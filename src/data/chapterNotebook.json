@@ -1,0 +1,297 @@
+[
+  {
+    "id": "biotech-meaning",
+    "module": "01",
+    "title": "What biotechnology means",
+    "objective": "Understand biotechnology as the use of organisms, cells or enzymes to make useful products and processes.",
+    "notes": [
+      "Traditional biotechnology includes practices such as fermentation, curd formation, cheese making and antibiotic production.",
+      "Modern biotechnology uses DNA-level tools, especially recombinant DNA technology, PCR, vectors and engineered host cells.",
+      "The chapter connects two worlds: molecular manipulation of genes and large-scale production under controlled sterile conditions."
+    ],
+    "neetHook": "If the question says organism/cell/enzyme plus useful product, it is asking the broad definition of biotechnology.",
+    "diagramPractice": "Draw four boxes: organism/cell/enzyme -> controlled process -> product -> application.",
+    "check": "Why is genetic engineering only one part of biotechnology, not the whole definition?"
+  },
+  {
+    "id": "principles",
+    "module": "02",
+    "title": "Principles of biotechnology",
+    "objective": "Link genetic engineering with sterile bioprocessing.",
+    "notes": [
+      "Genetic engineering changes the genetic material so that a desired trait or product can be obtained.",
+      "Sterile conditions are needed because unwanted microbes can outgrow the desired culture or contaminate the product.",
+      "A recombinant DNA experiment is complete only when the gene is expressed and the product is recovered safely."
+    ],
+    "neetHook": "Two principles are repeatedly asked: genetic engineering and contamination-free maintenance.",
+    "diagramPractice": "Draw desired gene -> vector -> host -> expression -> product, then add a sterile bioreactor around the host stage.",
+    "check": "Which principle explains why bioreactors have pH, oxygen and foam control?"
+  },
+  {
+    "id": "tools",
+    "module": "03",
+    "title": "Tools of recombinant DNA technology",
+    "objective": "Identify the role of each molecular tool.",
+    "notes": [
+      "Restriction enzymes cut DNA at specific sequences and can produce sticky or blunt ends.",
+      "DNA ligase seals compatible DNA ends by forming phosphodiester bonds.",
+      "Polymerase enzymes copy DNA; Taq polymerase is important for PCR because it is heat-stable.",
+      "Vectors carry DNA into host cells, and hosts maintain or express the recombinant DNA."
+    ],
+    "neetHook": "Tool-function matching is a common NEET pattern: scissors, glue, copier, carrier, factory.",
+    "diagramPractice": "Draw a toolbox with restriction enzyme, ligase, polymerase, vector and host cell.",
+    "check": "Which tool copies DNA and which tool joins DNA?"
+  },
+  {
+    "id": "dna-isolation",
+    "module": "04",
+    "title": "Isolation of desired DNA",
+    "objective": "Explain how DNA is released and purified from cells.",
+    "notes": [
+      "The cell wall and membrane must be broken to release DNA.",
+      "Lysozyme acts on bacterial cell wall, cellulase on plant cell wall and chitinase on fungal cell wall.",
+      "Protease removes proteins, RNase removes RNA, and chilled ethanol precipitates DNA as thread-like material."
+    ],
+    "neetHook": "Enzyme identity is a high-yield detail: lysozyme, cellulase, chitinase, protease and RNase.",
+    "diagramPractice": "Draw a test tube with cell lysate, ethanol layer and visible DNA threads.",
+    "check": "Why is chilled ethanol added during DNA isolation?"
+  },
+  {
+    "id": "restriction-enzymes",
+    "module": "05",
+    "title": "Restriction enzymes and palindromes",
+    "objective": "Understand recognition sequences, EcoRI, sticky ends and blunt ends.",
+    "notes": [
+      "Restriction endonucleases cut DNA internally at specific recognition sequences.",
+      "Many recognition sequences are palindromic when read in the 5' to 3' direction on both strands.",
+      "EcoRI recognises GAATTC and produces sticky ends that can pair with complementary sticky ends."
+    ],
+    "neetHook": "EcoRI and palindromic sequence interpretation are classic line-based questions.",
+    "diagramPractice": "Write 5'-GAATTC-3' above 3'-CTTAAG-5' and mark the EcoRI cut.",
+    "check": "What makes sticky ends useful for recombinant DNA formation?"
+  },
+  {
+    "id": "pcr",
+    "module": "06",
+    "title": "PCR amplification",
+    "objective": "Explain denaturation, annealing, extension and exponential copy number.",
+    "notes": [
+      "Denaturation separates DNA strands at high temperature.",
+      "Annealing allows primers to bind to complementary target sequences.",
+      "Extension uses Taq polymerase at about 72 C to synthesize new DNA strands.",
+      "Ideal amplification follows 2^n, where n is the number of cycles."
+    ],
+    "neetHook": "Cycle-temperature-function questions are very common.",
+    "diagramPractice": "Draw one PCR cycle as three panels with temperatures: 95 C, 50-65 C, 72 C.",
+    "check": "How many copies form from one DNA molecule after 8 ideal cycles?"
+  },
+  {
+    "id": "ligation",
+    "module": "07",
+    "title": "Ligation and recombinant DNA formation",
+    "objective": "Show how a gene insert joins with a vector.",
+    "notes": [
+      "The vector and insert should have compatible ends, often created by the same restriction enzyme.",
+      "DNA ligase seals nicks in the sugar-phosphate backbone.",
+      "A plasmid carrying a foreign DNA insert is called a recombinant plasmid."
+    ],
+    "neetHook": "Compatible sticky ends plus ligase equals recombinant DNA.",
+    "diagramPractice": "Draw an open plasmid, gene insert and final closed recombinant plasmid.",
+    "check": "Why is the same restriction enzyme often used for the vector and insert?"
+  },
+  {
+    "id": "vectors",
+    "module": "08",
+    "title": "Cloning vectors",
+    "objective": "Explain ori, selectable marker, cloning site and copy number.",
+    "notes": [
+      "ori allows the vector to replicate in the host cell.",
+      "Selectable markers help identify transformed cells.",
+      "A cloning site contains restriction sites where foreign DNA can be inserted.",
+      "Copy number affects how many copies of the vector exist in a cell."
+    ],
+    "neetHook": "Vector feature-function matching appears often.",
+    "diagramPractice": "Draw a circular plasmid map with ori, marker, restriction site and gene insert.",
+    "check": "What is the role of ori in a cloning vector?"
+  },
+  {
+    "id": "host-transformation",
+    "module": "09",
+    "title": "Competent host and transformation",
+    "objective": "Understand how recombinant DNA enters host cells.",
+    "notes": [
+      "Competent cells are able to take up foreign DNA.",
+      "Bacterial cells can be made competent using CaCl2 treatment followed by heat shock.",
+      "Microinjection, gene gun and disarmed pathogen vectors are other transfer approaches.",
+      "Agrobacterium-mediated transfer is important in plant biotechnology."
+    ],
+    "neetHook": "Transformation methods are often asked as direct one-line facts.",
+    "diagramPractice": "Draw plasmid entry into a bacterial cell after a heat shock pulse.",
+    "check": "Why must host cells be made competent?"
+  },
+  {
+    "id": "selection",
+    "module": "10",
+    "title": "Selection of recombinants",
+    "objective": "Differentiate transformed, non-transformed, recombinant and non-recombinant cells.",
+    "notes": [
+      "Non-transformed cells do not receive the vector and usually fail to survive selection.",
+      "Transformed cells receive the vector, but may or may not contain the desired insert.",
+      "Insertional inactivation occurs when inserted DNA disrupts a marker gene.",
+      "Blue-white screening uses this marker disruption idea to identify recombinant colonies."
+    ],
+    "neetHook": "Transformed is not always recombinant. That distinction is a common trap.",
+    "diagramPractice": "Draw a decision tree: no vector, vector without insert, vector with insert.",
+    "check": "Why can a transformed cell still be non-recombinant?"
+  },
+  {
+    "id": "gel",
+    "module": "11",
+    "title": "Gel electrophoresis and elution",
+    "objective": "Explain DNA fragment separation by size.",
+    "notes": [
+      "DNA is negatively charged and moves toward the positive electrode.",
+      "Agarose gel acts like a molecular sieve.",
+      "Smaller fragments move farther than larger fragments.",
+      "Elution means recovering the desired DNA fragment from the gel."
+    ],
+    "neetHook": "The direction of DNA movement and size-distance relation are extremely high-yield.",
+    "diagramPractice": "Draw wells near the negative electrode and bands moving toward the positive side.",
+    "check": "Which travels farther: 500 bp or 5000 bp DNA?"
+  },
+  {
+    "id": "bioreactor",
+    "module": "12",
+    "title": "Bioreactors",
+    "objective": "Describe large-scale production in a stirred-tank bioreactor.",
+    "notes": [
+      "Bioreactors provide optimal conditions for microbial or cell growth.",
+      "A stirred-tank bioreactor has an agitator/impeller for mixing and a sparger for air supply.",
+      "Temperature, pH, oxygen and foam are monitored and controlled.",
+      "Small lab cultures are scaled up to pilot and industrial levels."
+    ],
+    "neetHook": "Sparger and impeller functions are frequently tested.",
+    "diagramPractice": "Draw a labelled stirred tank with impeller, sparger, pH, temperature and sampling port.",
+    "check": "What is the role of a sparger?"
+  },
+  {
+    "id": "downstream",
+    "module": "13",
+    "title": "Downstream processing",
+    "objective": "Trace what happens after product formation.",
+    "notes": [
+      "After expression, the product is separated from cells and culture medium.",
+      "The product is purified, formulated and quality tested.",
+      "For therapeutic products, clinical testing may be required before use.",
+      "Packaging and release happen only after quality control."
+    ],
+    "neetHook": "Downstream processing is often hidden in options as separation, purification and formulation.",
+    "diagramPractice": "Draw culture broth -> separation -> purification -> formulation -> QC -> vial.",
+    "check": "Why is gene expression not the final step in biotechnology production?"
+  },
+  {
+    "id": "insulin",
+    "module": "14",
+    "title": "Genetically engineered insulin",
+    "objective": "Explain recombinant human insulin production.",
+    "notes": [
+      "Earlier insulin from animals could cause immune reactions in some patients.",
+      "Proinsulin contains A-chain, B-chain and C-peptide.",
+      "Mature insulin lacks C-peptide and has A and B chains linked by disulphide bonds.",
+      "Recombinant microbes can produce insulin chains that are purified and combined."
+    ],
+    "neetHook": "C-peptide is present in proinsulin, absent in mature insulin.",
+    "diagramPractice": "Draw proinsulin -> C-peptide removal -> A/B chains linked -> insulin vial.",
+    "check": "Which peptide is removed during insulin maturation?"
+  },
+  {
+    "id": "bt-cotton",
+    "module": "15",
+    "title": "Bt cotton",
+    "objective": "Explain Cry protein activation and pest resistance.",
+    "notes": [
+      "Bt genes come from Bacillus thuringiensis.",
+      "Cry proteins are produced as inactive protoxins.",
+      "The alkaline gut of the insect activates the protoxin.",
+      "The active toxin damages midgut epithelial cells, killing the pest."
+    ],
+    "neetHook": "Activation happens in alkaline insect gut, not inside the plant.",
+    "diagramPractice": "Draw plant leaf -> larva feeding -> alkaline gut -> active toxin -> midgut damage.",
+    "check": "Why is Bt protoxin safe inside the plant but harmful to target insects?"
+  },
+  {
+    "id": "gene-therapy",
+    "module": "16",
+    "title": "Gene therapy",
+    "objective": "Understand ADA deficiency and somatic gene therapy at student level.",
+    "notes": [
+      "Gene therapy introduces a functional gene to compensate for a defective one.",
+      "ADA deficiency is the classic example.",
+      "Ex vivo therapy removes cells, corrects them outside the body and returns them.",
+      "Somatic gene therapy affects body cells and is not inherited."
+    ],
+    "neetHook": "ADA deficiency plus ex vivo correction is the key NCERT memory pair.",
+    "diagramPractice": "Draw patient cell removed -> corrected with vector -> returned to patient.",
+    "check": "Why is somatic gene therapy not passed to offspring?"
+  },
+  {
+    "id": "rnai",
+    "module": "17",
+    "title": "RNA interference",
+    "objective": "Explain dsRNA-mediated gene silencing.",
+    "notes": [
+      "RNAi is a cellular method of silencing genes.",
+      "Double-stranded RNA leads to degradation or blocking of complementary mRNA.",
+      "The DNA gene remains, but its message is not translated.",
+      "NCERT uses nematode-resistant tobacco as an example."
+    ],
+    "neetHook": "RNAi works at the RNA level; it does not cut the DNA gene.",
+    "diagramPractice": "Draw dsRNA -> small RNA -> target mRNA cut -> protein absent.",
+    "check": "What molecule is degraded during RNA interference?"
+  },
+  {
+    "id": "diagnosis",
+    "module": "18",
+    "title": "Molecular diagnosis",
+    "objective": "Compare PCR, ELISA and DNA probes.",
+    "notes": [
+      "PCR detects small amounts of pathogen nucleic acid by amplification.",
+      "ELISA detects antigen-antibody interaction using a measurable signal.",
+      "DNA probes detect complementary target sequences.",
+      "Early diagnosis improves treatment decisions because markers may be low initially."
+    ],
+    "neetHook": "ELISA is antigen-antibody; DNA probe is complementary base pairing.",
+    "diagramPractice": "Draw PCR tube, ELISA plate and DNA probe binding target DNA.",
+    "check": "Which technique is based on antigen-antibody interaction?"
+  },
+  {
+    "id": "transgenic",
+    "module": "19",
+    "title": "Transgenic animals",
+    "objective": "Know why transgenic animals are made.",
+    "notes": [
+      "Transgenic animals carry foreign genes.",
+      "They can help study gene regulation and disease models.",
+      "They can be used for biological product production and vaccine/safety testing.",
+      "Ethical and welfare concerns must be considered."
+    ],
+    "neetHook": "Transgenic animals are not only for producing products; they also model disease and test safety.",
+    "diagramPractice": "Draw animal cell with inserted gene -> trait/model/product output.",
+    "check": "Give two uses of transgenic animals."
+  },
+  {
+    "id": "ethics",
+    "module": "20",
+    "title": "Ethical issues, patents, biopiracy and GEAC",
+    "objective": "Understand responsible biotechnology.",
+    "notes": [
+      "GM organisms must be evaluated for biosafety and environmental impact.",
+      "Patents can protect inventions but may raise access and ownership questions.",
+      "Biopiracy means unfair use of bioresources or traditional knowledge.",
+      "GEAC is associated with appraisal of genetically engineered organisms and products in India."
+    ],
+    "neetHook": "GEAC, biosafety and biopiracy are short but frequently asked topics.",
+    "diagramPractice": "Draw research -> biosafety data -> GEAC appraisal -> monitored release.",
+    "check": "What is biopiracy?"
+  }
+]

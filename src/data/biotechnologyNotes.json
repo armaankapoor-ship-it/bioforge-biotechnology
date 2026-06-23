@@ -1,0 +1,38 @@
+{
+  "chapter": "Biotechnology: Principles, Processes & Applications",
+  "chapterNumber": "09",
+  "roadmap": [
+    {"id":"chapter-notebook","number":"01","title":"Complete chapter notebook","subtitle":"20 guided modules for the whole chapter","accent":"mint"},
+    {"id":"study-atlas","number":"02","title":"Study atlas","subtitle":"NCERT core plus NEET depth notes","accent":"mint"},
+    {"id":"intro","number":"03","title":"Introduction","subtitle":"Traditional vs modern biotechnology","accent":"mint"},
+    {"id":"principles","number":"04","title":"Principles + tools","subtitle":"Engineering DNA and sterile processing","accent":"sky"},
+    {"id":"processes","number":"05","title":"rDNA process","subtitle":"Isolation, ligation, transformation, selection","accent":"coral"},
+    {"id":"restriction","number":"06","title":"Restriction enzymes","subtitle":"Recognition sites, sticky and blunt ends","accent":"lime"},
+    {"id":"pcr","number":"07","title":"PCR","subtitle":"Thermal cycling and exponential amplification","accent":"mint"},
+    {"id":"plasmid","number":"08","title":"Cloning vectors","subtitle":"ori, markers, cloning sites and insert","accent":"sky"},
+    {"id":"gel","number":"09","title":"Gel electrophoresis","subtitle":"Fragment separation and elution","accent":"coral"},
+    {"id":"bioreactor","number":"10","title":"Bioreactors","subtitle":"Large-scale controlled culture","accent":"lime"},
+    {"id":"downstream","number":"11","title":"Downstream processing","subtitle":"Purify, formulate, test and release","accent":"mint"},
+    {"id":"applications","number":"12","title":"Applications","subtitle":"Insulin, Bt cotton, gene therapy, RNAi, diagnosis","accent":"sky"},
+    {"id":"models","number":"13","title":"3D model gallery","subtitle":"Insulin, Bt toxin, vector, RNAi, diagnosis","accent":"lime"},
+    {"id":"high-yield","number":"14","title":"NEET high-yield","subtitle":"Facts, traps, confusing terms and match drills","accent":"mint"},
+    {"id":"revision","number":"15","title":"NEET revision dashboard","subtitle":"Flashcards, tables and local question bank","accent":"coral"}
+  ],
+  "restriction": {
+    "sequence": "GAATTC",
+    "complement": "CTTAAG",
+    "enzyme": "EcoRI",
+    "fact": "EcoRI recognises a palindromic sequence and cuts between G and A on both strands, producing complementary sticky ends."
+  },
+  "pcrPhases": [
+    {"name":"Denaturation","temperature":"95°C","description":"Hydrogen bonds break; the DNA strands separate.","color":"#ff7f66"},
+    {"name":"Annealing","temperature":"50-65°C","description":"Primers bind to complementary target sequences.","color":"#8ed7ee"},
+    {"name":"Extension","temperature":"72°C","description":"Taq polymerase extends primers to make new DNA.","color":"#b8e779"}
+  ],
+  "plasmidHotspots": [
+    {"id":"ori","label":"ori","title":"Origin of replication","description":"The start signal for plasmid copying; it influences copy number.","color":"#6de0bc"},
+    {"id":"marker","label":"ampR","title":"Selectable marker","description":"Helps identify transformed cells on an antibiotic plate.","color":"#8ed7ee"},
+    {"id":"site","label":"MCS","title":"Cloning site","description":"A designed region containing unique restriction sites.","color":"#ff9c85"},
+    {"id":"insert","label":"GOI","title":"Gene of interest","description":"The foreign DNA inserted to make a recombinant plasmid.","color":"#d9f99d"}
+  ]
+}

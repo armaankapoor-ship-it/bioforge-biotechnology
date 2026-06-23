@@ -1,0 +1,155 @@
+[
+  {
+    "id": "meaning",
+    "title": "Meaning and scope of biotechnology",
+    "core": "Biotechnology uses organisms, cells or enzymes to make useful products and processes. Traditional biotechnology used fermentation and breeding, while modern biotechnology works directly with DNA.",
+    "neetDepth": "NEET questions often test the difference between traditional biotechnology and modern genetic engineering. Modern biotechnology is not just growing microbes; it includes recombinant DNA, PCR, gene transfer, diagnostics and transgenic organisms.",
+    "mustRemember": ["Organism/cell/enzyme can be the biological tool.", "Useful product may be medicine, crop trait, diagnostic result or industrial molecule.", "Modern biotechnology combines genetic engineering and bioprocess engineering."],
+    "diagramCue": "Draw organism/cell/enzyme going through a controlled process to produce a useful product.",
+    "commonTrap": "Do not define biotechnology only as genetic engineering. Genetic engineering is one important part of modern biotechnology."
+  },
+  {
+    "id": "principles",
+    "title": "Two core principles",
+    "core": "The two central principles are genetic engineering and maintenance of sterile, contamination-free conditions for growth and product formation.",
+    "neetDepth": "Genetic engineering creates new DNA combinations. Bioprocess engineering keeps the organism alive, pure, productive and scalable.",
+    "mustRemember": ["Genetic engineering changes DNA.", "Sterile conditions prevent unwanted microbes from growing.", "Bioprocessing includes scale-up and product recovery."],
+    "diagramCue": "Show desired gene -> vector -> host -> expression -> product, with a sterile bioreactor alongside.",
+    "commonTrap": "A correct recombinant DNA molecule is not enough; the product must still be produced and purified."
+  },
+  {
+    "id": "isolation",
+    "title": "Isolation of desired DNA",
+    "core": "Cells are broken open, proteins and RNA are removed, and DNA is precipitated using chilled ethanol so it can be collected.",
+    "neetDepth": "Different cells need different wall-breaking enzymes: lysozyme for bacterial cell wall, cellulase for plant cell wall and chitinase for fungal cell wall. Protease removes proteins and RNase removes RNA.",
+    "mustRemember": ["Chilled ethanol helps DNA precipitate.", "DNA may appear as thread-like material.", "Pure DNA is needed before restriction digestion or PCR."],
+    "diagramCue": "Draw a tube with cell extract at bottom, ethanol layer above and white DNA threads between.",
+    "commonTrap": "Do not say RNase removes proteins; protease removes proteins, RNase removes RNA."
+  },
+  {
+    "id": "restriction",
+    "title": "Restriction enzymes",
+    "core": "Restriction enzymes cut DNA at specific recognition sequences. Many recognition sequences are palindromic.",
+    "neetDepth": "EcoRI recognises GAATTC and cuts between G and A to create sticky ends. Sticky ends can pair with complementary sticky ends and are sealed by ligase.",
+    "mustRemember": ["Restriction enzymes are molecular scissors.", "Endonucleases cut within DNA.", "Sticky ends have overhangs; blunt ends do not."],
+    "diagramCue": "Show 5'-GAATTC-3' and 3'-CTTAAG-5' with a cut between G and A.",
+    "commonTrap": "Palindrome in DNA means same reading in 5' to 3' direction on both strands, not simply left-to-right on one strand."
+  },
+  {
+    "id": "pcr",
+    "title": "Polymerase chain reaction",
+    "core": "PCR amplifies a selected DNA region through repeated cycles of denaturation, annealing and extension.",
+    "neetDepth": "Denaturation occurs around 95 C, annealing around 50-65 C and extension around 72 C. Taq polymerase is heat-stable and extends primers.",
+    "mustRemember": ["Ideal copies after n cycles = 2^n.", "Primers define the target region.", "Taq polymerase is from Thermus aquaticus."],
+    "diagramCue": "Draw double-stranded DNA separating, primers binding, and new strands extending.",
+    "commonTrap": "PCR amplifies DNA; it does not directly amplify proteins."
+  },
+  {
+    "id": "vectors",
+    "title": "Cloning vectors",
+    "core": "A cloning vector carries foreign DNA into a host and replicates there. Plasmids are common vectors.",
+    "neetDepth": "Important vector features include ori, selectable marker, cloning site and suitable copy number. A selectable marker helps identify transformed cells.",
+    "mustRemember": ["ori starts replication.", "Selectable marker helps selection.", "Cloning site accepts the foreign DNA insert."],
+    "diagramCue": "Draw a circular plasmid with ori, marker, restriction site and inserted gene labelled.",
+    "commonTrap": "Do not confuse vector with host. The vector carries DNA; the host cell maintains or expresses it."
+  },
+  {
+    "id": "transformation",
+    "title": "Competent host and transformation",
+    "core": "Host cells must be made competent to take up recombinant DNA. Bacterial transformation commonly uses CaCl2 and heat shock.",
+    "neetDepth": "Other transfer methods include microinjection, gene gun and disarmed pathogen vectors. Agrobacterium-mediated transfer is important in plant biotechnology.",
+    "mustRemember": ["Competent means able to take up DNA.", "Heat shock helps plasmid entry.", "Agrobacterium is a natural plant gene transfer system."],
+    "diagramCue": "Draw plasmid outside a bacterial cell, heat shock pulse, and plasmid inside the cell.",
+    "commonTrap": "Transformation and transduction are not the same word in all contexts; here transformation means uptake of foreign DNA by host cells."
+  },
+  {
+    "id": "selection",
+    "title": "Selection of recombinants",
+    "core": "Selectable markers and screening methods help identify cells that contain recombinant DNA.",
+    "neetDepth": "Antibiotic resistance markers distinguish transformed from non-transformed cells. Insertional inactivation can distinguish recombinant from non-recombinant transformants.",
+    "mustRemember": ["Transformed means vector entered.", "Recombinant means insert is present.", "Blue-white screening is based on insertional inactivation concept."],
+    "diagramCue": "Draw a petri plate with surviving colonies and separate blue/white colony outcomes.",
+    "commonTrap": "A transformed cell may contain a non-recombinant vector. Selection and screening are not identical."
+  },
+  {
+    "id": "gel",
+    "title": "Gel electrophoresis",
+    "core": "DNA fragments are separated in agarose gel under an electric field. DNA moves toward the positive electrode.",
+    "neetDepth": "Smaller DNA fragments migrate farther because they pass through gel pores more easily. DNA bands can be cut from the gel and recovered by elution.",
+    "mustRemember": ["DNA is negatively charged.", "Smaller fragments travel farther.", "Elution means recovery from gel."],
+    "diagramCue": "Draw wells near the negative side and bands moving toward the positive side.",
+    "commonTrap": "Do not say larger fragments move faster. Larger fragments move slower and stay closer to wells."
+  },
+  {
+    "id": "bioreactor",
+    "title": "Bioreactors",
+    "core": "Bioreactors provide controlled large-scale conditions for growth and product formation.",
+    "neetDepth": "A stirred-tank bioreactor includes agitator, sparger, pH control, temperature control, foam control, oxygen supply and sampling port.",
+    "mustRemember": ["Sparger supplies air or oxygen.", "Impeller mixes the culture.", "Sterility prevents contamination."],
+    "diagramCue": "Draw a stirred tank with impeller, sparger, inlet, outlet, pH and temperature labels.",
+    "commonTrap": "A bioreactor is not just a storage tank; it actively controls growth conditions."
+  },
+  {
+    "id": "downstream",
+    "title": "Downstream processing",
+    "core": "After production, the product is separated, purified, formulated, quality tested and released.",
+    "neetDepth": "Therapeutic products may need clinical trials and strict quality control. Downstream processing converts a culture product into a usable product.",
+    "mustRemember": ["Separation removes cells/debris.", "Purification isolates the target molecule.", "Quality control checks safety and activity."],
+    "diagramCue": "Draw a pipeline: culture broth -> filter -> purification -> QC -> vial/package.",
+    "commonTrap": "Expression of a gene is not the final commercial product. Recovery and purification are essential."
+  },
+  {
+    "id": "insulin",
+    "title": "Human insulin production",
+    "core": "Recombinant DNA technology can produce human insulin using microbial systems.",
+    "neetDepth": "Proinsulin has A, B and C peptide. Mature insulin forms after C-peptide removal and connection of A and B chains by disulphide bonds.",
+    "mustRemember": ["Animal insulin could cause immune reactions.", "Mature insulin has A and B chains.", "C-peptide is absent in mature insulin."],
+    "diagramCue": "Draw proinsulin with A, C and B regions, then remove C peptide and join A/B chains.",
+    "commonTrap": "Do not say C-peptide is part of mature insulin."
+  },
+  {
+    "id": "bt-cotton",
+    "title": "Bt cotton",
+    "core": "Bt cotton contains genes from Bacillus thuringiensis that produce Cry proteins toxic to specific insect pests.",
+    "neetDepth": "Bt toxin is produced as an inactive protoxin and becomes active in the alkaline gut of the insect, damaging midgut epithelial cells.",
+    "mustRemember": ["Bt = Bacillus thuringiensis.", "Cry protein is insecticidal.", "Activation happens in alkaline insect gut."],
+    "diagramCue": "Draw cotton plant, larva gut, protoxin activation and damaged gut lining.",
+    "commonTrap": "Do not say Bt toxin is activated in the human stomach or inside the plant."
+  },
+  {
+    "id": "gene-therapy",
+    "title": "Gene therapy",
+    "core": "Gene therapy attempts to correct or compensate for a defective gene by introducing a functional gene.",
+    "neetDepth": "ADA deficiency is the standard example. Ex vivo therapy removes cells, corrects them outside the body and returns them.",
+    "mustRemember": ["Somatic therapy affects body cells.", "ADA deficiency is a key example.", "Vectors deliver functional genes."],
+    "diagramCue": "Draw patient cells removed -> corrected with normal gene -> returned to patient.",
+    "commonTrap": "Somatic gene therapy does not change the germline."
+  },
+  {
+    "id": "rnai",
+    "title": "RNA interference",
+    "core": "RNAi is gene silencing by targeting matching mRNA for degradation or blocking.",
+    "neetDepth": "dsRNA is processed into small RNAs that guide silencing of complementary mRNA. NCERT links RNAi with nematode-resistant tobacco plants.",
+    "mustRemember": ["RNAi acts at RNA level.", "mRNA is degraded or blocked.", "Used for nematode resistance example."],
+    "diagramCue": "Draw dsRNA -> small RNA guide -> target mRNA cut -> protein not formed.",
+    "commonTrap": "RNAi does not remove the DNA gene; it prevents expression of its message."
+  },
+  {
+    "id": "diagnosis",
+    "title": "Molecular diagnosis",
+    "core": "Molecular diagnosis detects disease markers early using PCR, ELISA and DNA probes.",
+    "neetDepth": "PCR amplifies tiny nucleic acid amounts, ELISA detects antigen-antibody interaction and DNA probes bind complementary sequences.",
+    "mustRemember": ["PCR detects low nucleic acid amounts.", "ELISA is antigen-antibody based.", "Probe detection uses complementarity."],
+    "diagramCue": "Draw PCR result panel, ELISA plate with colour change and DNA probe binding a target.",
+    "commonTrap": "Probe and primer are different tools even though both can be short nucleic acid sequences."
+  },
+  {
+    "id": "ethics",
+    "title": "Ethical issues and GEAC",
+    "core": "Biotechnology requires biosafety review, ethical evaluation, patent awareness and fair use of bioresources.",
+    "neetDepth": "GEAC evaluates genetically engineered organisms and products for validity and safety. Biopiracy involves unfair exploitation of bioresources or traditional knowledge.",
+    "mustRemember": ["GM organisms need biosafety assessment.", "GEAC is important in India.", "Biopiracy is an ethical and legal concern."],
+    "diagramCue": "Draw research -> biosafety data -> GEAC review -> monitored release, plus benefit-sharing card.",
+    "commonTrap": "Ethics is not anti-biotechnology; it is responsible biotechnology."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {"term":"Biotechnology","definition":"Use of organisms, cells or enzymes to make useful products and processes."},
+  {"term":"Genetic engineering","definition":"Direct manipulation of DNA to produce a desired trait, molecule or organism."},
+  {"term":"Bioprocess engineering","definition":"Large-scale growth and product recovery under sterile, controlled conditions."},
+  {"term":"Vector","definition":"A DNA carrier used to transfer a gene into a host cell."},
+  {"term":"Cloning vector","definition":"A vector that can replicate in a host and carry inserted foreign DNA."},
+  {"term":"ori","definition":"Origin of replication; the DNA sequence where replication begins."},
+  {"term":"Selectable marker","definition":"A gene that helps identify transformed cells, often through antibiotic resistance."},
+  {"term":"Palindromic sequence","definition":"A DNA sequence that reads the same in the 5' to 3' direction on both strands."},
+  {"term":"Sticky end","definition":"A DNA end with a short single-stranded overhang that can pair with a complementary overhang."},
+  {"term":"Blunt end","definition":"A DNA end with no single-stranded overhang."},
+  {"term":"PCR","definition":"Polymerase chain reaction; a method for amplifying a DNA segment through repeated thermal cycles."},
+  {"term":"Elution","definition":"Recovery of a desired DNA fragment from an agarose gel."},
+  {"term":"Transformation","definition":"Uptake of foreign genetic material by a cell."},
+  {"term":"Competent host","definition":"A host cell prepared to take up foreign DNA."},
+  {"term":"Insertional inactivation","definition":"Loss of marker function when foreign DNA inserts into that marker gene."},
+  {"term":"Downstream processing","definition":"Separation, purification, formulation and quality testing of a biosynthetic product."},
+  {"term":"RNA interference","definition":"Gene silencing caused by degradation or blocking of complementary mRNA."},
+  {"term":"ELISA","definition":"A diagnostic method based on antigen-antibody interaction and a measurable signal."},
+  {"term":"Biopiracy","definition":"Unfair or unauthorised use of bioresources or traditional knowledge."},
+  {"term":"GEAC","definition":"Genetic Engineering Appraisal Committee, associated with biosafety evaluation of GM organisms in India."}
+]
