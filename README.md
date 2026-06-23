@@ -16,7 +16,7 @@ It includes an animated hero, chapter roadmap, restriction-enzyme model, PCR cyc
 
 ## Run locally on your own computer
 
-Requirements: Node.js 20 or newer.
+Requirements: Node.js 22.13 or newer.
 
 ```bash
 pnpm install
