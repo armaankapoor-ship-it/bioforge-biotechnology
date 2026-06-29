@@ -1,0 +1,268 @@
+{
+  "roadmap": [
+    {
+      "title": "Flower as reproductive organ",
+      "summary": "A typical flower carries male stamens and female pistil/carpel arranged to enable gamete formation and fertilization.",
+      "visual": "3D flower model"
+    },
+    {
+      "title": "Stamen and microsporangium",
+      "summary": "Anther lobes contain pollen sacs where microspore mother cells undergo meiosis to form microspores.",
+      "visual": "Anther cross-section"
+    },
+    {
+      "title": "Pollen grain",
+      "summary": "Male gametophyte with exine, intine, vegetative cell and generative cell; generative cell forms two male gametes.",
+      "visual": "Pollen grain card"
+    },
+    {
+      "title": "Pistil and ovule",
+      "summary": "The pistil has stigma, style and ovary; ovules contain nucellus, integuments, micropyle and embryo sac.",
+      "visual": "3D ovule model"
+    },
+    {
+      "title": "Megasporogenesis",
+      "summary": "Megaspore mother cell undergoes meiosis; usually one functional megaspore forms the female gametophyte.",
+      "visual": "Embryo sac timeline"
+    },
+    {
+      "title": "Pollination",
+      "summary": "Transfer of pollen from anther to stigma; can be autogamy, geitonogamy or xenogamy.",
+      "visual": "Pollination comparison"
+    },
+    {
+      "title": "Pollen-pistil interaction",
+      "summary": "The stigma recognizes compatible pollen and guides pollen tube growth through the style.",
+      "visual": "Pollen tube animation"
+    },
+    {
+      "title": "Double fertilization",
+      "summary": "One male gamete fuses with egg to form zygote; the other fuses with polar nuclei to form primary endosperm nucleus.",
+      "visual": "Double fusion diagram"
+    },
+    {
+      "title": "Post-fertilization events",
+      "summary": "Endosperm, embryo, seed and fruit develop; ovule becomes seed and ovary becomes fruit.",
+      "visual": "Seed and fruit transformation"
+    },
+    {
+      "title": "Apomixis and polyembryony",
+      "summary": "Some plants form seeds without fertilization or produce multiple embryos in one seed.",
+      "visual": "NEET alert card"
+    }
+  ],
+  "sections": [
+    {
+      "id": "flower",
+      "eyebrow": "Big picture",
+      "title": "Flower = reproductive laboratory",
+      "points": [
+        "Stamens produce pollen grains, the male gametophytes.",
+        "The pistil/carpel houses ovules, where the female gametophyte develops.",
+        "Sepals and petals protect or attract, but the exam focus is usually stamen, pistil, pollen, ovule and embryo sac."
+      ],
+      "neet": "A bisexual flower has both androecium and gynoecium; unisexual flowers have either stamens or pistils."
+    },
+    {
+      "id": "anther",
+      "eyebrow": "Male side",
+      "title": "Anther, microsporangium and pollen formation",
+      "points": [
+        "A typical angiosperm anther is bilobed and each lobe has two theca, so it is often called dithecous.",
+        "Each microsporangium has epidermis, endothecium, middle layers and tapetum around sporogenous tissue.",
+        "Microspore mother cells undergo meiosis to form microspore tetrads.",
+        "Microspores separate and mature into pollen grains."
+      ],
+      "neet": "Tapetum nourishes developing pollen and contributes materials for pollen wall formation."
+    },
+    {
+      "id": "pollen",
+      "eyebrow": "Male gametophyte",
+      "title": "Pollen grain structure",
+      "points": [
+        "Exine is the tough outer wall rich in sporopollenin.",
+        "Germ pores are regions where exine is absent or thin; pollen tube emerges from a germ pore.",
+        "Intine is inner and made mainly of cellulose and pectin.",
+        "At shedding, pollen may be two-celled or three-celled depending on species."
+      ],
+      "neet": "Sporopollenin is one of the most resistant organic materials; it helps pollen survive harsh conditions."
+    },
+    {
+      "id": "ovule",
+      "eyebrow": "Female side",
+      "title": "Ovule and embryo sac",
+      "points": [
+        "The ovule is attached to placenta by funicle; the junction region is hilum.",
+        "Integuments surround nucellus and leave a small opening called micropyle.",
+        "The mature embryo sac is usually 7-celled and 8-nucleate.",
+        "Egg apparatus has one egg cell and two synergids; antipodals lie at the chalazal end."
+      ],
+      "neet": "Most angiosperms show monosporic Polygonum-type embryo sac development."
+    },
+    {
+      "id": "pollination",
+      "eyebrow": "Transfer",
+      "title": "Pollination types and agents",
+      "points": [
+        "Autogamy is pollen transfer within the same flower.",
+        "Geitonogamy is transfer between different flowers of the same plant; genetically similar to autogamy.",
+        "Xenogamy is transfer between flowers of different plants of the same species; it brings genetic variation.",
+        "Wind, water and animals act as pollinating agents."
+      ],
+      "neet": "Cleistogamous flowers never open and assure seed set even without pollinators."
+    },
+    {
+      "id": "outbreeding",
+      "eyebrow": "Variation tools",
+      "title": "Outbreeding devices",
+      "points": [
+        "Pollen release and stigma receptivity may occur at different times.",
+        "Anther and stigma may be positioned to prevent self-pollen deposition.",
+        "Self-incompatibility rejects pollen from the same plant.",
+        "Dioecy prevents both autogamy and geitonogamy."
+      ],
+      "neet": "Outbreeding devices discourage inbreeding and promote cross-pollination."
+    },
+    {
+      "id": "double-fertilization",
+      "eyebrow": "Signature event",
+      "title": "Double fertilization and triple fusion",
+      "points": [
+        "Pollen tube releases two male gametes into the embryo sac.",
+        "Syngamy: one male gamete + egg cell = diploid zygote.",
+        "Triple fusion: one male gamete + two polar nuclei = triploid primary endosperm nucleus.",
+        "Double fertilization is unique to flowering plants."
+      ],
+      "neet": "Endosperm is usually triploid because it forms from triple fusion."
+    },
+    {
+      "id": "post-fertilization",
+      "eyebrow": "After fusion",
+      "title": "Endosperm, embryo, seed and fruit",
+      "points": [
+        "Endosperm often develops before the embryo and nourishes it.",
+        "The zygote develops into embryo with radicle, plumule and cotyledons.",
+        "Ovule becomes seed; integuments become seed coats.",
+        "Ovary becomes fruit; ovary wall becomes pericarp."
+      ],
+      "neet": "Albuminous seeds retain endosperm; non-albuminous seeds consume it during development."
+    },
+    {
+      "id": "apomixis",
+      "eyebrow": "Special cases",
+      "title": "Apomixis, parthenocarpy and polyembryony",
+      "points": [
+        "Apomixis is seed formation without fertilization.",
+        "Parthenocarpy is fruit formation without fertilization, often seedless.",
+        "Polyembryony means more than one embryo occurs in a seed.",
+        "Hybrid seed industry studies apomixis because it can preserve hybrid vigour."
+      ],
+      "neet": "Do not confuse apomixis with parthenocarpy: apomixis concerns seed, parthenocarpy concerns fruit."
+    }
+  ],
+  "highYield": [
+    "Microsporogenesis: microspore mother cell → meiosis → microspore tetrad.",
+    "Megasporogenesis: megaspore mother cell → meiosis → four megaspores; usually one functional.",
+    "Mature embryo sac is 7-celled, 8-nucleate.",
+    "Egg apparatus = 1 egg + 2 synergids.",
+    "Central cell contains two polar nuclei before triple fusion.",
+    "Syngamy produces zygote; triple fusion produces primary endosperm nucleus.",
+    "Double fertilization is characteristic of angiosperms.",
+    "Exine contains sporopollenin; intine contains cellulose and pectin.",
+    "Tapetum nourishes pollen.",
+    "Ovule → seed; ovary → fruit; integuments → seed coat.",
+    "Micropyle allows pollen tube entry and later helps water/oxygen entry into seed.",
+    "Geitonogamy is functionally cross-pollination but genetically self-pollination.",
+    "Self-incompatibility is a genetic mechanism preventing self pollen germination.",
+    "Cleistogamy assures seed set without pollinators.",
+    "Apomixis produces seeds without fertilization."
+  ],
+  "quiz": [
+    {
+      "question": "The outermost resistant layer of pollen grain is called:",
+      "options": ["Exine", "Intine", "Tapetum", "Endothecium"],
+      "answer": 0,
+      "explain": "Exine is the tough outer wall and contains sporopollenin."
+    },
+    {
+      "question": "A typical mature angiosperm embryo sac is:",
+      "options": ["8-celled, 7-nucleate", "7-celled, 8-nucleate", "6-celled, 8-nucleate", "8-celled, 8-nucleate"],
+      "answer": 1,
+      "explain": "It has 7 cells but 8 nuclei: egg, two synergids, three antipodals and a central cell with two polar nuclei."
+    },
+    {
+      "question": "Triple fusion forms the:",
+      "options": ["Zygote", "Embryo", "Primary endosperm nucleus", "Seed coat"],
+      "answer": 2,
+      "explain": "One male gamete fuses with two polar nuclei to form the primary endosperm nucleus."
+    },
+    {
+      "question": "Transfer of pollen from one flower to another flower of the same plant is:",
+      "options": ["Autogamy", "Geitonogamy", "Xenogamy", "Apomixis"],
+      "answer": 1,
+      "explain": "Geitonogamy occurs between different flowers of the same plant."
+    },
+    {
+      "question": "The nutritive layer of anther wall is:",
+      "options": ["Epidermis", "Endothecium", "Tapetum", "Middle layer"],
+      "answer": 2,
+      "explain": "Tapetum provides nutrition and wall materials to developing pollen."
+    },
+    {
+      "question": "The opening left by integuments in an ovule is called:",
+      "options": ["Hilum", "Micropyle", "Funicle", "Chalaza"],
+      "answer": 1,
+      "explain": "Micropyle is the small opening at one end of the ovule."
+    },
+    {
+      "question": "Seed formation without fertilization is:",
+      "options": ["Parthenocarpy", "Polyembryony", "Apomixis", "Geitonogamy"],
+      "answer": 2,
+      "explain": "Apomixis produces seeds without fertilization."
+    },
+    {
+      "question": "Which event is unique to angiosperms?",
+      "options": ["Pollination", "Meiosis", "Double fertilization", "Seed dormancy"],
+      "answer": 2,
+      "explain": "Double fertilization is a defining feature of flowering plants."
+    },
+    {
+      "question": "Ovary wall develops into:",
+      "options": ["Seed coat", "Pericarp", "Endosperm", "Cotyledon"],
+      "answer": 1,
+      "explain": "After fertilization, ovary wall becomes the fruit wall or pericarp."
+    },
+    {
+      "question": "Cleistogamous flowers are important because they:",
+      "options": ["Always require wind", "Never open and assure seed set", "Prevent seed formation", "Only occur under water"],
+      "answer": 1,
+      "explain": "They remain closed, self-pollinate and assure seed production."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Microsporogenesis",
+      "back": "Formation of haploid microspores from microspore mother cells by meiosis."
+    },
+    {
+      "front": "Megasporogenesis",
+      "back": "Formation of haploid megaspores from the megaspore mother cell by meiosis."
+    },
+    {
+      "front": "Syngamy",
+      "back": "Fusion of one male gamete with the egg cell to form a diploid zygote."
+    },
+    {
+      "front": "Triple fusion",
+      "back": "Fusion of the other male gamete with two polar nuclei to form primary endosperm nucleus."
+    },
+    {
+      "front": "Xenogamy",
+      "back": "Pollen transfer between flowers of different plants of the same species."
+    },
+    {
+      "front": "Apomixis",
+      "back": "Seed formation without fertilization."
+    }
+  ]
+}

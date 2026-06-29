@@ -1,4 +1,4 @@
-name: Deploy BioForge to GitHub Pages
+name: Deploy Flowering Plants Chapter to GitHub Pages
 
 on:
   push:
@@ -29,22 +29,10 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install --no-frozen-lockfile
       - run: pnpm run build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
-      - name: Install Chapter 1 site dependencies
-        working-directory: ./chapter1-flowering-reproduction
-        run: pnpm install --frozen-lockfile
-      - name: Build Chapter 1 site
-        working-directory: ./chapter1-flowering-reproduction
-        run: pnpm run build
-        env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/chapter1/
-      - name: Add Chapter 1 site to public build
-        run: |
-          mkdir -p ./dist/chapter1
-          cp -R ./chapter1-flowering-reproduction/dist/* ./dist/chapter1/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

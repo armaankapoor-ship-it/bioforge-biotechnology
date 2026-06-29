@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  ::selection {
+    background: rgba(236, 72, 153, .22);
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply rounded-full px-3 py-2 text-xs font-black uppercase tracking-[.12em] text-slate-500 transition hover:bg-pink-50 hover:text-petal dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white;
+  }
+
+  .nav-link.active {
+    @apply bg-petal text-white shadow-glow hover:bg-petal hover:text-white;
+  }
+
+  .icon-btn {
+    @apply grid h-10 w-10 place-items-center rounded-2xl border border-pink-100 bg-white text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-petal hover:text-petal dark:border-white/10 dark:bg-white/10 dark:text-white;
+  }
+
+  .hero-section {
+    @apply relative isolate min-h-screen overflow-hidden;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(236, 72, 153, .18), transparent 30%),
+      radial-gradient(circle at 82% 10%, rgba(124, 58, 237, .14), transparent 28%),
+      linear-gradient(135deg, #fff8ed 0%, #fdf2f8 42%, #f0fdf4 100%);
+  }
+
+  .dark .hero-section {
+    background:
+      radial-gradient(circle at 15% 20%, rgba(236, 72, 153, .18), transparent 32%),
+      radial-gradient(circle at 82% 10%, rgba(56, 189, 248, .12), transparent 28%),
+      linear-gradient(135deg, #100916 0%, #170d20 55%, #071510 100%);
+  }
+
+  .hero-orb {
+    @apply pointer-events-none absolute rounded-full blur-3xl;
+  }
+
+  .hero-orb-a {
+    @apply left-[-120px] top-[180px] h-72 w-72 bg-pink-300/40;
+    animation: float 9s ease-in-out infinite;
+  }
+
+  .hero-orb-b {
+    @apply right-[-80px] top-[120px] h-96 w-96 bg-emerald-200/40;
+    animation: float 11s ease-in-out infinite reverse;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-petal via-plum to-leaf bg-clip-text text-transparent;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-black transition;
+  }
+
+  .primary-btn {
+    @apply bg-ink text-white shadow-soft hover:-translate-y-1 hover:bg-petal dark:bg-petal;
+  }
+
+  .secondary-btn {
+    @apply border border-pink-200 bg-white/75 text-ink shadow-sm hover:-translate-y-1 hover:border-petal hover:text-petal dark:border-white/10 dark:bg-white/10 dark:text-white;
+  }
+
+  .floating-card {
+    @apply pointer-events-none absolute z-20 flex items-center gap-2 rounded-2xl border border-white/80 bg-white/80 px-4 py-3 text-xs font-black uppercase tracking-[.14em] text-petal shadow-soft backdrop-blur dark:border-white/10 dark:bg-[#170d20]/80;
+    animation: float 7s ease-in-out infinite;
+  }
+
+  .section-shell {
+    @apply scroll-mt-28 py-16 md:py-24;
+  }
+
+  .section-shell .eyebrow {
+    @apply mb-3 inline-flex rounded-full bg-pink-50 px-4 py-2 text-xs font-black uppercase tracking-[.18em] text-petal dark:bg-white/10;
+  }
+
+  .section-shell h2 {
+    @apply font-display text-4xl font-black leading-tight tracking-[-.045em] text-ink dark:text-white md:text-6xl;
+  }
+
+  .section-shell > div > div > p {
+    @apply mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300;
+  }
+
+  .premium-card,
+  .concept-card,
+  .quiz-card,
+  .three-panel,
+  .flashcard,
+  .yield-card,
+  .mistake-card,
+  .transform-card {
+    @apply border border-white/80 bg-white/80 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-white/10;
+  }
+
+  .premium-card {
+    @apply rounded-[34px];
+  }
+
+  .roadmap-card {
+    @apply grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-[26px] border border-pink-100 bg-white/80 p-4 text-left shadow-sm transition hover:-translate-y-1 hover:border-petal hover:shadow-soft dark:border-white/10 dark:bg-white/10;
+  }
+
+  .roadmap-card > span {
+    @apply grid h-11 w-11 place-items-center rounded-2xl bg-pink-50 text-sm font-black text-petal dark:bg-pink-300/10;
+  }
+
+  .roadmap-card h3 {
+    @apply text-base font-black tracking-[-.02em] text-ink dark:text-white;
+  }
+
+  .roadmap-card p {
+    @apply mt-1 text-sm leading-6 text-slate-500 dark:text-slate-400;
+  }
+
+  .mermaid-box {
+    @apply overflow-x-auto rounded-[26px] bg-white p-3 dark:bg-white/10;
+  }
+
+  .mermaid-box svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .three-panel {
+    @apply relative overflow-hidden rounded-[34px] p-4;
+  }
+
+  .three-panel::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0;
+    background:
+      radial-gradient(circle at 18% 20%, rgba(236, 72, 153, .22), transparent 25%),
+      radial-gradient(circle at 82% 75%, rgba(22, 163, 74, .16), transparent 28%);
+  }
+
+  .three-panel-head {
+    @apply relative z-10 mb-3 flex items-start justify-between gap-4 px-1;
+  }
+
+  .three-panel-head h3 {
+    @apply text-lg font-black tracking-[-.03em] text-ink dark:text-white;
+  }
+
+  .three-panel-head p {
+    @apply mt-1 text-xs font-bold uppercase tracking-[.12em] text-slate-500 dark:text-slate-400;
+  }
+
+  .three-canvas {
+    @apply relative z-10 h-[380px] overflow-hidden rounded-[28px] border border-pink-100 bg-gradient-to-br from-white to-pink-50 dark:border-white/10 dark:from-white/10 dark:to-pink-500/10;
+    cursor: grab;
+  }
+
+  .three-canvas:active {
+    cursor: grabbing;
+  }
+
+  .concept-card {
+    @apply rounded-[30px] p-6;
+  }
+
+  .concept-card h3 {
+    @apply mt-3 text-2xl font-black tracking-[-.035em] text-ink dark:text-white;
+  }
+
+  .concept-card ul {
+    @apply mt-4 grid gap-3 text-sm leading-6 text-slate-600 dark:text-slate-300;
+  }
+
+  .concept-card li {
+    @apply rounded-2xl bg-pink-50/70 px-4 py-3 dark:bg-white/10;
+  }
+
+  .neet-line {
+    @apply mt-5 flex items-start gap-2 rounded-2xl bg-ink px-4 py-3 text-sm font-bold leading-6 text-white dark:bg-petal/25;
+  }
+
+  .yield-card {
+    @apply flex gap-4 rounded-[26px] p-5;
+  }
+
+  .yield-card span {
+    @apply grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-petal text-sm font-black text-white;
+  }
+
+  .yield-card p {
+    @apply text-sm font-bold leading-6 text-ink dark:text-white;
+  }
+
+  .mistake-card {
+    @apply rounded-[28px] p-6;
+  }
+
+  .mistake-card svg {
+    @apply text-petal;
+  }
+
+  .mistake-card h3 {
+    @apply mt-3 text-xl font-black text-ink dark:text-white;
+  }
+
+  .mistake-card p {
+    @apply mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300;
+  }
+
+  .quiz-score {
+    @apply flex flex-col justify-between gap-4 rounded-[30px] border border-pink-100 bg-gradient-to-r from-ink to-petal p-6 text-white shadow-soft sm:flex-row sm:items-center dark:border-white/10;
+  }
+
+  .quiz-score p {
+    @apply text-xs font-black uppercase tracking-[.18em] text-white/70;
+  }
+
+  .quiz-score h3 {
+    @apply mt-1 text-4xl font-black;
+  }
+
+  .quiz-score button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-black text-ink transition hover:-translate-y-0.5;
+  }
+
+  .quiz-card {
+    @apply rounded-[30px] p-6;
+  }
+
+  .quiz-number {
+    @apply mb-3 inline-flex rounded-full bg-pink-50 px-3 py-1 text-xs font-black text-petal dark:bg-white/10;
+  }
+
+  .quiz-card h3 {
+    @apply text-xl font-black leading-snug tracking-[-.02em] text-ink dark:text-white;
+  }
+
+  .option {
+    @apply rounded-2xl border border-pink-100 bg-white px-4 py-3 text-left text-sm font-bold text-ink transition hover:border-petal hover:bg-pink-50 dark:border-white/10 dark:bg-white/10 dark:text-white;
+  }
+
+  .option.right {
+    @apply border-emerald-400 bg-emerald-50 text-emerald-900 dark:bg-emerald-400/20 dark:text-emerald-100;
+  }
+
+  .option.wrong {
+    @apply border-red-300 bg-red-50 text-red-800 dark:bg-red-400/20 dark:text-red-100;
+  }
+
+  .explain {
+    @apply mt-4 flex items-start gap-2 rounded-2xl bg-slate-50 px-4 py-3 text-sm font-semibold leading-6 text-slate-600 dark:bg-white/10 dark:text-slate-300;
+  }
+
+  .section-mini-title {
+    @apply text-2xl font-black tracking-[-.03em] text-ink dark:text-white;
+  }
+
+  .revision-table {
+    @apply mt-5 grid overflow-hidden rounded-[24px] border border-pink-100 dark:border-white/10;
+  }
+
+  .revision-table div {
+    @apply grid gap-2 border-b border-pink-100 p-4 last:border-b-0 dark:border-white/10 md:grid-cols-[.75fr_1fr];
+  }
+
+  .revision-table strong {
+    @apply text-sm font-black text-petal;
+  }
+
+  .revision-table span {
+    @apply text-sm font-semibold text-slate-600 dark:text-slate-300;
+  }
+
+  .flashcard {
+    @apply flex min-h-[320px] cursor-pointer flex-col justify-center rounded-[34px] bg-gradient-to-br from-petal to-plum p-8 text-white transition hover:-translate-y-1;
+  }
+
+  .flashcard p {
+    @apply text-xs font-black uppercase tracking-[.2em] text-white/70;
+  }
+
+  .flashcard h3 {
+    @apply mt-8 text-4xl font-black tracking-[-.05em];
+  }
+
+  .flashcard div {
+    @apply mt-5 text-lg font-semibold leading-8 text-white/90;
+  }
+
+  .transform-card {
+    @apply flex items-center justify-center gap-3 rounded-[26px] p-5 text-center;
+  }
+
+  .transform-card span {
+    @apply text-sm font-black text-slate-500 dark:text-slate-300;
+  }
+
+  .transform-card strong {
+    @apply text-lg font-black text-petal;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
