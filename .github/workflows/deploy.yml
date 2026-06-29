@@ -45,6 +45,30 @@ jobs:
         run: |
           mkdir -p ./dist/chapter1
           cp -R ./chapter1-flowering-reproduction/dist/* ./dist/chapter1/
+      - name: Install Chapter 2 site dependencies
+        working-directory: ./chapter2-human-reproduction
+        run: pnpm install --frozen-lockfile
+      - name: Build Chapter 2 site
+        working-directory: ./chapter2-human-reproduction
+        run: pnpm run build
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/chapter2/
+      - name: Add Chapter 2 site to public build
+        run: |
+          mkdir -p ./dist/chapter2
+          cp -R ./chapter2-human-reproduction/dist/* ./dist/chapter2/
+      - name: Install Chapter 3 site dependencies
+        working-directory: ./chapter3-reproductive-health
+        run: pnpm install --frozen-lockfile
+      - name: Build Chapter 3 site
+        working-directory: ./chapter3-reproductive-health
+        run: pnpm run build
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/chapter3/
+      - name: Add Chapter 3 site to public build
+        run: |
+          mkdir -p ./dist/chapter3
+          cp -R ./chapter3-reproductive-health/dist/* ./dist/chapter3/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

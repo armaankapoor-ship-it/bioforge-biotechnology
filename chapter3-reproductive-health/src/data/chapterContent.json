@@ -1,0 +1,331 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH3",
+  "slug": "bioforge-reproductive-health",
+  "chapterNo": "Chapter 3",
+  "title": "Reproductive Health",
+  "subtitle": "A visual guide to reproductive well-being, contraception, population control, STIs, infertility, ART, MTP and responsible choices — built for Class 12 Biology and NEET revision.",
+  "heroBadge": "Class 12 Biology · Chapter 3 · NEET ready",
+  "theme": {
+    "accent": "#14b8a6",
+    "accent2": "#8b5cf6",
+    "accent3": "#f59e0b",
+    "soft": "#ccfbf1",
+    "ink": "#13251f",
+    "dark": "#061410"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": ["safe choices", "early diagnosis"],
+  "heroModel": {
+    "title": "Reproductive health shield",
+    "subtitle": "Drag to rotate · scroll to zoom",
+    "scene": "reproductiveHealth"
+  },
+  "roadmapTitle": "The chapter connects health, prevention, counselling and technology.",
+  "roadmapDescription": "Think of reproductive health as a complete system: awareness, safe practices, contraception, infection prevention, infertility support and ethical medical care.",
+  "flowchart": "flowchart LR\n  A[Reproductive health] --> B[Awareness + counselling]\n  B --> C[Population control]\n  C --> D[Contraceptive methods]\n  D --> E[MTP where legal + safe]\n  B --> F[STI prevention]\n  F --> G[Early diagnosis + treatment]\n  B --> H[Infertility support]\n  H --> I[ART: IVF, ZIFT, IUT, ICSI, AI]\n  I --> J[Ethics + responsible care]",
+  "roadmap": [
+    {
+      "title": "Meaning of reproductive health",
+      "summary": "Total well-being in reproductive aspects, not merely absence of disease."
+    },
+    {
+      "title": "Strategies and awareness",
+      "summary": "Education, counselling, safe practices and access to health services."
+    },
+    {
+      "title": "Population explosion",
+      "summary": "Rapid population growth, causes, consequences and birth-control need."
+    },
+    {
+      "title": "Contraception",
+      "summary": "Natural, barrier, IUD, oral, injectable, implant and surgical methods."
+    },
+    {
+      "title": "Medical termination of pregnancy",
+      "summary": "MTP must be medically safe, legal and ethically guided."
+    },
+    {
+      "title": "Sexually transmitted infections",
+      "summary": "Transmission, symptoms, prevention and early treatment."
+    },
+    {
+      "title": "Infertility",
+      "summary": "Failure to conceive despite unprotected intercourse can have male or female causes."
+    },
+    {
+      "title": "Assisted reproductive technologies",
+      "summary": "IVF, ZIFT, IUT, ICSI, GIFT and artificial insemination help selected infertility cases."
+    }
+  ],
+  "conceptTitle": "Reproductive health, made exam-clear.",
+  "conceptDescription": "The chapter is short but very fact-heavy. These cards organise the facts into prevention, control, diagnosis and assisted reproduction.",
+  "sections": [
+    {
+      "eyebrow": "Definition",
+      "title": "Meaning of reproductive health",
+      "description": "Reproductive health means physical, emotional, behavioural and social well-being in all reproduction-related aspects.",
+      "points": [
+        "It is broader than absence of reproductive disease.",
+        "It includes awareness, responsible behaviour and access to safe health care.",
+        "Adolescence education helps prevent myths, unsafe practices and infections.",
+        "Mother-child health programmes improve pregnancy and newborn outcomes."
+      ],
+      "neet": "NCERT definition includes total well-being, not only disease-free reproductive organs."
+    },
+    {
+      "eyebrow": "Awareness",
+      "title": "Strategies for reproductive health",
+      "description": "Good reproductive health depends on education, counselling, safe practices and medical support.",
+      "points": [
+        "Sex education should provide accurate information about reproductive organs, puberty and safe practices.",
+        "Couples should know birth-control options and infertility care.",
+        "Health services include antenatal care, delivery support and postnatal care.",
+        "Early detection of reproductive tract problems improves treatment outcomes."
+      ],
+      "neet": "Counselling and awareness are prevention tools, not just social messages."
+    },
+    {
+      "eyebrow": "Population",
+      "title": "Population explosion and birth control",
+      "description": "Rapid population growth increases pressure on resources, health services and education.",
+      "points": [
+        "Decline in death rate, maternal mortality and infant mortality can increase population growth.",
+        "Better medical care and increased reproductive age population contribute to growth.",
+        "Small-family norms and contraception help population stabilisation.",
+        "Government programmes encourage responsible family planning."
+      ],
+      "neet": "Population control is linked to contraception, education and delayed marriage."
+    },
+    {
+      "eyebrow": "Contraception",
+      "title": "Contraceptive methods",
+      "description": "Contraceptives prevent pregnancy by blocking gamete meeting, ovulation, implantation or gamete transport.",
+      "points": [
+        "Natural methods include periodic abstinence, withdrawal and lactational amenorrhea.",
+        "Barrier methods prevent sperm from reaching ovum and can reduce STI risk.",
+        "IUDs increase phagocytosis of sperms or suppress sperm motility/fertilising ability.",
+        "Oral pills inhibit ovulation and implantation and alter cervical mucus."
+      ],
+      "neet": "Lactational amenorrhea works only up to about six months after parturition when lactation is intense."
+    },
+    {
+      "eyebrow": "MTP",
+      "title": "Medical termination of pregnancy",
+      "description": "MTP is intentional termination of pregnancy under medical supervision and legal guidelines.",
+      "points": [
+        "It can be needed for medical, ethical or social reasons under legal rules.",
+        "Unsafe abortions are dangerous and must be avoided.",
+        "MTP should never be misused for sex-selective practices.",
+        "Medical supervision is essential for safety."
+      ],
+      "neet": "MTP is legal only under specific conditions and must be medically safe."
+    },
+    {
+      "eyebrow": "STIs",
+      "title": "Sexually transmitted infections",
+      "description": "STIs spread mainly through sexual contact and can damage reproductive health if untreated.",
+      "points": [
+        "Examples include gonorrhoea, syphilis, genital herpes, chlamydiasis, hepatitis B and HIV/AIDS.",
+        "Symptoms may include discharge, itching, pain, swelling or sores, but some infections may be silent.",
+        "Prevention includes safe sex, avoiding multiple partners and using condoms.",
+        "Early diagnosis and complete treatment are important."
+      ],
+      "neet": "Hepatitis B and HIV can also spread through blood and from mother to child."
+    },
+    {
+      "eyebrow": "Infertility",
+      "title": "Infertility and its causes",
+      "description": "Infertility is inability to produce children despite unprotected sexual cohabitation, often due to male or female factors.",
+      "points": [
+        "Causes may be physical, congenital, immunological, psychological or disease-related.",
+        "Male causes may include low sperm count or poor sperm motility.",
+        "Female causes may include ovulation, tubal or uterine problems.",
+        "Counselling and diagnosis should precede treatment."
+      ],
+      "neet": "Infertility is a couple-level problem; do not automatically assign it only to the female partner."
+    },
+    {
+      "eyebrow": "ART",
+      "title": "Assisted reproductive technologies",
+      "description": "ART helps selected infertile couples by handling gametes or embryos medically.",
+      "points": [
+        "IVF means fertilisation outside the body under simulated conditions.",
+        "ZIFT transfers zygote or early embryo up to 8 blastomeres into the fallopian tube.",
+        "IUT transfers embryo with more than 8 blastomeres into the uterus.",
+        "ICSI injects sperm directly into ovum; artificial insemination places semen into female tract."
+      ],
+      "neet": "ZIFT is up to 8 blastomeres; IUT is more than 8 blastomeres."
+    }
+  ],
+  "modelTitle": "Visual lab for prevention, infection and ART.",
+  "modelDescription": "The chapter is conceptual, so these original 3D models turn public-health ideas into memorable visual anchors.",
+  "models": [
+    {
+      "title": "Health shield",
+      "description": "Total reproductive well-being and safe choices.",
+      "scene": "reproductiveHealth"
+    },
+    {
+      "title": "Contraceptive methods",
+      "description": "Pill, barrier and IUD visual comparison.",
+      "scene": "contraception"
+    },
+    {
+      "title": "STI prevention",
+      "description": "Infection particles and prevention/diagnosis signal.",
+      "scene": "sti"
+    },
+    {
+      "title": "Population control",
+      "description": "Population growth and family-planning idea.",
+      "scene": "population"
+    },
+    {
+      "title": "ART laboratory",
+      "description": "IVF, embryo transfer and assisted reproduction.",
+      "scene": "artLab"
+    },
+    {
+      "title": "Counselling clinic",
+      "description": "Responsible care, diagnosis and ethics.",
+      "scene": "safeClinic"
+    }
+  ],
+  "highYield": [
+    "Reproductive health means total well-being in reproductive aspects.",
+    "Sex education helps remove myths and promotes responsible behaviour.",
+    "Contraception helps population control and reproductive planning.",
+    "Natural methods include periodic abstinence, withdrawal and lactational amenorrhea.",
+    "Lactational amenorrhea is effective only up to about six months with intense lactation.",
+    "Barrier methods reduce chances of both pregnancy and STIs.",
+    "IUDs can increase phagocytosis of sperms and reduce sperm motility/fertilising capacity.",
+    "Oral pills inhibit ovulation and implantation and alter cervical mucus.",
+    "Surgical methods are terminal and block gamete transport.",
+    "MTP must be safe, legal and medically supervised.",
+    "STIs may be symptomatic or silent.",
+    "HIV and hepatitis B can spread by sexual contact, blood and mother-to-child transmission.",
+    "Infertility may have male or female causes.",
+    "ZIFT transfers zygote/early embryo up to 8 blastomeres into fallopian tube.",
+    "IUT transfers embryo with more than 8 blastomeres into uterus."
+  ],
+  "mistakes": [
+    {
+      "title": "ZIFT vs IUT",
+      "body": "ZIFT is up to 8 blastomeres into the fallopian tube. IUT is more than 8 blastomeres into the uterus."
+    },
+    {
+      "title": "MTP is not casual",
+      "body": "MTP must be legal, medically supervised and ethically used. Unsafe abortions are dangerous."
+    },
+    {
+      "title": "Infertility blame trap",
+      "body": "Infertility can be due to either partner or combined factors, so it is treated as a couple-level issue."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Reproductive health means:",
+      "options": ["Only absence of STIs", "Total well-being in reproductive aspects", "Only fertility", "Only safe childbirth"],
+      "answer": 1,
+      "explain": "NCERT defines reproductive health as total well-being in all reproductive aspects."
+    },
+    {
+      "question": "Lactational amenorrhea is generally effective up to:",
+      "options": ["1 month", "6 months", "2 years", "10 years"],
+      "answer": 1,
+      "explain": "It is considered effective for about six months after parturition under intense lactation."
+    },
+    {
+      "question": "Which method also helps reduce STI transmission?",
+      "options": ["Condom", "Copper-T only", "Tubectomy", "Periodic abstinence"],
+      "answer": 0,
+      "explain": "Barrier methods like condoms reduce contact and lower STI transmission risk."
+    },
+    {
+      "question": "Copper-releasing IUDs mainly:",
+      "options": ["Increase sperm motility", "Suppress sperm motility and fertilising capacity", "Cause ovulation", "Produce hCG"],
+      "answer": 1,
+      "explain": "Copper ions suppress sperm motility and fertilising capacity."
+    },
+    {
+      "question": "Oral contraceptive pills mainly prevent pregnancy by:",
+      "options": ["Increasing ovulation", "Inhibiting ovulation and implantation", "Producing sperm antibodies only", "Increasing hCG"],
+      "answer": 1,
+      "explain": "Pills inhibit ovulation and implantation and alter cervical mucus."
+    },
+    {
+      "question": "Which STI can also spread through blood and mother-to-child transmission?",
+      "options": ["HIV", "Only gonorrhoea", "Only chlamydia", "Only syphilis"],
+      "answer": 0,
+      "explain": "HIV and hepatitis B can spread through blood and from infected mother to child."
+    },
+    {
+      "question": "In ZIFT, embryo stage transferred is usually:",
+      "options": ["More than 8 blastomeres into uterus", "Zygote/early embryo up to 8 blastomeres into fallopian tube", "Fetus into uterus", "Sperm into uterus"],
+      "answer": 1,
+      "explain": "ZIFT transfers zygote or early embryo up to 8 blastomeres into fallopian tube."
+    },
+    {
+      "question": "IUT means transfer of:",
+      "options": ["Sperm into vagina", "Embryo with more than 8 blastomeres into uterus", "Ovum into testis", "Zygote into ovary"],
+      "answer": 1,
+      "explain": "IUT transfers embryo with more than 8 blastomeres into the uterus."
+    },
+    {
+      "question": "ICSI involves:",
+      "options": ["Injecting sperm directly into ovum", "Injecting ovum into uterus", "Blocking vas deferens", "Removing placenta"],
+      "answer": 0,
+      "explain": "In ICSI, sperm is directly injected into the ovum."
+    },
+    {
+      "question": "Surgical contraceptive methods are called terminal because they:",
+      "options": ["Are temporary pills", "Block gamete transport permanently or long-term", "Increase fertility", "Treat STIs"],
+      "answer": 1,
+      "explain": "Vasectomy and tubectomy block gamete transport and are considered terminal methods."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Reproductive health",
+      "back": "Total physical, emotional, behavioural and social well-being in reproductive aspects."
+    },
+    {
+      "front": "Lactational amenorrhea",
+      "back": "Natural contraception due to absence of menstruation during intense lactation, effective about six months postpartum."
+    },
+    {
+      "front": "MTP",
+      "back": "Medical termination of pregnancy under legal and medically supervised conditions."
+    },
+    {
+      "front": "ZIFT",
+      "back": "Transfer of zygote or embryo up to 8 blastomeres into fallopian tube."
+    },
+    {
+      "front": "IUT",
+      "back": "Transfer of embryo with more than 8 blastomeres into uterus."
+    },
+    {
+      "front": "ICSI",
+      "back": "Intracytoplasmic sperm injection: direct injection of sperm into ovum."
+    }
+  ],
+  "revisionTable": [
+    ["Natural methods", "Periodic abstinence, withdrawal, lactational amenorrhea"],
+    ["Barrier methods", "Condoms, diaphragms, cervical caps, vaults"],
+    ["IUDs", "Copper-T, Cu7, LNG-20, Progestasert"],
+    ["Oral pills", "Inhibit ovulation/implantation and alter cervical mucus"],
+    ["Surgical methods", "Vasectomy and tubectomy block gamete transport"],
+    ["STI prevention", "Safe sex, condoms, early diagnosis, complete treatment"],
+    ["ART", "IVF, ZIFT, IUT, ICSI, GIFT and artificial insemination"]
+  ],
+  "transforms": [
+    ["ZIFT", "≤ 8 blastomeres"],
+    ["IUT", "> 8 blastomeres"],
+    ["Condom", "Barrier + STI protection"]
+  ]
+}

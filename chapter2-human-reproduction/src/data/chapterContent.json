@@ -1,0 +1,331 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH2",
+  "slug": "bioforge-human-reproduction",
+  "chapterNo": "Chapter 2",
+  "title": "Human Reproduction",
+  "subtitle": "From gamete formation to birth — a visual, NCERT-aligned and NEET-ready guide to the male system, female system, gametogenesis, menstrual cycle, fertilisation, pregnancy, parturition and lactation.",
+  "heroBadge": "Class 12 Biology · Chapter 2 · NEET ready",
+  "theme": {
+    "accent": "#0ea5e9",
+    "accent2": "#ec4899",
+    "accent3": "#22c55e",
+    "soft": "#e0f2fe",
+    "ink": "#142033",
+    "dark": "#08111f"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": ["gametogenesis", "fertilisation"],
+  "heroModel": {
+    "title": "Human reproduction overview",
+    "subtitle": "Drag to rotate · scroll to zoom",
+    "scene": "humanOverview"
+  },
+  "roadmapTitle": "The chapter moves from organs to gametes to embryo.",
+  "roadmapDescription": "Keep this order in mind: reproductive organs make gametes, hormones coordinate cycles, gametes fuse, embryo implants, pregnancy develops, birth and lactation complete the story.",
+  "flowchart": "flowchart LR\n  A[Male reproductive system] --> B[Spermatogenesis]\n  C[Female reproductive system] --> D[Oogenesis]\n  D --> E[Menstrual cycle]\n  B --> F[Fertilisation]\n  E --> F\n  F --> G[Cleavage + blastocyst]\n  G --> H[Implantation]\n  H --> I[Pregnancy + placenta]\n  I --> J[Parturition]\n  J --> K[Lactation]",
+  "roadmap": [
+    {
+      "title": "Male reproductive system",
+      "summary": "Testes, ducts, glands and penis form the male reproductive pathway."
+    },
+    {
+      "title": "Female reproductive system",
+      "summary": "Ovaries, oviducts, uterus, cervix, vagina and external genitalia support egg formation, fertilisation and pregnancy."
+    },
+    {
+      "title": "Spermatogenesis",
+      "summary": "Spermatogonia produce spermatozoa through mitosis, meiosis and spermiogenesis."
+    },
+    {
+      "title": "Oogenesis",
+      "summary": "Primary oocytes begin before birth and complete stages only around ovulation and fertilisation."
+    },
+    {
+      "title": "Menstrual cycle",
+      "summary": "Hormones coordinate menstrual, follicular, ovulatory and luteal phases."
+    },
+    {
+      "title": "Fertilisation and implantation",
+      "summary": "Sperm meets ovum in the ampullary-isthmic junction; blastocyst implants in the endometrium."
+    },
+    {
+      "title": "Pregnancy and placenta",
+      "summary": "Placenta supports exchange, endocrine signalling and fetal development."
+    },
+    {
+      "title": "Parturition and lactation",
+      "summary": "Foetal ejection reflex and oxytocin drive birth; prolactin supports milk production."
+    }
+  ],
+  "conceptTitle": "NCERT core, explained visually.",
+  "conceptDescription": "Every major heading is converted into a study card with the NEET line students usually miss.",
+  "sections": [
+    {
+      "eyebrow": "Male system",
+      "title": "Testis, ducts, glands and penis",
+      "description": "The male reproductive system produces sperm, stores and transports them, and adds glandular secretions to form semen.",
+      "points": [
+        "Testes lie in the scrotum because sperm formation needs a temperature lower than core body temperature.",
+        "Seminiferous tubules contain germ cells and Sertoli cells.",
+        "Leydig cells in interstitial spaces secrete androgens, mainly testosterone.",
+        "Epididymis, vas deferens, ejaculatory duct and urethra form the sperm transport pathway."
+      ],
+      "neet": "Sertoli cells nourish germ cells; Leydig cells produce testosterone."
+    },
+    {
+      "eyebrow": "Female system",
+      "title": "Ovary, oviduct, uterus and vagina",
+      "description": "The female system produces ova and provides sites for fertilisation, implantation, pregnancy and birth.",
+      "points": [
+        "Ovaries contain follicles at different stages and secrete estrogen and progesterone.",
+        "Oviduct has infundibulum, ampulla and isthmus.",
+        "Fertilisation usually occurs at the ampullary-isthmic junction.",
+        "Uterus has perimetrium, myometrium and endometrium."
+      ],
+      "neet": "Endometrium undergoes cyclic changes and is the implantation site for the blastocyst."
+    },
+    {
+      "eyebrow": "Male gamete",
+      "title": "Spermatogenesis and sperm structure",
+      "description": "Sperm production starts at puberty and converts diploid spermatogonia into haploid spermatozoa.",
+      "points": [
+        "Spermatogonia divide by mitosis to maintain stem cells and produce primary spermatocytes.",
+        "Meiosis I forms secondary spermatocytes; meiosis II forms spermatids.",
+        "Spermiogenesis converts spermatids into spermatozoa.",
+        "A sperm has head, neck, middle piece and tail; acrosome contains enzymes for ovum penetration."
+      ],
+      "neet": "Spermiation is release of sperm from Sertoli cells into the lumen, not the same as spermiogenesis."
+    },
+    {
+      "eyebrow": "Female gamete",
+      "title": "Oogenesis and follicular development",
+      "description": "Oogenesis begins before birth, pauses, resumes at puberty and completes only after sperm entry.",
+      "points": [
+        "Oogonia form primary oocytes during fetal life.",
+        "Primary oocytes are arrested in prophase I until puberty.",
+        "A secondary oocyte is released during ovulation and is arrested in metaphase II.",
+        "Completion of meiosis II occurs only if fertilisation happens."
+      ],
+      "neet": "The ovum released at ovulation is technically a secondary oocyte."
+    },
+    {
+      "eyebrow": "Hormone cycle",
+      "title": "Menstrual cycle",
+      "description": "The menstrual cycle is a hormone-linked cycle of ovarian and uterine changes.",
+      "points": [
+        "Menstrual phase: endometrium breaks down if fertilisation does not occur.",
+        "Follicular phase: follicles grow and estrogen rises.",
+        "LH surge triggers ovulation around the middle of the cycle.",
+        "Luteal phase: corpus luteum secretes progesterone to maintain endometrium."
+      ],
+      "neet": "LH surge is the immediate trigger for ovulation."
+    },
+    {
+      "eyebrow": "Fusion",
+      "title": "Fertilisation and cleavage",
+      "description": "Fertilisation restores diploidy and starts embryonic development through cleavage divisions.",
+      "points": [
+        "Capacitated sperm reaches the secondary oocyte.",
+        "Acrosomal enzymes help sperm penetrate ovum coverings.",
+        "Fusion of gamete membranes forms zygote.",
+        "Cleavage produces morula and then blastocyst."
+      ],
+      "neet": "Fertilisation normally occurs at the ampullary-isthmic junction of the oviduct."
+    },
+    {
+      "eyebrow": "Pregnancy",
+      "title": "Implantation, placenta and embryonic development",
+      "description": "Blastocyst attaches to endometrium and placenta becomes the exchange and endocrine interface.",
+      "points": [
+        "Blastocyst embeds in the endometrium during implantation.",
+        "Placenta exchanges gases, nutrients and wastes between mother and fetus.",
+        "Placenta secretes hCG, hPL, estrogen, progesterone and relaxin.",
+        "Umbilical cord connects fetus to placenta."
+      ],
+      "neet": "hCG maintains corpus luteum in early pregnancy and is detected in pregnancy tests."
+    },
+    {
+      "eyebrow": "Birth",
+      "title": "Parturition and lactation",
+      "description": "Birth is controlled by neuroendocrine feedback; milk production starts after delivery.",
+      "points": [
+        "Foetal ejection reflex begins from the fully developed fetus and placenta.",
+        "Oxytocin causes strong uterine contractions.",
+        "Positive feedback strengthens contractions until delivery.",
+        "Colostrum is rich in antibodies and protects the newborn."
+      ],
+      "neet": "Parturition is a neuroendocrine mechanism driven strongly by oxytocin."
+    }
+  ],
+  "modelTitle": "Rotate the chapter’s core structures.",
+  "modelDescription": "Original Three.js schematics help you understand shape, pathway and sequence without copied textbook diagrams.",
+  "models": [
+    {
+      "title": "Male reproductive pathway",
+      "description": "Testis, duct, gland and transport logic.",
+      "scene": "maleSystem"
+    },
+    {
+      "title": "Female reproductive pathway",
+      "description": "Ovary, oviduct, uterus and implantation zone.",
+      "scene": "femaleSystem"
+    },
+    {
+      "title": "Spermatogenesis lab",
+      "description": "Seminiferous tubule and sperm release concept.",
+      "scene": "spermatogenesis"
+    },
+    {
+      "title": "Oogenesis lab",
+      "description": "Follicle growth and ovum release.",
+      "scene": "oogenesis"
+    },
+    {
+      "title": "Menstrual cycle wheel",
+      "description": "Menstrual, follicular, ovulatory and luteal phases.",
+      "scene": "menstrualCycle"
+    },
+    {
+      "title": "Fertilisation to implantation",
+      "description": "Sperm, ovum, blastocyst and endometrium.",
+      "scene": "fertilization"
+    }
+  ],
+  "highYield": [
+    "Testes are outside the abdominal cavity to maintain lower temperature for spermatogenesis.",
+    "Seminiferous tubules contain male germ cells and Sertoli cells.",
+    "Leydig cells secrete testosterone.",
+    "Spermatogenesis starts at puberty; oogenesis starts before birth.",
+    "Spermiogenesis is conversion of spermatids into spermatozoa.",
+    "Spermiation is release of spermatozoa from Sertoli cells.",
+    "Acrosome contains enzymes that help sperm penetrate ovum coverings.",
+    "Fertilisation occurs at the ampullary-isthmic junction.",
+    "LH surge triggers ovulation.",
+    "Corpus luteum secretes progesterone.",
+    "Blastocyst implants in the endometrium.",
+    "Placenta secretes hCG, hPL, estrogen, progesterone and relaxin.",
+    "hCG is detected in pregnancy tests.",
+    "Oxytocin causes uterine contractions during parturition.",
+    "Colostrum is rich in antibodies."
+  ],
+  "mistakes": [
+    {
+      "title": "Spermiogenesis vs spermiation",
+      "body": "Spermiogenesis changes spermatids into spermatozoa; spermiation releases them from Sertoli cells."
+    },
+    {
+      "title": "Ovum at ovulation",
+      "body": "The released cell is a secondary oocyte arrested in metaphase II, not a fully completed ovum."
+    },
+    {
+      "title": "Fertilisation site",
+      "body": "The standard NCERT answer is ampullary-isthmic junction, not simply uterus or ovary."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which cells secrete testosterone in the testis?",
+      "options": ["Sertoli cells", "Leydig cells", "Spermatids", "Oogonia"],
+      "answer": 1,
+      "explain": "Leydig cells, present in interstitial spaces, produce testosterone."
+    },
+    {
+      "question": "The immediate trigger for ovulation is:",
+      "options": ["FSH fall", "LH surge", "hCG secretion", "Prolactin release"],
+      "answer": 1,
+      "explain": "A surge in LH around mid-cycle triggers ovulation."
+    },
+    {
+      "question": "Fertilisation normally occurs in the:",
+      "options": ["Cervix", "Uterus", "Ampullary-isthmic junction", "Vagina"],
+      "answer": 2,
+      "explain": "NCERT specifies the ampullary-isthmic junction of the oviduct."
+    },
+    {
+      "question": "Spermiogenesis refers to:",
+      "options": ["Sperm release", "Spermatid to sperm transformation", "Meiosis I", "Testosterone secretion"],
+      "answer": 1,
+      "explain": "Spermiogenesis is the transformation of spermatids into spermatozoa."
+    },
+    {
+      "question": "Which hormone is detected in pregnancy tests?",
+      "options": ["LH", "hCG", "FSH", "Oxytocin"],
+      "answer": 1,
+      "explain": "hCG appears in maternal blood/urine after implantation."
+    },
+    {
+      "question": "The acrosome is important because it:",
+      "options": ["Produces testosterone", "Contains enzymes for ovum penetration", "Stores milk", "Forms placenta"],
+      "answer": 1,
+      "explain": "Acrosomal enzymes help sperm penetrate the ovum coverings."
+    },
+    {
+      "question": "Corpus luteum mainly secretes:",
+      "options": ["Progesterone", "Oxytocin", "Relaxin only", "hPL only"],
+      "answer": 0,
+      "explain": "Progesterone maintains the endometrium in the luteal phase."
+    },
+    {
+      "question": "Implantation is embedding of:",
+      "options": ["Morula in ovary", "Blastocyst in endometrium", "Sperm in cervix", "Oocyte in follicle"],
+      "answer": 1,
+      "explain": "The blastocyst embeds in the uterine endometrium."
+    },
+    {
+      "question": "Parturition is mainly driven by:",
+      "options": ["Thyroxine", "Oxytocin", "Insulin", "Melatonin"],
+      "answer": 1,
+      "explain": "Oxytocin strengthens uterine contractions in a positive feedback loop."
+    },
+    {
+      "question": "Colostrum is valuable because it is rich in:",
+      "options": ["Antibodies", "Starch", "DNA polymerase", "Bile salts"],
+      "answer": 0,
+      "explain": "Colostrum provides passive immunity to the newborn."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Sertoli cell",
+      "back": "Nourishes developing male germ cells inside seminiferous tubules."
+    },
+    {
+      "front": "Leydig cell",
+      "back": "Interstitial testis cell that secretes testosterone."
+    },
+    {
+      "front": "LH surge",
+      "back": "Mid-cycle hormonal spike that triggers ovulation."
+    },
+    {
+      "front": "hCG",
+      "back": "Placental hormone used in pregnancy detection."
+    },
+    {
+      "front": "Implantation",
+      "back": "Attachment and embedding of blastocyst in endometrium."
+    },
+    {
+      "front": "Parturition",
+      "back": "Birth process caused by neuroendocrine reflex and oxytocin-driven contractions."
+    }
+  ],
+  "revisionTable": [
+    ["Spermatogenesis", "Spermatogonia → primary spermatocyte → secondary spermatocyte → spermatid → spermatozoa"],
+    ["Oogenesis", "Oogonia → primary oocyte → secondary oocyte → ovum after fertilisation"],
+    ["Menstrual cycle", "Menstrual → follicular → ovulation → luteal"],
+    ["Fertilisation", "Sperm + secondary oocyte at ampullary-isthmic junction"],
+    ["Cleavage", "Zygote → morula → blastocyst"],
+    ["Implantation", "Blastocyst embeds in endometrium"],
+    ["Birth", "Foetal ejection reflex → oxytocin → uterine contractions"]
+  ],
+  "transforms": [
+    ["Spermatid", "Spermatozoon"],
+    ["Zygote", "Blastocyst"],
+    ["Corpus luteum", "Progesterone source"]
+  ]
+}

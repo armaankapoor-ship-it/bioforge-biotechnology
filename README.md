@@ -81,6 +81,13 @@ Example: if your username is `armaan` and repository is `bioforge-biotechnology`
 https://armaan.github.io/bioforge-biotechnology/
 ```
 
+## Published chapter sites in this repository
+
+- Biotechnology: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/`
+- Chapter 1, Sexual Reproduction in Flowering Plants: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter1/`
+- Chapter 2, Human Reproduction: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter2/`
+- Chapter 3, Reproductive Health: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter3/`
+
 ## Project structure
 
 ```text
