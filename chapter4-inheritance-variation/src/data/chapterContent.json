@@ -1,0 +1,414 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH4",
+  "slug": "bioforge-inheritance-variation",
+  "chapterNo": "Chapter 4",
+  "title": "Principles of Inheritance and Variation",
+  "subtitle": "From Mendelian ratios to pedigree analysis, linkage, mutation and genetic disorders - a visual NEET-ready genetics studio.",
+  "heroBadge": "Class 12 Biology - Chapter 4 - NEET ready",
+  "theme": {
+    "accent": "#7c3aed",
+    "accent2": "#0ea5e9",
+    "accent3": "#22c55e",
+    "soft": "#ede9fe",
+    "ink": "#201633",
+    "dark": "#0d0820"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": [
+    "alleles",
+    "pedigree"
+  ],
+  "heroModel": {
+    "title": "Inheritance logic lab",
+    "subtitle": "Drag to rotate - scroll to zoom",
+    "scene": "inheritanceLab"
+  },
+  "roadmapTitle": "Genetics moves from crosses to chromosomes to human disorders.",
+  "roadmapDescription": "Keep the flow simple: Mendel observed ratios, chromosomes explained them, linkage modified them, pedigree tracks them, and mutation changes them.",
+  "flowchart": "flowchart LR\n  A[Mendel experiments] --> B[Law of dominance]\n  B --> C[Segregation]\n  C --> D[Independent assortment]\n  D --> E[Extensions of Mendelism]\n  E --> F[Chromosomal theory]\n  F --> G[Linkage and recombination]\n  G --> H[Pedigree analysis]\n  H --> I[Genetic disorders]",
+  "roadmap": [
+    {
+      "title": "Mendelian inheritance",
+      "summary": "Monohybrid and dihybrid crosses reveal predictable inheritance ratios."
+    },
+    {
+      "title": "Laws of inheritance",
+      "summary": "Dominance, segregation and independent assortment explain allele behavior."
+    },
+    {
+      "title": "Beyond Mendel",
+      "summary": "Incomplete dominance, codominance, multiple alleles and polygenic inheritance modify simple ratios."
+    },
+    {
+      "title": "Chromosomal theory",
+      "summary": "Genes are located on chromosomes and move during meiosis."
+    },
+    {
+      "title": "Linkage and recombination",
+      "summary": "Linked genes travel together, while crossing over creates new combinations."
+    },
+    {
+      "title": "Sex determination",
+      "summary": "XY, XO, ZW and haplodiploid systems decide sex in different organisms."
+    },
+    {
+      "title": "Pedigree analysis",
+      "summary": "Family trees help trace autosomal and sex-linked traits."
+    },
+    {
+      "title": "Genetic disorders",
+      "summary": "Mendelian and chromosomal disorders arise from gene or chromosome changes."
+    }
+  ],
+  "conceptTitle": "Inheritance made visual and ratio-clear.",
+  "conceptDescription": "Use each card as a small mental model: allele pair, gamete split, fertilisation, phenotype ratio, exception or disorder.",
+  "sections": [
+    {
+      "eyebrow": "Mendel",
+      "title": "Mendelian crosses and test cross",
+      "description": "Mendel used pea plant traits with clear alternatives and followed inheritance across generations.",
+      "points": [
+        "Monohybrid cross tracks one character and gives 3:1 phenotype ratio in F2 for complete dominance.",
+        "Genotypic ratio in monohybrid F2 is 1:2:1.",
+        "Dihybrid F2 ratio is 9:3:3:1 when genes assort independently.",
+        "Test cross uses a recessive parent to reveal unknown genotype."
+      ],
+      "neet": "Test cross ratio 1:1 suggests heterozygous monohybrid parent."
+    },
+    {
+      "eyebrow": "Laws",
+      "title": "Dominance, segregation and independent assortment",
+      "description": "Mendelian laws describe how alleles express and separate during gamete formation.",
+      "points": [
+        "Dominance: one allele can mask another in heterozygous condition.",
+        "Segregation: allele pairs separate during gamete formation.",
+        "Independent assortment: alleles of different genes assort independently if unlinked.",
+        "Segregation has no exception among Mendelian laws."
+      ],
+      "neet": "Law of segregation is also called purity of gametes."
+    },
+    {
+      "eyebrow": "Extensions",
+      "title": "Incomplete dominance and codominance",
+      "description": "Some traits do not follow simple dominant-recessive expression.",
+      "points": [
+        "Incomplete dominance gives an intermediate phenotype in heterozygote.",
+        "Codominance expresses both alleles together.",
+        "AB blood group shows codominance between IA and IB.",
+        "Multiple alleles mean more than two allelic forms exist in a population."
+      ],
+      "neet": "ABO blood group involves multiple alleles and codominance."
+    },
+    {
+      "eyebrow": "Chromosomes",
+      "title": "Chromosomal theory of inheritance",
+      "description": "Sutton and Boveri connected Mendel factors with chromosome behavior during meiosis.",
+      "points": [
+        "Chromosomes occur in pairs like alleles.",
+        "Homologous chromosomes segregate during meiosis.",
+        "Gametes receive one chromosome from each homologous pair.",
+        "Fertilisation restores diploid chromosome number."
+      ],
+      "neet": "Chromosomal movement during meiosis physically explains Mendelian segregation."
+    },
+    {
+      "eyebrow": "Linkage",
+      "title": "Linkage, recombination and mapping",
+      "description": "Genes on the same chromosome may not assort independently.",
+      "points": [
+        "Linked genes are inherited together more often.",
+        "Crossing over produces recombinants.",
+        "Recombination frequency helps map gene distance.",
+        "More distance between genes usually means more recombination."
+      ],
+      "neet": "One map unit equals 1 percent recombination frequency."
+    },
+    {
+      "eyebrow": "Sex",
+      "title": "Sex determination systems",
+      "description": "Different organisms use different chromosome systems for sex determination.",
+      "points": [
+        "Humans follow XX-XY system.",
+        "Grasshopper shows XX-XO system.",
+        "Birds follow ZZ-ZW system.",
+        "Honeybee uses haplodiploidy where males are haploid."
+      ],
+      "neet": "Father decides the sex of a human child because sperm can carry X or Y."
+    },
+    {
+      "eyebrow": "Pedigree",
+      "title": "Pedigree analysis",
+      "description": "Pedigree charts track inheritance of traits through families.",
+      "points": [
+        "Autosomal dominant traits can appear in every generation.",
+        "Autosomal recessive traits may skip generations.",
+        "X-linked recessive traits are more frequent in males.",
+        "Carrier females can transmit X-linked traits."
+      ],
+      "neet": "A criss-cross pattern is common in X-linked inheritance."
+    },
+    {
+      "eyebrow": "Disorders",
+      "title": "Mendelian and chromosomal disorders",
+      "description": "Genetic disorders may result from single gene changes or chromosome number changes.",
+      "points": [
+        "Sickle-cell anaemia is autosomal recessive.",
+        "Haemophilia is X-linked recessive.",
+        "Down syndrome is trisomy 21.",
+        "Turner syndrome is XO and Klinefelter syndrome is XXY."
+      ],
+      "neet": "Down syndrome is caused by an extra copy of chromosome 21."
+    }
+  ],
+  "modelTitle": "Rotate genetics as structure, not just ratios.",
+  "modelDescription": "Original 3D schematics connect allele position, crossing over, pedigree flow and inheritance logic.",
+  "models": [
+    {
+      "title": "Allele and Punnett lab",
+      "description": "Alleles on chromosomes plus Punnett square logic.",
+      "scene": "inheritanceLab"
+    },
+    {
+      "title": "Pedigree tree",
+      "description": "Family inheritance as connected nodes.",
+      "scene": "pedigreeTree"
+    },
+    {
+      "title": "Crossing-over model",
+      "description": "Linked chromosomes exchanging segments.",
+      "scene": "chromosomeCrossover"
+    },
+    {
+      "title": "Gene expression anchor",
+      "description": "How inherited DNA becomes trait-making product.",
+      "scene": "molecularDogma"
+    },
+    {
+      "title": "Population genetics curve",
+      "description": "Allele frequency idea as population change.",
+      "scene": "ecologyPopulation"
+    },
+    {
+      "title": "Disorder tracing board",
+      "description": "Affected trait tracking across generations.",
+      "scene": "pedigreeTree"
+    }
+  ],
+  "highYield": [
+    "Monohybrid phenotypic ratio is 3:1 and genotypic ratio is 1:2:1.",
+    "Dihybrid ratio is 9:3:3:1 for independent assortment.",
+    "Law of segregation has no exception.",
+    "Test cross reveals unknown genotype.",
+    "Incomplete dominance gives intermediate phenotype.",
+    "Codominance expresses both alleles.",
+    "ABO blood group shows multiple alleles and codominance.",
+    "Linked genes show reduced recombination.",
+    "Recombination frequency helps gene mapping.",
+    "Father determines sex in humans.",
+    "Haemophilia is X-linked recessive.",
+    "Sickle-cell anaemia is autosomal recessive.",
+    "Down syndrome is trisomy 21.",
+    "Turner syndrome is XO.",
+    "Klinefelter syndrome is XXY."
+  ],
+  "mistakes": [
+    {
+      "title": "Phenotype vs genotype ratio",
+      "body": "Monohybrid F2 phenotype is 3:1, but genotype is 1:2:1."
+    },
+    {
+      "title": "Dominance is not strength",
+      "body": "Dominant allele is expressed in heterozygote; it is not necessarily more common or biologically stronger."
+    },
+    {
+      "title": "Linkage modifies assortment",
+      "body": "Linked genes do not show independent assortment unless crossing over separates them."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "The genotypic ratio of a monohybrid F2 cross is:",
+      "options": [
+        "3:1",
+        "1:2:1",
+        "9:3:3:1",
+        "1:1"
+      ],
+      "answer": 1,
+      "explain": "Complete dominance gives 1 homozygous dominant : 2 heterozygous : 1 homozygous recessive."
+    },
+    {
+      "question": "A test cross is performed with:",
+      "options": [
+        "Two dominant parents",
+        "A recessive parent",
+        "Two hybrids only",
+        "An unknown dominant parent and another dominant parent"
+      ],
+      "answer": 1,
+      "explain": "The recessive parent reveals whether the dominant-looking individual is homozygous or heterozygous."
+    },
+    {
+      "question": "AB blood group is an example of:",
+      "options": [
+        "Incomplete dominance",
+        "Codominance",
+        "Linkage only",
+        "Aneuploidy"
+      ],
+      "answer": 1,
+      "explain": "IA and IB are expressed together."
+    },
+    {
+      "question": "Linked genes are found on:",
+      "options": [
+        "Different chromosomes only",
+        "Same chromosome",
+        "Mitochondria only",
+        "Ribosomes"
+      ],
+      "answer": 1,
+      "explain": "Genes on the same chromosome tend to be inherited together."
+    },
+    {
+      "question": "Down syndrome is caused by:",
+      "options": [
+        "Monosomy X",
+        "Trisomy 21",
+        "XXY",
+        "Point mutation only"
+      ],
+      "answer": 1,
+      "explain": "Down syndrome is trisomy of chromosome 21."
+    },
+    {
+      "question": "Haemophilia is usually:",
+      "options": [
+        "Autosomal dominant",
+        "X-linked recessive",
+        "Y-linked dominant",
+        "Mitochondrial only"
+      ],
+      "answer": 1,
+      "explain": "NCERT treats haemophilia as X-linked recessive."
+    },
+    {
+      "question": "Human male genotype is:",
+      "options": [
+        "XX",
+        "XY",
+        "XO",
+        "ZZ"
+      ],
+      "answer": 1,
+      "explain": "Human males are XY."
+    },
+    {
+      "question": "One map unit equals:",
+      "options": [
+        "10 percent recombination",
+        "1 percent recombination",
+        "No recombination",
+        "50 percent recombination"
+      ],
+      "answer": 1,
+      "explain": "A centimorgan/map unit corresponds to 1 percent recombination."
+    },
+    {
+      "question": "Law of segregation is also called:",
+      "options": [
+        "Law of purity of gametes",
+        "Law of dominance only",
+        "Law of linkage",
+        "Hardy-Weinberg law"
+      ],
+      "answer": 0,
+      "explain": "Alleles separate so gametes carry one allele."
+    },
+    {
+      "question": "Sickle-cell anaemia is:",
+      "options": [
+        "Autosomal recessive",
+        "X-linked dominant",
+        "Trisomy",
+        "Monosomy"
+      ],
+      "answer": 0,
+      "explain": "Sickle-cell anaemia is an autosomal recessive Mendelian disorder."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Test cross",
+      "back": "Cross with homozygous recessive parent to identify genotype."
+    },
+    {
+      "front": "Codominance",
+      "back": "Both alleles express in heterozygote, e.g. AB blood group."
+    },
+    {
+      "front": "Linkage",
+      "back": "Genes on same chromosome inherited together more often."
+    },
+    {
+      "front": "Recombination",
+      "back": "New allele combinations due to crossing over."
+    },
+    {
+      "front": "Aneuploidy",
+      "back": "Gain or loss of chromosomes, e.g. trisomy 21."
+    },
+    {
+      "front": "Pedigree",
+      "back": "Family chart used to trace trait inheritance."
+    }
+  ],
+  "revisionTable": [
+    [
+      "Monohybrid",
+      "Phenotype 3:1, genotype 1:2:1"
+    ],
+    [
+      "Dihybrid",
+      "Phenotype 9:3:3:1"
+    ],
+    [
+      "Incomplete dominance",
+      "Heterozygote intermediate"
+    ],
+    [
+      "Codominance",
+      "Both alleles expressed"
+    ],
+    [
+      "Linkage",
+      "Same chromosome genes travel together"
+    ],
+    [
+      "Down syndrome",
+      "Trisomy 21"
+    ],
+    [
+      "Haemophilia",
+      "X-linked recessive"
+    ]
+  ],
+  "transforms": [
+    [
+      "Allele pair",
+      "Gametes"
+    ],
+    [
+      "Crossing over",
+      "Recombinants"
+    ],
+    [
+      "Pedigree",
+      "Inheritance pattern"
+    ]
+  ]
+}

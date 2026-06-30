@@ -1,0 +1,414 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH7",
+  "slug": "bioforge-human-health-disease",
+  "chapterNo": "Chapter 7",
+  "title": "Human Health and Disease",
+  "subtitle": "Immunity, common diseases, AIDS, cancer, drugs, alcohol and adolescent health - a premium visual clinical revision guide.",
+  "heroBadge": "Class 12 Biology - Chapter 7 - NEET ready",
+  "theme": {
+    "accent": "#dc2626",
+    "accent2": "#2563eb",
+    "accent3": "#16a34a",
+    "soft": "#fee2e2",
+    "ink": "#311415",
+    "dark": "#160707"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": [
+    "immunity",
+    "prevention"
+  ],
+  "heroModel": {
+    "title": "Immune defense model",
+    "subtitle": "Drag to rotate - scroll to zoom",
+    "scene": "immunityDefense"
+  },
+  "roadmapTitle": "Health is maintained by prevention, immunity and responsible choices.",
+  "roadmapDescription": "Learn disease examples as cause -> transmission -> symptoms -> prevention, then connect immunity, cancer and substance abuse.",
+  "flowchart": "flowchart LR\n  A[Health] --> B[Pathogens]\n  B --> C[Common diseases]\n  C --> D[Immunity]\n  D --> E[Vaccination]\n  C --> F[AIDS]\n  C --> G[Cancer]\n  A --> H[Drugs and alcohol]\n  H --> I[Prevention and support]",
+  "roadmap": [
+    {
+      "title": "Meaning of health",
+      "summary": "Physical, mental and social well-being, not just absence of disease."
+    },
+    {
+      "title": "Common diseases",
+      "summary": "Pathogens cause infectious diseases with specific transmission routes."
+    },
+    {
+      "title": "Innate immunity",
+      "summary": "Non-specific barriers and cells act quickly."
+    },
+    {
+      "title": "Acquired immunity",
+      "summary": "Specific lymphocyte response with memory."
+    },
+    {
+      "title": "AIDS",
+      "summary": "HIV attacks helper T cells and weakens immunity."
+    },
+    {
+      "title": "Cancer",
+      "summary": "Uncontrolled cell division and metastasis."
+    },
+    {
+      "title": "Drugs and alcohol",
+      "summary": "Addiction, dependence and health/social consequences."
+    },
+    {
+      "title": "Prevention",
+      "summary": "Hygiene, vaccination, diagnosis, counselling and support."
+    }
+  ],
+  "conceptTitle": "Clinical facts organised for fast recall.",
+  "conceptDescription": "The chapter becomes easy when every disease is remembered by pathogen, spread, symptoms and prevention.",
+  "sections": [
+    {
+      "eyebrow": "Health",
+      "title": "Health and disease basics",
+      "description": "Health includes physical, mental and social well-being.",
+      "points": [
+        "Disease can be infectious or non-infectious.",
+        "Pathogens include viruses, bacteria, protozoans, fungi and helminths.",
+        "Lifestyle and environment influence health.",
+        "Prevention is often easier than treatment."
+      ],
+      "neet": "WHO-style definition includes complete well-being."
+    },
+    {
+      "eyebrow": "Diseases",
+      "title": "Common infectious diseases",
+      "description": "NCERT examples include typhoid, pneumonia, common cold, malaria, amoebiasis, ascariasis and ringworm.",
+      "points": [
+        "Typhoid is caused by Salmonella typhi.",
+        "Pneumonia can be caused by Streptococcus pneumoniae and Haemophilus influenzae.",
+        "Malaria is caused by Plasmodium and spread by female Anopheles mosquito.",
+        "Amoebiasis is caused by Entamoeba histolytica."
+      ],
+      "neet": "Female Anopheles transmits malaria."
+    },
+    {
+      "eyebrow": "Innate",
+      "title": "Innate immunity",
+      "description": "Innate immunity is non-specific defense present from birth.",
+      "points": [
+        "Physical barriers include skin and mucous lining.",
+        "Physiological barriers include acid, saliva and tears.",
+        "Cellular barriers include phagocytes and NK cells.",
+        "Cytokine barriers include interferons."
+      ],
+      "neet": "Interferons protect non-infected cells from viral infection."
+    },
+    {
+      "eyebrow": "Acquired",
+      "title": "Acquired immunity and vaccination",
+      "description": "Acquired immunity is specific and has memory.",
+      "points": [
+        "B cells produce antibodies.",
+        "T cells support cellular immunity.",
+        "Primary response is slow; secondary response is faster and stronger.",
+        "Vaccines create immunological memory."
+      ],
+      "neet": "Memory cells make secondary response faster."
+    },
+    {
+      "eyebrow": "AIDS",
+      "title": "HIV and AIDS",
+      "description": "HIV destroys helper T lymphocytes and causes immunodeficiency.",
+      "points": [
+        "HIV spreads through sexual contact, infected blood, shared needles and mother to child.",
+        "HIV infects macrophages and T helper cells.",
+        "AIDS causes vulnerability to opportunistic infections.",
+        "ELISA can help detect HIV infection."
+      ],
+      "neet": "HIV does not spread through casual contact."
+    },
+    {
+      "eyebrow": "Cancer",
+      "title": "Cancer biology",
+      "description": "Cancer involves uncontrolled cell division and spread.",
+      "points": [
+        "Proto-oncogenes can become oncogenes.",
+        "Tumours may be benign or malignant.",
+        "Metastasis is spread of cancer cells to distant sites.",
+        "Radiation, chemicals and viruses can be carcinogenic."
+      ],
+      "neet": "Metastasis is a key feature of malignant tumours."
+    },
+    {
+      "eyebrow": "Substance",
+      "title": "Drugs, alcohol and dependence",
+      "description": "Substance abuse can lead to tolerance, dependence and withdrawal symptoms.",
+      "points": [
+        "Opioids bind opioid receptors.",
+        "Cannabinoids affect brain and cardiovascular system.",
+        "Cocaine interferes with dopamine transport.",
+        "Adolescents are especially vulnerable to peer pressure."
+      ],
+      "neet": "Addiction is psychological attachment; dependence causes withdrawal symptoms."
+    },
+    {
+      "eyebrow": "Prevention",
+      "title": "Prevention and support",
+      "description": "Disease prevention combines hygiene, vaccination, early diagnosis and counselling.",
+      "points": [
+        "Safe water and sanitation prevent many infections.",
+        "Vector control reduces mosquito-borne disease.",
+        "Vaccination prevents many serious infections.",
+        "Counselling and family support help substance-abuse recovery."
+      ],
+      "neet": "Prevention and early detection are repeatedly tested themes."
+    }
+  ],
+  "modelTitle": "3D health defense lab.",
+  "modelDescription": "Immunity, pathogens, diagnosis and prevention become visual anchors.",
+  "models": [
+    {
+      "title": "Immune defense",
+      "description": "Shield, antibodies and pathogens.",
+      "scene": "immunityDefense"
+    },
+    {
+      "title": "Pathogen cluster",
+      "description": "Infection particles and prevention signal.",
+      "scene": "sti"
+    },
+    {
+      "title": "Vaccination memory",
+      "description": "Defensive memory as shield model.",
+      "scene": "safeClinic"
+    },
+    {
+      "title": "Cancer warning model",
+      "description": "Uncontrolled cell cluster as risk anchor.",
+      "scene": "microbeFactory"
+    },
+    {
+      "title": "Clinical care dashboard",
+      "description": "Counselling and diagnosis.",
+      "scene": "reproductiveHealth"
+    },
+    {
+      "title": "Population prevention",
+      "description": "Disease spread and prevention at population level.",
+      "scene": "ecologyPopulation"
+    }
+  ],
+  "highYield": [
+    "Health includes physical, mental and social well-being.",
+    "Typhoid is caused by Salmonella typhi.",
+    "Malaria is caused by Plasmodium.",
+    "Female Anopheles transmits malaria.",
+    "Entamoeba histolytica causes amoebiasis.",
+    "Innate immunity is non-specific.",
+    "Acquired immunity is specific and has memory.",
+    "B cells produce antibodies.",
+    "T cells mediate cellular immunity.",
+    "Interferons are cytokine barriers.",
+    "HIV attacks helper T cells.",
+    "ELISA can detect HIV.",
+    "Cancer cells show uncontrolled division.",
+    "Metastasis means spread of cancer.",
+    "Addiction and dependence are not the same."
+  ],
+  "mistakes": [
+    {
+      "title": "HIV transmission myth",
+      "body": "HIV does not spread by touch, sharing food or casual contact."
+    },
+    {
+      "title": "Primary vs secondary response",
+      "body": "Secondary immune response is faster and stronger due to memory cells."
+    },
+    {
+      "title": "Benign vs malignant",
+      "body": "Malignant tumours invade and metastasise; benign tumours usually remain localised."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Malaria is transmitted by:",
+      "options": [
+        "Male Anopheles",
+        "Female Anopheles",
+        "Housefly",
+        "Culex only"
+      ],
+      "answer": 1,
+      "explain": "Female Anopheles mosquito transmits Plasmodium."
+    },
+    {
+      "question": "Typhoid is caused by:",
+      "options": [
+        "Salmonella typhi",
+        "Plasmodium",
+        "HIV",
+        "Entamoeba"
+      ],
+      "answer": 0,
+      "explain": "Salmonella typhi causes typhoid."
+    },
+    {
+      "question": "Antibodies are produced by:",
+      "options": [
+        "B lymphocytes",
+        "RBCs",
+        "Platelets",
+        "Nephrons"
+      ],
+      "answer": 0,
+      "explain": "B cells/plasma cells produce antibodies."
+    },
+    {
+      "question": "Interferons are part of:",
+      "options": [
+        "Cytokine barrier",
+        "Physical barrier only",
+        "Digestive enzyme",
+        "Hormone cycle"
+      ],
+      "answer": 0,
+      "explain": "Interferons are cytokines released during viral infection."
+    },
+    {
+      "question": "HIV primarily reduces:",
+      "options": [
+        "Helper T cells",
+        "Red blood cells only",
+        "Platelets only",
+        "Bone calcium"
+      ],
+      "answer": 0,
+      "explain": "HIV infects and destroys helper T lymphocytes."
+    },
+    {
+      "question": "Metastasis means:",
+      "options": [
+        "Cancer spread",
+        "Vaccine memory",
+        "Antibody production",
+        "Fever"
+      ],
+      "answer": 0,
+      "explain": "Malignant cancer cells can spread to distant sites."
+    },
+    {
+      "question": "ELISA is associated with diagnosis of:",
+      "options": [
+        "HIV infection",
+        "Sickle-cell only",
+        "Down syndrome only",
+        "Ovulation"
+      ],
+      "answer": 0,
+      "explain": "ELISA is used in HIV detection."
+    },
+    {
+      "question": "Secondary immune response is faster due to:",
+      "options": [
+        "Memory cells",
+        "No lymphocytes",
+        "RBCs",
+        "Skin keratin only"
+      ],
+      "answer": 0,
+      "explain": "Memory cells respond quickly."
+    },
+    {
+      "question": "Amoebiasis is caused by:",
+      "options": [
+        "Entamoeba histolytica",
+        "Salmonella typhi",
+        "Rhizobium",
+        "Yeast"
+      ],
+      "answer": 0,
+      "explain": "Entamoeba histolytica causes amoebiasis."
+    },
+    {
+      "question": "Dependence on drugs often causes:",
+      "options": [
+        "Withdrawal symptoms",
+        "Guaranteed immunity",
+        "No effect",
+        "Photosynthesis"
+      ],
+      "answer": 0,
+      "explain": "Dependence can produce withdrawal symptoms when drug is stopped."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Innate immunity",
+      "back": "Non-specific defense present from birth."
+    },
+    {
+      "front": "Acquired immunity",
+      "back": "Specific response with memory."
+    },
+    {
+      "front": "Interferon",
+      "back": "Cytokine barrier against viral infection."
+    },
+    {
+      "front": "HIV target",
+      "back": "Helper T lymphocytes."
+    },
+    {
+      "front": "Metastasis",
+      "back": "Spread of malignant cancer cells."
+    },
+    {
+      "front": "Addiction",
+      "back": "Psychological attachment to substance."
+    }
+  ],
+  "revisionTable": [
+    [
+      "Malaria",
+      "Plasmodium via female Anopheles"
+    ],
+    [
+      "Typhoid",
+      "Salmonella typhi"
+    ],
+    [
+      "Amoebiasis",
+      "Entamoeba histolytica"
+    ],
+    [
+      "Innate immunity",
+      "Non-specific barriers"
+    ],
+    [
+      "Acquired immunity",
+      "Specific memory response"
+    ],
+    [
+      "AIDS",
+      "HIV reduces helper T cells"
+    ],
+    [
+      "Cancer",
+      "Uncontrolled division and metastasis"
+    ]
+  ],
+  "transforms": [
+    [
+      "Vaccine",
+      "Memory cells"
+    ],
+    [
+      "HIV infection",
+      "Low helper T cells"
+    ],
+    [
+      "Benign tumour",
+      "Malignant risk if invasive"
+    ]
+  ]
+}

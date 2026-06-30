@@ -33,42 +33,37 @@ jobs:
       - run: pnpm run build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
-      - name: Install Chapter 1 site dependencies
-        working-directory: ./chapter1-flowering-reproduction
-        run: pnpm install --frozen-lockfile
-      - name: Build Chapter 1 site
-        working-directory: ./chapter1-flowering-reproduction
-        run: pnpm run build
+      - name: Build chapter websites
+        shell: bash
         env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/chapter1/
-      - name: Add Chapter 1 site to public build
+          REPO_NAME: ${{ github.event.repository.name }}
         run: |
-          mkdir -p ./dist/chapter1
-          cp -R ./chapter1-flowering-reproduction/dist/* ./dist/chapter1/
-      - name: Install Chapter 2 site dependencies
-        working-directory: ./chapter2-human-reproduction
-        run: pnpm install --frozen-lockfile
-      - name: Build Chapter 2 site
-        working-directory: ./chapter2-human-reproduction
-        run: pnpm run build
-        env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/chapter2/
-      - name: Add Chapter 2 site to public build
-        run: |
-          mkdir -p ./dist/chapter2
-          cp -R ./chapter2-human-reproduction/dist/* ./dist/chapter2/
-      - name: Install Chapter 3 site dependencies
-        working-directory: ./chapter3-reproductive-health
-        run: pnpm install --frozen-lockfile
-      - name: Build Chapter 3 site
-        working-directory: ./chapter3-reproductive-health
-        run: pnpm run build
-        env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/chapter3/
-      - name: Add Chapter 3 site to public build
-        run: |
-          mkdir -p ./dist/chapter3
-          cp -R ./chapter3-reproductive-health/dist/* ./dist/chapter3/
+          set -euo pipefail
+          chapters=(
+            "chapter1:chapter1-flowering-reproduction"
+            "chapter2:chapter2-human-reproduction"
+            "chapter3:chapter3-reproductive-health"
+            "chapter4:chapter4-inheritance-variation"
+            "chapter5:chapter5-molecular-basis"
+            "chapter6:chapter6-evolution"
+            "chapter7:chapter7-human-health-disease"
+            "chapter8:chapter8-microbes-human-welfare"
+            "chapter10:chapter10-biotechnology-applications"
+            "chapter11:chapter11-organisms-populations"
+            "chapter12:chapter12-ecosystem"
+          )
+
+          for entry in "${chapters[@]}"; do
+            public_path="${entry%%:*}"
+            source_dir="${entry#*:}"
+            echo "Building ${public_path} from ${source_dir}"
+            (
+              cd "${source_dir}"
+              VITE_BASE_PATH="/${REPO_NAME}/${public_path}/" ../node_modules/.bin/vite build
+            )
+            mkdir -p "./dist/${public_path}"
+            cp -R "./${source_dir}/dist/"* "./dist/${public_path}/"
+          done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

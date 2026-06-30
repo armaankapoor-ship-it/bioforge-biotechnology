@@ -1,0 +1,414 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH10",
+  "slug": "bioforge-biotechnology-applications",
+  "chapterNo": "Chapter 10",
+  "title": "Biotechnology and Its Applications",
+  "subtitle": "Insulin, Bt cotton, gene therapy, RNAi, molecular diagnosis, transgenic animals and biosafety ethics - a premium visual applications guide.",
+  "heroBadge": "Class 12 Biology - Chapter 10 - NEET ready",
+  "theme": {
+    "accent": "#0ea5e9",
+    "accent2": "#22c55e",
+    "accent3": "#ec4899",
+    "soft": "#e0f2fe",
+    "ink": "#102033",
+    "dark": "#061120"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": [
+    "insulin",
+    "Bt cotton"
+  ],
+  "heroModel": {
+    "title": "Biotech applications map",
+    "subtitle": "Drag to rotate - scroll to zoom",
+    "scene": "biotechApps"
+  },
+  "roadmapTitle": "Biotechnology applications convert genes into medicines, crops and diagnostics.",
+  "roadmapDescription": "Remember the chapter by outcomes: therapeutic proteins, resistant crops, gene correction, silencing, diagnosis and ethical control.",
+  "flowchart": "flowchart LR\n  A[Recombinant DNA] --> B[Insulin]\n  A --> C[Gene therapy]\n  A --> D[Transgenic animals]\n  A --> E[GM crops]\n  E --> F[Bt cotton]\n  E --> G[RNA interference]\n  A --> H[Molecular diagnosis]\n  H --> I[ELISA and PCR]\n  A --> J[Biosafety ethics]",
+  "roadmap": [
+    {
+      "title": "Recombinant insulin",
+      "summary": "Human insulin chains produced using recombinant microbes."
+    },
+    {
+      "title": "Gene therapy",
+      "summary": "Correcting defective genes, with ADA deficiency as classic example."
+    },
+    {
+      "title": "Molecular diagnosis",
+      "summary": "PCR, ELISA and probes detect disease early."
+    },
+    {
+      "title": "Bt crops",
+      "summary": "Bt toxin protects plants from insect pests."
+    },
+    {
+      "title": "RNA interference",
+      "summary": "dsRNA silences specific mRNA."
+    },
+    {
+      "title": "Transgenic animals",
+      "summary": "Animals with foreign genes help study disease and products."
+    },
+    {
+      "title": "Biosafety and GEAC",
+      "summary": "GM organisms need safety assessment and regulation."
+    },
+    {
+      "title": "Biopiracy and patents",
+      "summary": "Ethical use and benefit sharing matter."
+    }
+  ],
+  "conceptTitle": "Applications: gene to useful outcome.",
+  "conceptDescription": "Each card explains what was inserted, where it acts, and what benefit or concern follows.",
+  "sections": [
+    {
+      "eyebrow": "Insulin",
+      "title": "Genetically engineered insulin",
+      "description": "Recombinant DNA technology produces human insulin in microbial systems.",
+      "points": [
+        "Earlier insulin from animals could cause immune reactions.",
+        "Human insulin has A and B chains.",
+        "Proinsulin includes C peptide; mature insulin lacks C peptide.",
+        "Recombinant microbes can produce insulin chains."
+      ],
+      "neet": "Mature insulin consists of A and B chains joined by disulphide bonds."
+    },
+    {
+      "eyebrow": "Bt crop",
+      "title": "Bt cotton and Cry protein",
+      "description": "Bt cotton carries a gene from Bacillus thuringiensis that protects against specific insects.",
+      "points": [
+        "Cry protein is produced as inactive protoxin.",
+        "Alkaline insect gut activates the toxin.",
+        "Activated toxin damages midgut epithelial cells.",
+        "Bt crops reduce certain insect pest damage."
+      ],
+      "neet": "Protoxin becomes active in alkaline gut of insect."
+    },
+    {
+      "eyebrow": "Gene therapy",
+      "title": "Gene therapy and ADA deficiency",
+      "description": "Gene therapy aims to correct a defective gene in patient cells.",
+      "points": [
+        "ADA deficiency affects immune function.",
+        "Lymphocytes can be removed, corrected and returned.",
+        "Bone marrow cell correction may give longer benefit.",
+        "Somatic gene therapy is discussed at school level."
+      ],
+      "neet": "ADA deficiency is the standard NCERT gene therapy example."
+    },
+    {
+      "eyebrow": "RNAi",
+      "title": "RNA interference",
+      "description": "RNAi silences gene expression by degrading target mRNA.",
+      "points": [
+        "dsRNA triggers RNAi pathway.",
+        "mRNA is degraded or translation is blocked.",
+        "RNAi can protect tobacco roots against nematode.",
+        "Process is highly sequence-specific."
+      ],
+      "neet": "RNAi works at mRNA level, not by cutting DNA."
+    },
+    {
+      "eyebrow": "Diagnosis",
+      "title": "Molecular diagnosis",
+      "description": "Molecular tests detect disease even when pathogen level is low.",
+      "points": [
+        "PCR amplifies pathogen nucleic acid.",
+        "ELISA uses antigen-antibody interaction.",
+        "DNA probes bind complementary sequences.",
+        "Early diagnosis improves treatment success."
+      ],
+      "neet": "PCR can detect very low pathogen load by amplification."
+    },
+    {
+      "eyebrow": "Transgenic",
+      "title": "Transgenic animals",
+      "description": "Transgenic animals carry and express foreign genes for research and products.",
+      "points": [
+        "They help study gene function and disease models.",
+        "They can produce biological products.",
+        "They support vaccine safety and toxicity testing.",
+        "Ethical treatment is essential."
+      ],
+      "neet": "Rosie cow produced human protein-enriched milk in NCERT example."
+    },
+    {
+      "eyebrow": "Ethics",
+      "title": "Biosafety, GEAC and patents",
+      "description": "Applications require safety regulation and ethical control.",
+      "points": [
+        "GEAC evaluates GM organism release in India.",
+        "Biosafety assesses environmental and health risks.",
+        "Patents protect inventions but can raise access issues.",
+        "Biopiracy is exploitation of bioresources without proper permission or benefit sharing."
+      ],
+      "neet": "GEAC is the approval body associated with GM organisms in India."
+    },
+    {
+      "eyebrow": "Balance",
+      "title": "Responsible biotechnology",
+      "description": "Useful biotechnology must be paired with safety, monitoring and public benefit.",
+      "points": [
+        "GM crops need resistance-management strategies.",
+        "Therapies need clinical testing.",
+        "Diagnostics need accuracy and quality control.",
+        "Benefit sharing is important for traditional knowledge."
+      ],
+      "neet": "NEET often tests both benefit and ethical concern."
+    }
+  ],
+  "modelTitle": "Application-focused 3D biotech lab.",
+  "modelDescription": "Rotate transgene, vector, therapy and product models.",
+  "models": [
+    {
+      "title": "Gene to product",
+      "description": "Transgene delivery and product outcome.",
+      "scene": "biotechApps"
+    },
+    {
+      "title": "Gene therapy cell",
+      "description": "Vector entering corrected cell.",
+      "scene": "geneTherapy3d"
+    },
+    {
+      "title": "Molecular diagnosis",
+      "description": "Probe and immune detection anchor.",
+      "scene": "immunityDefense"
+    },
+    {
+      "title": "Microbial insulin factory",
+      "description": "Culture to medicine product.",
+      "scene": "microbeFactory"
+    },
+    {
+      "title": "Bt plant protection",
+      "description": "Plant field and transgene idea.",
+      "scene": "biotechApps"
+    },
+    {
+      "title": "RNAi silencing",
+      "description": "Gene-expression shutdown concept.",
+      "scene": "molecularDogma"
+    }
+  ],
+  "highYield": [
+    "Animal insulin could cause immune reactions.",
+    "Mature insulin has A and B chains.",
+    "C peptide is absent in mature insulin.",
+    "Bt gene comes from Bacillus thuringiensis.",
+    "Cry protein is inactive protoxin in plant.",
+    "Alkaline insect gut activates Bt toxin.",
+    "ADA deficiency is gene therapy example.",
+    "RNAi uses dsRNA to silence mRNA.",
+    "Nematode resistance in tobacco is RNAi example.",
+    "PCR detects low pathogen DNA/RNA.",
+    "ELISA uses antigen-antibody interaction.",
+    "DNA probes bind complementary sequences.",
+    "Rosie cow produced human protein-enriched milk.",
+    "GEAC evaluates GM organism release.",
+    "Biopiracy exploits bioresources without fair permission."
+  ],
+  "mistakes": [
+    {
+      "title": "Insulin chains",
+      "body": "Mature insulin has A and B chains; C peptide is removed from proinsulin."
+    },
+    {
+      "title": "Bt activation site",
+      "body": "Bt protoxin becomes active in alkaline insect gut, not in the plant cell."
+    },
+    {
+      "title": "RNAi target",
+      "body": "RNAi degrades/silences mRNA; it is not the same as gene knockout at DNA level."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Mature human insulin contains:",
+      "options": [
+        "A, B and C peptides",
+        "A and B chains only",
+        "Only C peptide",
+        "Only DNA"
+      ],
+      "answer": 1,
+      "explain": "C peptide is removed from proinsulin."
+    },
+    {
+      "question": "Bt toxin is activated in insect gut because it is:",
+      "options": [
+        "Acidic",
+        "Alkaline",
+        "Neutral only",
+        "Frozen"
+      ],
+      "answer": 1,
+      "explain": "Alkaline gut activates protoxin."
+    },
+    {
+      "question": "Bt gene comes from:",
+      "options": [
+        "Bacillus thuringiensis",
+        "Rhizobium",
+        "Glomus",
+        "HIV"
+      ],
+      "answer": 0,
+      "explain": "Bt stands for Bacillus thuringiensis."
+    },
+    {
+      "question": "ADA deficiency is linked with:",
+      "options": [
+        "Gene therapy",
+        "BOD",
+        "Hardy-Weinberg only",
+        "Menstrual cycle"
+      ],
+      "answer": 0,
+      "explain": "ADA deficiency is the classic gene therapy example."
+    },
+    {
+      "question": "RNAi uses:",
+      "options": [
+        "dsRNA",
+        "Only lipids",
+        "Only antibodies",
+        "Cell wall"
+      ],
+      "answer": 0,
+      "explain": "Double-stranded RNA triggers RNA interference."
+    },
+    {
+      "question": "ELISA is based on:",
+      "options": [
+        "Antigen-antibody interaction",
+        "Hardy-Weinberg law",
+        "Okazaki fragments",
+        "Lactation"
+      ],
+      "answer": 0,
+      "explain": "ELISA detects molecules using antigen-antibody binding."
+    },
+    {
+      "question": "PCR-based diagnosis helps because PCR:",
+      "options": [
+        "Amplifies nucleic acid",
+        "Kills all cells",
+        "Makes curd",
+        "Blocks meiosis"
+      ],
+      "answer": 0,
+      "explain": "Amplification allows early detection."
+    },
+    {
+      "question": "GEAC is related to:",
+      "options": [
+        "Approval of GM organisms",
+        "Sperm formation",
+        "Oxygen transport",
+        "Photosynthesis only"
+      ],
+      "answer": 0,
+      "explain": "GEAC evaluates genetic engineering applications."
+    },
+    {
+      "question": "Rosie is an example of:",
+      "options": [
+        "Transgenic cow",
+        "Bt cotton pest",
+        "Virus",
+        "Antibiotic"
+      ],
+      "answer": 0,
+      "explain": "Rosie cow produced human protein-rich milk."
+    },
+    {
+      "question": "Biopiracy refers to:",
+      "options": [
+        "Unauthorised exploitation of bioresources",
+        "DNA replication",
+        "Fertilisation",
+        "Antibody formation"
+      ],
+      "answer": 0,
+      "explain": "Biopiracy involves unfair use of bioresources/traditional knowledge."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "C peptide",
+      "back": "Removed from proinsulin to form mature insulin."
+    },
+    {
+      "front": "Bt protoxin",
+      "back": "Inactive toxin activated in alkaline insect gut."
+    },
+    {
+      "front": "ADA therapy",
+      "back": "Correct defective ADA gene in patient cells."
+    },
+    {
+      "front": "RNAi",
+      "back": "dsRNA-mediated mRNA silencing."
+    },
+    {
+      "front": "ELISA",
+      "back": "Antigen-antibody detection method."
+    },
+    {
+      "front": "GEAC",
+      "back": "Indian approval body for GM organisms."
+    }
+  ],
+  "revisionTable": [
+    [
+      "Insulin",
+      "A and B chains, C peptide removed"
+    ],
+    [
+      "Bt cotton",
+      "Cry protoxin activated in alkaline gut"
+    ],
+    [
+      "Gene therapy",
+      "ADA deficiency example"
+    ],
+    [
+      "RNAi",
+      "dsRNA -> mRNA silencing"
+    ],
+    [
+      "Diagnosis",
+      "PCR, ELISA, DNA probe"
+    ],
+    [
+      "Transgenic animals",
+      "Research and products"
+    ],
+    [
+      "Ethics",
+      "GEAC, patents, biopiracy"
+    ]
+  ],
+  "transforms": [
+    [
+      "Proinsulin",
+      "Mature insulin"
+    ],
+    [
+      "Cry protoxin",
+      "Active toxin"
+    ],
+    [
+      "dsRNA",
+      "mRNA silencing"
+    ]
+  ]
+}

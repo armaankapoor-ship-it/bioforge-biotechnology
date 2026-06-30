@@ -1,0 +1,414 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH8",
+  "slug": "bioforge-microbes-human-welfare",
+  "chapterNo": "Chapter 8",
+  "title": "Microbes in Human Welfare",
+  "subtitle": "Microbes in food, industry, sewage treatment, biogas, biocontrol and biofertilisers - a visual factory-to-field guide.",
+  "heroBadge": "Class 12 Biology - Chapter 8 - NEET ready",
+  "theme": {
+    "accent": "#059669",
+    "accent2": "#7c3aed",
+    "accent3": "#f59e0b",
+    "soft": "#d1fae5",
+    "ink": "#10251d",
+    "dark": "#06140f"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": [
+    "fermentation",
+    "biofertiliser"
+  ],
+  "heroModel": {
+    "title": "Microbial factory",
+    "subtitle": "Drag to rotate - scroll to zoom",
+    "scene": "microbeFactory"
+  },
+  "roadmapTitle": "Microbes are useful in homes, factories, farms and sewage plants.",
+  "roadmapDescription": "Track the same idea everywhere: microbes convert raw material into useful products or ecological services.",
+  "flowchart": "flowchart LR\n  A[Microbes] --> B[Household food]\n  A --> C[Industrial products]\n  C --> D[Antibiotics and chemicals]\n  A --> E[Sewage treatment]\n  E --> F[Biogas]\n  A --> G[Biocontrol]\n  A --> H[Biofertilisers]",
+  "roadmap": [
+    {
+      "title": "Household products",
+      "summary": "Curd, cheese, idli, dosa and bread use microbes."
+    },
+    {
+      "title": "Industrial fermentation",
+      "summary": "Large fermenters produce alcohol, organic acids, enzymes and antibiotics."
+    },
+    {
+      "title": "Antibiotics",
+      "summary": "Microbial products inhibit other microbes."
+    },
+    {
+      "title": "Sewage treatment",
+      "summary": "Microbes reduce organic matter and BOD."
+    },
+    {
+      "title": "Biogas",
+      "summary": "Methanogens produce methane-rich gas from dung and waste."
+    },
+    {
+      "title": "Biocontrol",
+      "summary": "Living organisms control pests and pathogens."
+    },
+    {
+      "title": "Biofertilisers",
+      "summary": "Microbes improve soil nutrient availability."
+    },
+    {
+      "title": "NEET examples",
+      "summary": "Remember organism-product pairs."
+    }
+  ],
+  "conceptTitle": "Microbe-product pairs that actually stick.",
+  "conceptDescription": "Each card links organism, process and product so examples stop feeling random.",
+  "sections": [
+    {
+      "eyebrow": "Food",
+      "title": "Microbes in household products",
+      "description": "Fermentation by microbes improves food texture, taste and nutrition.",
+      "points": [
+        "Lactobacillus converts milk to curd.",
+        "Yeast ferments dough for bread.",
+        "Idli and dosa batter is fermented by bacteria.",
+        "Some cheeses are ripened by specific microbes."
+      ],
+      "neet": "Lactobacillus increases vitamin B12 in curd."
+    },
+    {
+      "eyebrow": "Industry",
+      "title": "Industrial products",
+      "description": "Large-scale microbial fermentation produces useful chemicals and beverages.",
+      "points": [
+        "Saccharomyces cerevisiae produces ethanol.",
+        "Aspergillus niger produces citric acid.",
+        "Acetobacter aceti produces acetic acid.",
+        "Clostridium butylicum produces butyric acid."
+      ],
+      "neet": "Saccharomyces cerevisiae is brewer yeast."
+    },
+    {
+      "eyebrow": "Antibiotics",
+      "title": "Antibiotics and enzymes",
+      "description": "Microbes produce molecules that affect other organisms or catalyse reactions.",
+      "points": [
+        "Penicillin was discovered by Alexander Fleming.",
+        "Streptokinase helps remove clots.",
+        "Pectinases and proteases clarify fruit juices.",
+        "Cyclosporin A is an immunosuppressant."
+      ],
+      "neet": "Penicillium notatum is linked with penicillin."
+    },
+    {
+      "eyebrow": "Sewage",
+      "title": "Sewage treatment",
+      "description": "Microbes degrade organic matter in sewage and reduce BOD.",
+      "points": [
+        "Primary treatment removes grit and solids physically.",
+        "Secondary treatment uses aerobic microbes.",
+        "Activated sludge contains microbial flocs.",
+        "BOD falls as organic matter is consumed."
+      ],
+      "neet": "Secondary sewage treatment is biological treatment."
+    },
+    {
+      "eyebrow": "Biogas",
+      "title": "Biogas production",
+      "description": "Methanogens produce methane from anaerobic digestion of organic waste.",
+      "points": [
+        "Methanobacterium is found in cattle rumen.",
+        "Biogas contains methane, carbon dioxide and hydrogen.",
+        "Dung and sewage sludge can be used as substrate.",
+        "Biogas plants provide fuel and manure."
+      ],
+      "neet": "Methanogens are anaerobic archaea."
+    },
+    {
+      "eyebrow": "Biocontrol",
+      "title": "Microbes as biocontrol agents",
+      "description": "Biological control reduces dependence on chemical pesticides.",
+      "points": [
+        "Bt toxin controls insect pests.",
+        "Trichoderma controls plant pathogens.",
+        "Baculoviruses are species-specific bioagents.",
+        "Biocontrol is usually ecological and targeted."
+      ],
+      "neet": "Baculoviruses are useful because they are narrow spectrum."
+    },
+    {
+      "eyebrow": "Biofertiliser",
+      "title": "Biofertilisers",
+      "description": "Biofertilisers improve nutrient availability using microbes.",
+      "points": [
+        "Rhizobium fixes nitrogen in legume roots.",
+        "Azotobacter and Azospirillum fix nitrogen in soil.",
+        "Cyanobacteria help in paddy fields.",
+        "Mycorrhiza improves phosphorus absorption."
+      ],
+      "neet": "Glomus forms mycorrhizal association."
+    },
+    {
+      "eyebrow": "Integration",
+      "title": "Microbes as welfare tools",
+      "description": "The chapter shows microbes as production systems and ecosystem partners.",
+      "points": [
+        "Fermentation creates food and industrial products.",
+        "Waste treatment recycles organic matter.",
+        "Biofertilisers support sustainable farming.",
+        "Biocontrol reduces chemical load."
+      ],
+      "neet": "Microbes are not only pathogens; many are economically useful."
+    }
+  ],
+  "modelTitle": "Microbe factory and ecosystem service lab.",
+  "modelDescription": "Rotate fermenter, nutrient cycling and product models.",
+  "models": [
+    {
+      "title": "Fermentation tank",
+      "description": "Microbes converting substrate into product.",
+      "scene": "microbeFactory"
+    },
+    {
+      "title": "Biogas digester idea",
+      "description": "Anaerobic microbial production.",
+      "scene": "nutrientCycle"
+    },
+    {
+      "title": "Sewage treatment flow",
+      "description": "Microbial cycling and purification.",
+      "scene": "ecosystemFlow"
+    },
+    {
+      "title": "Biofertiliser root zone",
+      "description": "Microbe-plant nutrient partnership.",
+      "scene": "biotechApps"
+    },
+    {
+      "title": "Biocontrol shield",
+      "description": "Targeted biological control concept.",
+      "scene": "immunityDefense"
+    },
+    {
+      "title": "Industrial product vial",
+      "description": "Product recovery from culture.",
+      "scene": "microbeFactory"
+    }
+  ],
+  "highYield": [
+    "Lactobacillus makes curd.",
+    "Yeast is Saccharomyces cerevisiae.",
+    "Aspergillus niger produces citric acid.",
+    "Acetobacter aceti produces acetic acid.",
+    "Clostridium butylicum produces butyric acid.",
+    "Penicillin is linked with Penicillium notatum.",
+    "Streptokinase is a clot buster.",
+    "Cyclosporin A is immunosuppressant.",
+    "Secondary sewage treatment is biological.",
+    "Activated sludge contains flocs.",
+    "BOD decreases after microbial treatment.",
+    "Methanogens produce biogas.",
+    "Rhizobium fixes nitrogen in legumes.",
+    "Glomus forms mycorrhiza.",
+    "Baculoviruses are narrow-spectrum biocontrol agents."
+  ],
+  "mistakes": [
+    {
+      "title": "BOD direction",
+      "body": "Good sewage treatment lowers BOD because organic matter is reduced."
+    },
+    {
+      "title": "Biogas organism",
+      "body": "Methanogens, not yeast, produce methane-rich biogas."
+    },
+    {
+      "title": "Biofertiliser vs biocontrol",
+      "body": "Biofertilisers improve nutrients; biocontrol agents reduce pests/pathogens."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Curd formation mainly involves:",
+      "options": [
+        "Lactobacillus",
+        "Plasmodium",
+        "HIV",
+        "Anopheles"
+      ],
+      "answer": 0,
+      "explain": "Lactobacillus converts milk to curd."
+    },
+    {
+      "question": "Brewer yeast is:",
+      "options": [
+        "Saccharomyces cerevisiae",
+        "Rhizobium",
+        "Glomus",
+        "Entamoeba"
+      ],
+      "answer": 0,
+      "explain": "Saccharomyces cerevisiae ferments sugars to ethanol."
+    },
+    {
+      "question": "Citric acid is produced by:",
+      "options": [
+        "Aspergillus niger",
+        "Acetobacter aceti",
+        "Methanobacterium",
+        "Baculovirus"
+      ],
+      "answer": 0,
+      "explain": "Aspergillus niger is used for citric acid."
+    },
+    {
+      "question": "Secondary sewage treatment is:",
+      "options": [
+        "Biological",
+        "Only screening",
+        "Only chlorination",
+        "Only sedimentation"
+      ],
+      "answer": 0,
+      "explain": "Aerobic microbes digest organic matter."
+    },
+    {
+      "question": "BOD after effective sewage treatment:",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Becomes infinite",
+        "Has no meaning"
+      ],
+      "answer": 1,
+      "explain": "Lower BOD means less organic pollution."
+    },
+    {
+      "question": "Biogas production involves:",
+      "options": [
+        "Methanogens",
+        "Penicillium only",
+        "Sperm cells",
+        "Ribosomes only"
+      ],
+      "answer": 0,
+      "explain": "Methanogens generate methane."
+    },
+    {
+      "question": "Rhizobium is important for:",
+      "options": [
+        "Nitrogen fixation",
+        "Cancer spread",
+        "AIDS",
+        "DNA fingerprinting"
+      ],
+      "answer": 0,
+      "explain": "Rhizobium fixes nitrogen in legume nodules."
+    },
+    {
+      "question": "Glomus is associated with:",
+      "options": [
+        "Mycorrhiza",
+        "Typhoid",
+        "Pneumonia",
+        "PCR"
+      ],
+      "answer": 0,
+      "explain": "Glomus forms mycorrhizal association."
+    },
+    {
+      "question": "Baculoviruses are useful because they are:",
+      "options": [
+        "Narrow spectrum",
+        "Always broad poison",
+        "Human pathogens only",
+        "Antibiotics"
+      ],
+      "answer": 0,
+      "explain": "They target specific insect pests."
+    },
+    {
+      "question": "Streptokinase is used as:",
+      "options": [
+        "Clot buster",
+        "Fertiliser gas",
+        "Pregnancy hormone",
+        "Stop codon"
+      ],
+      "answer": 0,
+      "explain": "Streptokinase helps dissolve clots."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Lactobacillus",
+      "back": "Curd formation."
+    },
+    {
+      "front": "Saccharomyces",
+      "back": "Ethanol and bread fermentation."
+    },
+    {
+      "front": "BOD",
+      "back": "Oxygen demand; decreases after treatment."
+    },
+    {
+      "front": "Methanogen",
+      "back": "Anaerobic methane producer."
+    },
+    {
+      "front": "Rhizobium",
+      "back": "Nitrogen fixer in legumes."
+    },
+    {
+      "front": "Glomus",
+      "back": "Mycorrhizal fungus for phosphorus absorption."
+    }
+  ],
+  "revisionTable": [
+    [
+      "Curd",
+      "Lactobacillus"
+    ],
+    [
+      "Ethanol",
+      "Saccharomyces cerevisiae"
+    ],
+    [
+      "Citric acid",
+      "Aspergillus niger"
+    ],
+    [
+      "Sewage",
+      "Activated sludge and low BOD"
+    ],
+    [
+      "Biogas",
+      "Methanogens"
+    ],
+    [
+      "Biofertiliser",
+      "Rhizobium, Azotobacter, cyanobacteria, Glomus"
+    ],
+    [
+      "Biocontrol",
+      "Bt, Trichoderma, baculovirus"
+    ]
+  ],
+  "transforms": [
+    [
+      "Milk",
+      "Curd"
+    ],
+    [
+      "Sewage",
+      "Treated effluent"
+    ],
+    [
+      "Dung",
+      "Biogas"
+    ]
+  ]
+}

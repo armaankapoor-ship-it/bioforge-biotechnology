@@ -87,6 +87,14 @@ https://armaan.github.io/bioforge-biotechnology/
 - Chapter 1, Sexual Reproduction in Flowering Plants: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter1/`
 - Chapter 2, Human Reproduction: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter2/`
 - Chapter 3, Reproductive Health: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter3/`
+- Chapter 4, Principles of Inheritance and Variation: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter4/`
+- Chapter 5, Molecular Basis of Inheritance: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter5/`
+- Chapter 6, Evolution: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter6/`
+- Chapter 7, Human Health and Disease: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter7/`
+- Chapter 8, Microbes in Human Welfare: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter8/`
+- Chapter 10, Biotechnology and Its Applications: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter10/`
+- Chapter 11, Organisms and Populations: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter11/`
+- Chapter 12, Ecosystem: `https://armaankapoor-ship-it.github.io/bioforge-biotechnology/chapter12/`
 
 ## Project structure
 
@@ -96,6 +104,8 @@ src/
   data/              Notes, quiz, glossary, diagrams, and flashcards JSON
   styles/            Tailwind layers and original visual system
   App.jsx            Single-page chapter experience
+chapter-site-shared/ Shared visual template for standalone chapter sites
+chapter*/            Standalone chapter websites deployed as subpaths
 .github/workflows/   Free GitHub Pages deployment
 ```
 

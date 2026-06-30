@@ -1,0 +1,414 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH5",
+  "slug": "bioforge-molecular-basis",
+  "chapterNo": "Chapter 5",
+  "title": "Molecular Basis of Inheritance",
+  "subtitle": "DNA structure, replication, transcription, genetic code, translation, regulation, genome project and DNA fingerprinting - visually compressed for NEET.",
+  "heroBadge": "Class 12 Biology - Chapter 5 - NEET ready",
+  "theme": {
+    "accent": "#2563eb",
+    "accent2": "#db2777",
+    "accent3": "#16a34a",
+    "soft": "#dbeafe",
+    "ink": "#11213d",
+    "dark": "#071225"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": [
+    "replication",
+    "central dogma"
+  ],
+  "heroModel": {
+    "title": "Central dogma studio",
+    "subtitle": "Drag to rotate - scroll to zoom",
+    "scene": "molecularDogma"
+  },
+  "roadmapTitle": "DNA stores information, copies it, expresses it and can identify individuals.",
+  "roadmapDescription": "Follow the molecule: DNA structure -> replication -> transcription -> translation -> regulation -> genome tools.",
+  "flowchart": "flowchart LR\n  A[DNA structure] --> B[Genetic material proof]\n  B --> C[Replication]\n  C --> D[Transcription]\n  D --> E[Genetic code]\n  E --> F[Translation]\n  F --> G[Gene regulation]\n  G --> H[Genome project]\n  H --> I[DNA fingerprinting]",
+  "roadmap": [
+    {
+      "title": "DNA as genetic material",
+      "summary": "Transforming principle, bacteriophage experiments and RNA in some viruses."
+    },
+    {
+      "title": "DNA structure",
+      "summary": "Double helix, antiparallel strands, base pairing and nucleosomes."
+    },
+    {
+      "title": "Replication",
+      "summary": "Semiconservative copying with polymerase, primers and replication fork."
+    },
+    {
+      "title": "Transcription",
+      "summary": "DNA-dependent RNA synthesis with promoter, coding strand and template strand."
+    },
+    {
+      "title": "Genetic code",
+      "summary": "Triplet, degenerate, universal, non-overlapping and nearly comma-less."
+    },
+    {
+      "title": "Translation",
+      "summary": "Ribosome reads mRNA and links amino acids using tRNA adaptors."
+    },
+    {
+      "title": "Gene regulation",
+      "summary": "Lac operon explains inducible gene control in bacteria."
+    },
+    {
+      "title": "Genome tools",
+      "summary": "Human Genome Project and DNA fingerprinting use sequence variation."
+    }
+  ],
+  "conceptTitle": "Molecular inheritance without memorising blindly.",
+  "conceptDescription": "Each card converts a dense NCERT paragraph into a visual sequence or decision rule.",
+  "sections": [
+    {
+      "eyebrow": "Proof",
+      "title": "DNA as genetic material",
+      "description": "Experiments showed DNA carries hereditary information.",
+      "points": [
+        "Griffith observed transformation in bacteria.",
+        "Avery, MacLeod and McCarty identified DNA as transforming principle.",
+        "Hershey and Chase used bacteriophages to prove DNA enters bacteria.",
+        "RNA is genetic material in some viruses."
+      ],
+      "neet": "Hershey-Chase used radioactive phosphorus for DNA and sulfur for protein."
+    },
+    {
+      "eyebrow": "Structure",
+      "title": "DNA double helix and packaging",
+      "description": "DNA is a polymer of deoxyribonucleotides arranged as antiparallel double helix.",
+      "points": [
+        "A pairs with T using two hydrogen bonds.",
+        "G pairs with C using three hydrogen bonds.",
+        "DNA strands are antiparallel.",
+        "Histones help package DNA into nucleosomes in eukaryotes."
+      ],
+      "neet": "A-T has two H bonds; G-C has three H bonds."
+    },
+    {
+      "eyebrow": "Copying",
+      "title": "Semiconservative replication",
+      "description": "Each new DNA molecule receives one old strand and one new strand.",
+      "points": [
+        "Meselson and Stahl proved semiconservative replication.",
+        "DNA polymerase adds nucleotides in 5 prime to 3 prime direction.",
+        "Leading strand is continuous, lagging strand forms Okazaki fragments.",
+        "Primase, helicase, polymerase and ligase coordinate replication."
+      ],
+      "neet": "DNA polymerase cannot initiate synthesis without a primer."
+    },
+    {
+      "eyebrow": "RNA",
+      "title": "Transcription",
+      "description": "Transcription copies genetic information from DNA into RNA.",
+      "points": [
+        "Template strand is read by RNA polymerase.",
+        "Promoter and terminator define transcription unit.",
+        "In eukaryotes hnRNA undergoes capping, tailing and splicing.",
+        "Exons remain in mature RNA, introns are removed."
+      ],
+      "neet": "Splicing removes introns and joins exons."
+    },
+    {
+      "eyebrow": "Code",
+      "title": "Genetic code",
+      "description": "Codons are triplets that specify amino acids or stop signals.",
+      "points": [
+        "AUG is start codon and codes for methionine.",
+        "UAA, UAG and UGA are stop codons.",
+        "Code is degenerate because many amino acids have more than one codon.",
+        "Code is nearly universal."
+      ],
+      "neet": "AUG is both start codon and methionine codon."
+    },
+    {
+      "eyebrow": "Protein",
+      "title": "Translation",
+      "description": "Translation converts mRNA codon sequence into a polypeptide.",
+      "points": [
+        "tRNA acts as adaptor molecule.",
+        "Ribosome has sites for tRNA movement.",
+        "Charging of tRNA requires aminoacyl-tRNA synthetase.",
+        "Peptide bonds form between amino acids."
+      ],
+      "neet": "tRNA has anticodon loop and amino acid attachment site."
+    },
+    {
+      "eyebrow": "Regulation",
+      "title": "Lac operon",
+      "description": "The lac operon is an inducible system controlled by lactose availability.",
+      "points": [
+        "Repressor blocks operator when inducer is absent.",
+        "Lactose/allolactose acts as inducer.",
+        "Structural genes help metabolise lactose.",
+        "Operator, promoter and regulator gene are key terms."
+      ],
+      "neet": "In lac operon, inducer inactivates repressor."
+    },
+    {
+      "eyebrow": "Tools",
+      "title": "Human genome and DNA fingerprinting",
+      "description": "Genome analysis and sequence variation are used in identification and research.",
+      "points": [
+        "Human Genome Project aimed to sequence human DNA.",
+        "Most human DNA does not code for proteins.",
+        "VNTRs/STRs vary among individuals.",
+        "DNA fingerprinting compares variable regions."
+      ],
+      "neet": "VNTR variation is central to DNA fingerprinting."
+    }
+  ],
+  "modelTitle": "3D molecular process lab.",
+  "modelDescription": "Rotate original DNA, replication fork, transcription and code-flow schematics.",
+  "models": [
+    {
+      "title": "Central dogma",
+      "description": "DNA to mRNA to protein.",
+      "scene": "molecularDogma"
+    },
+    {
+      "title": "Replication fork",
+      "description": "Semiconservative copying and new strands.",
+      "scene": "dnaReplication"
+    },
+    {
+      "title": "Transcription unit",
+      "description": "RNA polymerase and RNA output.",
+      "scene": "transcriptionScene"
+    },
+    {
+      "title": "Chromatin packing",
+      "description": "Gene location and packaging anchor.",
+      "scene": "inheritanceLab"
+    },
+    {
+      "title": "Gene regulation switch",
+      "description": "Operator/repressor logic as control model.",
+      "scene": "geneTherapy3d"
+    },
+    {
+      "title": "DNA fingerprint idea",
+      "description": "Variable markers as identity pattern.",
+      "scene": "pedigreeTree"
+    }
+  ],
+  "highYield": [
+    "DNA is transforming principle in Avery experiment.",
+    "Hershey-Chase proved DNA enters bacteria using labelled phage.",
+    "A pairs T, G pairs C.",
+    "DNA strands are antiparallel.",
+    "Meselson-Stahl proved semiconservative replication.",
+    "DNA polymerase works 5 prime to 3 prime.",
+    "Okazaki fragments form on lagging strand.",
+    "hnRNA processing includes capping, tailing and splicing.",
+    "AUG is start codon and methionine.",
+    "UAA, UAG, UGA are stop codons.",
+    "Genetic code is triplet and degenerate.",
+    "tRNA is adaptor molecule.",
+    "Lac operon is inducible.",
+    "Inducer inactivates repressor.",
+    "VNTR variation helps DNA fingerprinting."
+  ],
+  "mistakes": [
+    {
+      "title": "Coding vs template strand",
+      "body": "RNA sequence resembles coding strand except U replaces T, but RNA is made using template strand."
+    },
+    {
+      "title": "Replication direction",
+      "body": "Polymerase adds nucleotides only 5 prime to 3 prime, creating lagging strand fragments."
+    },
+    {
+      "title": "Introns vs exons",
+      "body": "Introns are removed; exons stay and express."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Meselson and Stahl proved DNA replication is:",
+      "options": [
+        "Conservative",
+        "Semiconservative",
+        "Dispersive only",
+        "Random"
+      ],
+      "answer": 1,
+      "explain": "Each daughter DNA has one old and one new strand."
+    },
+    {
+      "question": "AUG codes for:",
+      "options": [
+        "Stop",
+        "Methionine",
+        "Glycine",
+        "Phenylalanine"
+      ],
+      "answer": 1,
+      "explain": "AUG is start codon and codes methionine."
+    },
+    {
+      "question": "Which codon is not a stop codon?",
+      "options": [
+        "UAA",
+        "UAG",
+        "UGA",
+        "AUG"
+      ],
+      "answer": 3,
+      "explain": "AUG is start, not stop."
+    },
+    {
+      "question": "DNA polymerase synthesises DNA in:",
+      "options": [
+        "3 prime to 5 prime",
+        "5 prime to 3 prime",
+        "Both equally",
+        "No direction"
+      ],
+      "answer": 1,
+      "explain": "New DNA strand elongates 5 prime to 3 prime."
+    },
+    {
+      "question": "tRNA acts as:",
+      "options": [
+        "Template",
+        "Adaptor",
+        "Promoter",
+        "Operator"
+      ],
+      "answer": 1,
+      "explain": "tRNA links codon to amino acid."
+    },
+    {
+      "question": "In lac operon, lactose acts as:",
+      "options": [
+        "Repressor",
+        "Inducer",
+        "Terminator",
+        "Histone"
+      ],
+      "answer": 1,
+      "explain": "Lactose/allolactose induces operon by inactivating repressor."
+    },
+    {
+      "question": "Splicing removes:",
+      "options": [
+        "Exons",
+        "Introns",
+        "Promoters",
+        "Codons only"
+      ],
+      "answer": 1,
+      "explain": "Introns are removed from hnRNA."
+    },
+    {
+      "question": "Hershey-Chase labelled DNA with:",
+      "options": [
+        "Sulfur",
+        "Phosphorus",
+        "Carbon dioxide",
+        "Iodine"
+      ],
+      "answer": 1,
+      "explain": "DNA contains phosphorus, proteins contain sulfur."
+    },
+    {
+      "question": "A-T base pair has:",
+      "options": [
+        "One H bond",
+        "Two H bonds",
+        "Three H bonds",
+        "Four H bonds"
+      ],
+      "answer": 1,
+      "explain": "A-T has two hydrogen bonds."
+    },
+    {
+      "question": "DNA fingerprinting uses variation in:",
+      "options": [
+        "Ribosomes",
+        "VNTR/STR regions",
+        "Mitochondrial ATP only",
+        "Cell wall"
+      ],
+      "answer": 1,
+      "explain": "Variable tandem repeats differ between individuals."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Semiconservative",
+      "back": "Each new DNA has one parental and one newly made strand."
+    },
+    {
+      "front": "Okazaki fragments",
+      "back": "Short lagging-strand DNA pieces joined by ligase."
+    },
+    {
+      "front": "Splicing",
+      "back": "Removal of introns from hnRNA."
+    },
+    {
+      "front": "AUG",
+      "back": "Start codon; codes methionine."
+    },
+    {
+      "front": "Lac inducer",
+      "back": "Lactose/allolactose inactivates repressor."
+    },
+    {
+      "front": "VNTR",
+      "back": "Variable repeat region used in DNA fingerprinting."
+    }
+  ],
+  "revisionTable": [
+    [
+      "DNA proof",
+      "Griffith -> Avery -> Hershey-Chase"
+    ],
+    [
+      "Base pairing",
+      "A-T two bonds, G-C three bonds"
+    ],
+    [
+      "Replication",
+      "Semiconservative, 5 prime to 3 prime"
+    ],
+    [
+      "Transcription",
+      "Template DNA -> RNA"
+    ],
+    [
+      "RNA processing",
+      "Capping, tailing, splicing"
+    ],
+    [
+      "Translation",
+      "mRNA codon -> tRNA -> amino acid"
+    ],
+    [
+      "Lac operon",
+      "Inducible gene regulation"
+    ]
+  ],
+  "transforms": [
+    [
+      "DNA",
+      "mRNA"
+    ],
+    [
+      "mRNA",
+      "Protein"
+    ],
+    [
+      "hnRNA",
+      "mature RNA"
+    ]
+  ]
+}

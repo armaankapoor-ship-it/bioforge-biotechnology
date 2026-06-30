@@ -1,0 +1,414 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH11",
+  "slug": "bioforge-organisms-populations",
+  "chapterNo": "Chapter 11",
+  "title": "Organisms and Populations",
+  "subtitle": "Abiotic factors, adaptations, population attributes, growth models and species interactions - ecology made interactive and exam-ready.",
+  "heroBadge": "Class 12 Biology - Chapter 11 - NEET ready",
+  "theme": {
+    "accent": "#65a30d",
+    "accent2": "#0ea5e9",
+    "accent3": "#f97316",
+    "soft": "#ecfccb",
+    "ink": "#1d2a13",
+    "dark": "#0b1305"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": [
+    "population growth",
+    "interactions"
+  ],
+  "heroModel": {
+    "title": "Population growth model",
+    "subtitle": "Drag to rotate - scroll to zoom",
+    "scene": "ecologyPopulation"
+  },
+  "roadmapTitle": "Ecology begins with organisms responding to their environment.",
+  "roadmapDescription": "Move from abiotic factors to adaptations, then population growth and interactions.",
+  "flowchart": "flowchart LR\n  A[Organism] --> B[Abiotic factors]\n  B --> C[Adaptations]\n  C --> D[Population attributes]\n  D --> E[Exponential growth]\n  D --> F[Logistic growth]\n  E --> G[Interactions]\n  F --> G\n  G --> H[Niche and community effects]",
+  "roadmap": [
+    {
+      "title": "Organism and environment",
+      "summary": "Temperature, water, light and soil shape survival."
+    },
+    {
+      "title": "Responses",
+      "summary": "Regulate, conform, migrate or suspend."
+    },
+    {
+      "title": "Adaptations",
+      "summary": "Morphological, physiological and behavioural adaptations."
+    },
+    {
+      "title": "Population attributes",
+      "summary": "Density, birth rate, death rate, sex ratio and age distribution."
+    },
+    {
+      "title": "Growth models",
+      "summary": "Exponential and logistic growth models."
+    },
+    {
+      "title": "Carrying capacity",
+      "summary": "Environment limits population size."
+    },
+    {
+      "title": "Population interactions",
+      "summary": "Competition, predation, parasitism, mutualism, commensalism and amensalism."
+    },
+    {
+      "title": "Niche",
+      "summary": "Functional role and resource use pattern of an organism."
+    }
+  ],
+  "conceptTitle": "Population ecology as graphs and interactions.",
+  "conceptDescription": "These cards convert theory into curves, symbols and relationship logic.",
+  "sections": [
+    {
+      "eyebrow": "Abiotic",
+      "title": "Major abiotic factors",
+      "description": "Temperature, water, light and soil influence organism distribution and survival.",
+      "points": [
+        "Temperature affects enzyme activity and metabolism.",
+        "Water availability is critical for terrestrial organisms.",
+        "Light affects photosynthesis and photoperiodic responses.",
+        "Soil properties affect plants and decomposers."
+      ],
+      "neet": "Temperature is the most ecologically relevant environmental factor in many contexts."
+    },
+    {
+      "eyebrow": "Response",
+      "title": "Regulate, conform, migrate, suspend",
+      "description": "Organisms respond to environmental change in different ways.",
+      "points": [
+        "Regulators maintain internal homeostasis.",
+        "Conformers allow body conditions to vary with environment.",
+        "Migration avoids stressful conditions.",
+        "Suspension includes hibernation, aestivation, diapause and dormancy."
+      ],
+      "neet": "Most animals and plants are conformers, not regulators."
+    },
+    {
+      "eyebrow": "Adaptation",
+      "title": "Adaptations",
+      "description": "Adaptations improve survival and reproduction in a habitat.",
+      "points": [
+        "Kangaroo rat conserves water in desert.",
+        "Mammals in cold areas may have thick fur and fat.",
+        "Altitude adaptation includes increased RBC production.",
+        "Behavioural adaptations include basking or burrowing."
+      ],
+      "neet": "Kangaroo rat is a classic desert adaptation example."
+    },
+    {
+      "eyebrow": "Attributes",
+      "title": "Population attributes",
+      "description": "Population has properties that individuals do not.",
+      "points": [
+        "Population density measures number per unit area/volume.",
+        "Natality adds individuals.",
+        "Mortality removes individuals.",
+        "Age pyramids indicate growing, stable or declining population."
+      ],
+      "neet": "Birth rate and death rate are population-level attributes."
+    },
+    {
+      "eyebrow": "Growth",
+      "title": "Exponential and logistic growth",
+      "description": "Population growth depends on resources and environmental resistance.",
+      "points": [
+        "Exponential growth occurs with unlimited resources.",
+        "Logistic growth occurs with limited resources.",
+        "K is carrying capacity.",
+        "Logistic curve is sigmoid."
+      ],
+      "neet": "Logistic growth is more realistic in nature."
+    },
+    {
+      "eyebrow": "Interactions",
+      "title": "Population interactions",
+      "description": "Species interactions are classified by benefit or harm.",
+      "points": [
+        "Mutualism benefits both species.",
+        "Competition harms both by resource limitation.",
+        "Predation benefits predator and harms prey.",
+        "Commensalism benefits one and does not affect the other."
+      ],
+      "neet": "+/+ is mutualism; +/- is predation or parasitism."
+    },
+    {
+      "eyebrow": "Competition",
+      "title": "Competition and resource partitioning",
+      "description": "Competition occurs when species share limiting resources.",
+      "points": [
+        "Gause principle: two closely related species cannot coexist indefinitely on same limiting resource.",
+        "Resource partitioning reduces competition.",
+        "Competition can be interspecific or intraspecific.",
+        "Interference and exploitation are forms of competition."
+      ],
+      "neet": "Competitive exclusion is linked with Gause principle."
+    },
+    {
+      "eyebrow": "Predation",
+      "title": "Predation, parasitism and defence",
+      "description": "Predators and parasites influence population size and adaptations.",
+      "points": [
+        "Predators transfer energy through food chains.",
+        "Prey evolve camouflage, toxins or spines.",
+        "Parasites depend on hosts and may reduce fitness.",
+        "Brood parasitism is seen in cuckoo example."
+      ],
+      "neet": "Predation can maintain species diversity by controlling dominant prey."
+    }
+  ],
+  "modelTitle": "3D population ecology lab.",
+  "modelDescription": "Rotate growth curves, interaction networks and niche models.",
+  "models": [
+    {
+      "title": "Logistic population curve",
+      "description": "Population rising toward carrying capacity.",
+      "scene": "ecologyPopulation"
+    },
+    {
+      "title": "Energy and interaction web",
+      "description": "Organisms connected by energy flow.",
+      "scene": "ecosystemFlow"
+    },
+    {
+      "title": "Competition branches",
+      "description": "Shared ancestry/resource-style connection.",
+      "scene": "evolutionTree"
+    },
+    {
+      "title": "Niche pyramid anchor",
+      "description": "Role and trophic position idea.",
+      "scene": "pyramidScene"
+    },
+    {
+      "title": "Resource cycling",
+      "description": "Environment feedback loop.",
+      "scene": "nutrientCycle"
+    },
+    {
+      "title": "Adaptation comparison",
+      "description": "Variation and selection anchor.",
+      "scene": "chromosomeCrossover"
+    }
+  ],
+  "highYield": [
+    "Major abiotic factors are temperature, water, light and soil.",
+    "Regulators maintain homeostasis.",
+    "Conformers vary with environment.",
+    "Migration avoids stress.",
+    "Suspension includes hibernation, aestivation, diapause and dormancy.",
+    "Population density, natality, mortality, sex ratio and age distribution are population attributes.",
+    "Exponential growth is J-shaped.",
+    "Logistic growth is sigmoid.",
+    "K is carrying capacity.",
+    "Mutualism is +/+.",
+    "Competition is -/-.",
+    "Predation is +/-.",
+    "Parasitism is +/-.",
+    "Commensalism is +/0.",
+    "Gause principle explains competitive exclusion."
+  ],
+  "mistakes": [
+    {
+      "title": "Individual vs population attribute",
+      "body": "Birth rate and death rate apply to populations, not single organisms."
+    },
+    {
+      "title": "Exponential vs logistic",
+      "body": "Exponential assumes unlimited resources; logistic includes carrying capacity."
+    },
+    {
+      "title": "Predation vs parasitism",
+      "body": "Both are +/-, but parasite usually lives in/on host and may not kill immediately."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Logistic growth curve is:",
+      "options": [
+        "J-shaped",
+        "Sigmoid",
+        "Straight only",
+        "Circular"
+      ],
+      "answer": 1,
+      "explain": "Limited resources produce sigmoid logistic curve."
+    },
+    {
+      "question": "Carrying capacity is denoted by:",
+      "options": [
+        "K",
+        "AUG",
+        "BOD",
+        "hCG"
+      ],
+      "answer": 0,
+      "explain": "K is carrying capacity."
+    },
+    {
+      "question": "Mutualism is represented as:",
+      "options": [
+        "+/+",
+        "+/-",
+        "-/-",
+        "+/0"
+      ],
+      "answer": 0,
+      "explain": "Both partners benefit."
+    },
+    {
+      "question": "Commensalism is:",
+      "options": [
+        "+/0",
+        "-/-",
+        "+/+",
+        "-/0 only"
+      ],
+      "answer": 0,
+      "explain": "One benefits, other unaffected."
+    },
+    {
+      "question": "Most organisms are:",
+      "options": [
+        "Conformers",
+        "Perfect regulators",
+        "Neither",
+        "Always migratory"
+      ],
+      "answer": 0,
+      "explain": "Most animals and plants cannot maintain constant internal conditions always."
+    },
+    {
+      "question": "Diapause is a type of:",
+      "options": [
+        "Suspension",
+        "Translation",
+        "Replication",
+        "Fertilisation"
+      ],
+      "answer": 0,
+      "explain": "Diapause is suspended development."
+    },
+    {
+      "question": "Natality refers to:",
+      "options": [
+        "Birth rate",
+        "Death rate",
+        "Migration out only",
+        "Predation"
+      ],
+      "answer": 0,
+      "explain": "Natality adds individuals to population."
+    },
+    {
+      "question": "Gause principle relates to:",
+      "options": [
+        "Competitive exclusion",
+        "Genetic code",
+        "Insulin",
+        "Curd"
+      ],
+      "answer": 0,
+      "explain": "Two species competing for same limiting resource cannot coexist indefinitely."
+    },
+    {
+      "question": "Kangaroo rat is an example of:",
+      "options": [
+        "Desert adaptation",
+        "AIDS",
+        "Biogas",
+        "DNA fingerprinting"
+      ],
+      "answer": 0,
+      "explain": "It conserves water in desert."
+    },
+    {
+      "question": "Predation is:",
+      "options": [
+        "+/- interaction",
+        "+/+ interaction",
+        "-/- interaction",
+        "0/0 only"
+      ],
+      "answer": 0,
+      "explain": "Predator benefits; prey is harmed."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Regulator",
+      "back": "Maintains internal homeostasis."
+    },
+    {
+      "front": "Conformer",
+      "back": "Internal state changes with environment."
+    },
+    {
+      "front": "K",
+      "back": "Carrying capacity."
+    },
+    {
+      "front": "Natality",
+      "back": "Birth rate."
+    },
+    {
+      "front": "Mutualism",
+      "back": "+/+ interaction."
+    },
+    {
+      "front": "Commensalism",
+      "back": "+/0 interaction."
+    }
+  ],
+  "revisionTable": [
+    [
+      "Abiotic factors",
+      "Temperature, water, light, soil"
+    ],
+    [
+      "Responses",
+      "Regulate, conform, migrate, suspend"
+    ],
+    [
+      "Population attributes",
+      "Density, natality, mortality, age, sex ratio"
+    ],
+    [
+      "Exponential",
+      "J curve, unlimited resources"
+    ],
+    [
+      "Logistic",
+      "Sigmoid curve, K"
+    ],
+    [
+      "Interactions",
+      "+/+, +/-, -/-, +/0"
+    ],
+    [
+      "Competition",
+      "Gause principle"
+    ]
+  ],
+  "transforms": [
+    [
+      "Unlimited resources",
+      "Exponential growth"
+    ],
+    [
+      "Limited resources",
+      "Logistic growth"
+    ],
+    [
+      "Shared resource",
+      "Competition"
+    ]
+  ]
+}

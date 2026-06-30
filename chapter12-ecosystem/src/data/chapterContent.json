@@ -1,0 +1,414 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH12",
+  "slug": "bioforge-ecosystem",
+  "chapterNo": "Chapter 12",
+  "title": "Ecosystem",
+  "subtitle": "Ecosystem structure, productivity, decomposition, energy flow, ecological pyramids, nutrient cycles and succession - a visual ecology dashboard.",
+  "heroBadge": "Class 12 Biology - Chapter 12 - NEET ready",
+  "theme": {
+    "accent": "#15803d",
+    "accent2": "#0284c7",
+    "accent3": "#ca8a04",
+    "soft": "#dcfce7",
+    "ink": "#132517",
+    "dark": "#061409"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": [
+    "energy flow",
+    "nutrient cycle"
+  ],
+  "heroModel": {
+    "title": "Energy flow ecosystem",
+    "subtitle": "Drag to rotate - scroll to zoom",
+    "scene": "ecosystemFlow"
+  },
+  "roadmapTitle": "Ecosystem is energy flow plus nutrient cycling.",
+  "roadmapDescription": "Learn structure first, then productivity, decomposition, trophic transfer, pyramids, cycles, succession and services.",
+  "flowchart": "flowchart LR\n  A[Ecosystem structure] --> B[Productivity]\n  B --> C[Decomposition]\n  C --> D[Energy flow]\n  D --> E[Food chain and web]\n  E --> F[Ecological pyramids]\n  F --> G[Nutrient cycling]\n  G --> H[Succession]\n  H --> I[Ecosystem services]",
+  "roadmap": [
+    {
+      "title": "Ecosystem structure",
+      "summary": "Abiotic components plus producers, consumers and decomposers."
+    },
+    {
+      "title": "Productivity",
+      "summary": "Rate of biomass production as GPP and NPP."
+    },
+    {
+      "title": "Decomposition",
+      "summary": "Detritus is broken down through fragmentation, leaching, catabolism, humification and mineralisation."
+    },
+    {
+      "title": "Energy flow",
+      "summary": "Energy moves one way through trophic levels."
+    },
+    {
+      "title": "Pyramids",
+      "summary": "Number, biomass and energy pyramids compare trophic levels."
+    },
+    {
+      "title": "Nutrient cycles",
+      "summary": "Carbon and phosphorus cycle through biotic and abiotic pools."
+    },
+    {
+      "title": "Succession",
+      "summary": "Communities change from pioneer stage to climax."
+    },
+    {
+      "title": "Ecosystem services",
+      "summary": "Nature provides life-supporting services."
+    }
+  ],
+  "conceptTitle": "Ecosystem as a moving flow diagram.",
+  "conceptDescription": "Every concept becomes a transfer: sunlight to biomass, detritus to minerals, nutrients to organisms and back.",
+  "sections": [
+    {
+      "eyebrow": "Structure",
+      "title": "Ecosystem components",
+      "description": "Ecosystems include abiotic factors and interacting living organisms.",
+      "points": [
+        "Producers convert solar energy into biomass.",
+        "Consumers depend directly or indirectly on producers.",
+        "Decomposers break down dead organic matter.",
+        "Abiotic pool includes nutrients, water, temperature and light."
+      ],
+      "neet": "Producers form the base of most ecosystems."
+    },
+    {
+      "eyebrow": "Productivity",
+      "title": "GPP and NPP",
+      "description": "Productivity is the rate of biomass production.",
+      "points": [
+        "GPP is total organic matter produced by photosynthesis.",
+        "Respiration consumes part of GPP.",
+        "NPP equals GPP minus respiration.",
+        "NPP is available to consumers."
+      ],
+      "neet": "NPP = GPP - R is a high-yield formula."
+    },
+    {
+      "eyebrow": "Decomposition",
+      "title": "Decomposition steps",
+      "description": "Decomposition converts detritus into simpler substances and minerals.",
+      "points": [
+        "Fragmentation breaks detritus into smaller particles.",
+        "Leaching removes soluble nutrients.",
+        "Catabolism enzymatically degrades detritus.",
+        "Humification forms humus and mineralisation releases inorganic nutrients."
+      ],
+      "neet": "Warm, moist and aerobic conditions favour decomposition."
+    },
+    {
+      "eyebrow": "Energy",
+      "title": "Energy flow and trophic levels",
+      "description": "Energy flow through ecosystem is unidirectional.",
+      "points": [
+        "Sun is main energy source.",
+        "Only a fraction transfers to next trophic level.",
+        "Food chains link producers, consumers and decomposers.",
+        "Food webs provide stability."
+      ],
+      "neet": "Energy is not recycled; nutrients are recycled."
+    },
+    {
+      "eyebrow": "Pyramids",
+      "title": "Ecological pyramids",
+      "description": "Pyramids represent trophic levels in number, biomass or energy.",
+      "points": [
+        "Energy pyramid is always upright.",
+        "Pyramid of biomass may be inverted in aquatic systems.",
+        "Pyramid of number may be inverted in tree ecosystem.",
+        "Each trophic level loses energy as heat."
+      ],
+      "neet": "Energy pyramid is always upright."
+    },
+    {
+      "eyebrow": "Cycles",
+      "title": "Nutrient cycling",
+      "description": "Nutrients cycle between organisms and abiotic pools.",
+      "points": [
+        "Carbon cycle includes photosynthesis, respiration, decomposition and combustion.",
+        "Phosphorus cycle lacks a major gaseous phase.",
+        "Reservoirs store nutrients.",
+        "Decomposers are essential for recycling."
+      ],
+      "neet": "Phosphorus cycle is sedimentary and has no significant atmospheric phase."
+    },
+    {
+      "eyebrow": "Succession",
+      "title": "Ecological succession",
+      "description": "Communities change gradually toward a relatively stable climax community.",
+      "points": [
+        "Primary succession begins on bare areas.",
+        "Secondary succession begins where soil already exists.",
+        "Pioneer species start succession.",
+        "Xerarch succession begins in dry areas, hydrarch in wet areas."
+      ],
+      "neet": "Secondary succession is faster than primary succession."
+    },
+    {
+      "eyebrow": "Services",
+      "title": "Ecosystem services",
+      "description": "Ecosystems provide benefits that support human life.",
+      "points": [
+        "Pollination, climate regulation and oxygen production are services.",
+        "Forests reduce erosion and regulate water cycles.",
+        "Biodiversity supports stability.",
+        "Healthy ecosystems have economic and survival value."
+      ],
+      "neet": "Ecosystem services are natural life-support services."
+    }
+  ],
+  "modelTitle": "3D energy and nutrient lab.",
+  "modelDescription": "Rotate energy flow, pyramids and nutrient cycle schematics.",
+  "models": [
+    {
+      "title": "Energy flow",
+      "description": "Sun to producer to consumers.",
+      "scene": "ecosystemFlow"
+    },
+    {
+      "title": "Ecological pyramid",
+      "description": "Trophic levels and energy loss.",
+      "scene": "pyramidScene"
+    },
+    {
+      "title": "Nutrient cycle",
+      "description": "Recycling through decomposers.",
+      "scene": "nutrientCycle"
+    },
+    {
+      "title": "Decomposer factory",
+      "description": "Detritus to minerals idea.",
+      "scene": "microbeFactory"
+    },
+    {
+      "title": "Population support",
+      "description": "Carrying capacity within ecosystem.",
+      "scene": "ecologyPopulation"
+    },
+    {
+      "title": "Succession branch",
+      "description": "Community change through stages.",
+      "scene": "evolutionTree"
+    }
+  ],
+  "highYield": [
+    "GPP is total photosynthetic production.",
+    "NPP = GPP - respiration.",
+    "NPP is available to consumers.",
+    "Decomposition steps include fragmentation, leaching, catabolism, humification and mineralisation.",
+    "Warm moist aerobic conditions favour decomposition.",
+    "Energy flow is unidirectional.",
+    "Nutrients are recycled.",
+    "Energy pyramid is always upright.",
+    "Biomass pyramid can be inverted in aquatic ecosystem.",
+    "Number pyramid can be inverted in tree ecosystem.",
+    "Phosphorus cycle is sedimentary.",
+    "Phosphorus has no major gaseous phase.",
+    "Primary succession starts on bare area.",
+    "Secondary succession is faster.",
+    "Pioneer species start succession."
+  ],
+  "mistakes": [
+    {
+      "title": "Energy vs nutrients",
+      "body": "Energy flows one way; nutrients cycle."
+    },
+    {
+      "title": "GPP vs NPP",
+      "body": "NPP is not total production. It is GPP minus respiration."
+    },
+    {
+      "title": "Always upright?",
+      "body": "Only energy pyramid is always upright; number and biomass pyramids can be inverted."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "NPP equals:",
+      "options": [
+        "GPP - respiration",
+        "GPP + respiration",
+        "Only respiration",
+        "BOD"
+      ],
+      "answer": 0,
+      "explain": "Net primary productivity is GPP minus respiratory loss."
+    },
+    {
+      "question": "Energy flow in ecosystem is:",
+      "options": [
+        "Unidirectional",
+        "Always cyclic",
+        "Absent",
+        "Only downward in soil"
+      ],
+      "answer": 0,
+      "explain": "Energy enters and is lost as heat; it is not recycled."
+    },
+    {
+      "question": "Which pyramid is always upright?",
+      "options": [
+        "Energy",
+        "Number",
+        "Biomass",
+        "All always"
+      ],
+      "answer": 0,
+      "explain": "Energy pyramid is always upright."
+    },
+    {
+      "question": "Decomposition is fastest in:",
+      "options": [
+        "Warm moist aerobic conditions",
+        "Very dry cold anaerobic conditions",
+        "No oxygen and freezing only",
+        "Vacuum"
+      ],
+      "answer": 0,
+      "explain": "Moisture, warmth and oxygen support decomposers."
+    },
+    {
+      "question": "Phosphorus cycle is mainly:",
+      "options": [
+        "Sedimentary",
+        "Gaseous",
+        "No reservoir",
+        "Only atmospheric"
+      ],
+      "answer": 0,
+      "explain": "Phosphorus has sedimentary reservoir."
+    },
+    {
+      "question": "Secondary succession is faster because:",
+      "options": [
+        "Soil already exists",
+        "No organisms exist ever",
+        "Energy is absent",
+        "No pioneers"
+      ],
+      "answer": 0,
+      "explain": "Existing soil speeds recovery."
+    },
+    {
+      "question": "Humification forms:",
+      "options": [
+        "Humus",
+        "Glucose only",
+        "Antibody",
+        "Methane only"
+      ],
+      "answer": 0,
+      "explain": "Humification produces humus."
+    },
+    {
+      "question": "NPP is available to:",
+      "options": [
+        "Consumers",
+        "Only sunlight",
+        "Only oxygen",
+        "No organism"
+      ],
+      "answer": 0,
+      "explain": "Consumers use producer biomass."
+    },
+    {
+      "question": "Primary succession begins on:",
+      "options": [
+        "Bare area",
+        "Established forest only",
+        "Human blood",
+        "DNA"
+      ],
+      "answer": 0,
+      "explain": "Primary succession begins where no soil/community exists."
+    },
+    {
+      "question": "Nutrients in ecosystem:",
+      "options": [
+        "Cycle",
+        "Only flow one way",
+        "Disappear completely",
+        "Never enter organisms"
+      ],
+      "answer": 0,
+      "explain": "Nutrients recycle between biotic and abiotic pools."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "GPP",
+      "back": "Total photosynthetic production."
+    },
+    {
+      "front": "NPP",
+      "back": "GPP minus respiration."
+    },
+    {
+      "front": "Fragmentation",
+      "back": "Detritus broken into small particles."
+    },
+    {
+      "front": "Mineralisation",
+      "back": "Release of inorganic nutrients."
+    },
+    {
+      "front": "Energy pyramid",
+      "back": "Always upright."
+    },
+    {
+      "front": "Secondary succession",
+      "back": "Faster because soil already exists."
+    }
+  ],
+  "revisionTable": [
+    [
+      "Components",
+      "Producers, consumers, decomposers, abiotic pool"
+    ],
+    [
+      "Productivity",
+      "GPP, NPP = GPP - R"
+    ],
+    [
+      "Decomposition",
+      "Fragmentation, leaching, catabolism, humification, mineralisation"
+    ],
+    [
+      "Energy flow",
+      "Unidirectional"
+    ],
+    [
+      "Pyramids",
+      "Energy always upright"
+    ],
+    [
+      "Cycles",
+      "Carbon and phosphorus"
+    ],
+    [
+      "Succession",
+      "Primary slower, secondary faster"
+    ]
+  ],
+  "transforms": [
+    [
+      "Sunlight",
+      "Producer biomass"
+    ],
+    [
+      "Detritus",
+      "Minerals"
+    ],
+    [
+      "Pioneer community",
+      "Climax community"
+    ]
+  ]
+}

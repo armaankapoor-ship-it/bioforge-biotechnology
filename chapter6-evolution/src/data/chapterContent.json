@@ -1,0 +1,414 @@
+{
+  "brand": "BIOFORGE",
+  "chapterShort": "CH6",
+  "slug": "bioforge-evolution",
+  "chapterNo": "Chapter 6",
+  "title": "Evolution",
+  "subtitle": "Origin of life, evidence, natural selection, Hardy-Weinberg principle, adaptive radiation and human evolution - made visual for NEET.",
+  "heroBadge": "Class 12 Biology - Chapter 6 - NEET ready",
+  "theme": {
+    "accent": "#16a34a",
+    "accent2": "#f59e0b",
+    "accent3": "#0ea5e9",
+    "soft": "#dcfce7",
+    "ink": "#14251b",
+    "dark": "#06140a"
+  },
+  "stats": {
+    "modules": "8",
+    "models": "6"
+  },
+  "floating": [
+    "natural selection",
+    "fossils"
+  ],
+  "heroModel": {
+    "title": "Evolutionary tree",
+    "subtitle": "Drag to rotate - scroll to zoom",
+    "scene": "evolutionTree"
+  },
+  "roadmapTitle": "Evolution connects variation, selection, time and ancestry.",
+  "roadmapDescription": "Read the chapter as a story: life arose, evidence supports change, selection shifts populations, and lineages branch across time.",
+  "flowchart": "flowchart LR\n  A[Origin of life] --> B[Evidence]\n  B --> C[Variation]\n  C --> D[Natural selection]\n  D --> E[Hardy Weinberg]\n  E --> F[Adaptive radiation]\n  F --> G[Speciation]\n  G --> H[Human evolution]",
+  "roadmap": [
+    {
+      "title": "Origin of life",
+      "summary": "Chemical evolution explains formation of early organic molecules."
+    },
+    {
+      "title": "Evidence for evolution",
+      "summary": "Fossils, comparative anatomy, embryology and biochemistry support evolution."
+    },
+    {
+      "title": "Darwinian selection",
+      "summary": "Heritable variations with survival advantage become common."
+    },
+    {
+      "title": "Hardy-Weinberg principle",
+      "summary": "Allele frequencies remain stable unless evolutionary forces act."
+    },
+    {
+      "title": "Adaptive radiation",
+      "summary": "One ancestor gives rise to many forms in different niches."
+    },
+    {
+      "title": "Speciation",
+      "summary": "Isolation and accumulated changes create new species."
+    },
+    {
+      "title": "Human evolution",
+      "summary": "Primates to hominins to modern humans through a fossil sequence."
+    },
+    {
+      "title": "Modern view",
+      "summary": "Mutation, recombination, gene flow, drift and selection alter populations."
+    }
+  ],
+  "conceptTitle": "Evolution as a population-level process.",
+  "conceptDescription": "These cards shift the chapter from story memorisation to cause-effect clarity.",
+  "sections": [
+    {
+      "eyebrow": "Origin",
+      "title": "Chemical evolution and early life",
+      "description": "Life is thought to have arisen from non-living organic molecules under primitive Earth conditions.",
+      "points": [
+        "Primitive atmosphere was reducing.",
+        "Oparin and Haldane proposed chemical evolution.",
+        "Miller-Urey experiment produced amino acids under simulated early conditions.",
+        "First life forms were likely simple anaerobic heterotrophs."
+      ],
+      "neet": "Miller-Urey experiment is the classic origin-of-life experiment."
+    },
+    {
+      "eyebrow": "Evidence",
+      "title": "Evidence for evolution",
+      "description": "Multiple independent observations support descent with modification.",
+      "points": [
+        "Fossils show life forms from different geological periods.",
+        "Homologous organs show divergent evolution.",
+        "Analogous organs show convergent evolution.",
+        "Molecular similarity supports common ancestry."
+      ],
+      "neet": "Homology indicates common ancestry; analogy indicates similar function, not same origin."
+    },
+    {
+      "eyebrow": "Darwin",
+      "title": "Natural selection",
+      "description": "Natural selection favours heritable variations that increase survival or reproduction.",
+      "points": [
+        "Variation exists in populations.",
+        "Organisms overproduce offspring.",
+        "Competition occurs for resources.",
+        "Favourable variations are selected over generations."
+      ],
+      "neet": "Natural selection acts on phenotype but changes allele frequencies."
+    },
+    {
+      "eyebrow": "Hardy",
+      "title": "Hardy-Weinberg principle",
+      "description": "A non-evolving population maintains allele frequencies under ideal conditions.",
+      "points": [
+        "Equation is p squared + 2pq + q squared = 1.",
+        "p and q are allele frequencies.",
+        "Mutation, migration, drift, recombination and selection disturb equilibrium.",
+        "Genetic drift is strong in small populations."
+      ],
+      "neet": "Hardy-Weinberg is a null model for detecting evolution."
+    },
+    {
+      "eyebrow": "Radiation",
+      "title": "Adaptive radiation",
+      "description": "Different forms evolve from a common ancestor in different habitats or niches.",
+      "points": [
+        "Darwin finches show adaptive radiation.",
+        "Australian marsupials show adaptive radiation.",
+        "Convergent evolution can produce similar adaptations in unrelated groups.",
+        "Ecological opportunity speeds diversification."
+      ],
+      "neet": "Darwin finches are a textbook adaptive radiation example."
+    },
+    {
+      "eyebrow": "Speciation",
+      "title": "Isolation and species formation",
+      "description": "New species form when gene flow is restricted and differences accumulate.",
+      "points": [
+        "Geographical isolation can separate populations.",
+        "Reproductive isolation prevents interbreeding.",
+        "Mutation and selection build differences.",
+        "Speciation is usually gradual across many generations."
+      ],
+      "neet": "Isolation plus accumulated genetic change can form new species."
+    },
+    {
+      "eyebrow": "Human",
+      "title": "Human evolution",
+      "description": "Human evolution is reconstructed using fossils and comparative features.",
+      "points": [
+        "Australopithecus was more ape-like but walked upright.",
+        "Homo habilis used tools.",
+        "Homo erectus had larger brain and used fire.",
+        "Homo sapiens shows modern cranial features and culture."
+      ],
+      "neet": "Human evolution is branching, not a straight ladder."
+    },
+    {
+      "eyebrow": "Forces",
+      "title": "Evolutionary forces",
+      "description": "Several mechanisms alter allele frequencies in populations.",
+      "points": [
+        "Mutation creates new variation.",
+        "Recombination reshuffles variation.",
+        "Gene flow moves alleles between populations.",
+        "Natural selection and drift change allele frequencies."
+      ],
+      "neet": "Evolution is change in allele frequency over generations."
+    }
+  ],
+  "modelTitle": "Evolution in 3D timelines and populations.",
+  "modelDescription": "Original models represent branching ancestry, population curves, selection and variation.",
+  "models": [
+    {
+      "title": "Evolution tree",
+      "description": "Common ancestor with branching lineages.",
+      "scene": "evolutionTree"
+    },
+    {
+      "title": "Selection curve",
+      "description": "Population change and carrying idea.",
+      "scene": "ecologyPopulation"
+    },
+    {
+      "title": "Variation source",
+      "description": "Recombination and crossing-over anchor.",
+      "scene": "chromosomeCrossover"
+    },
+    {
+      "title": "Comparative evidence",
+      "description": "Shared pattern model for homology.",
+      "scene": "pedigreeTree"
+    },
+    {
+      "title": "Molecular ancestry",
+      "description": "DNA similarity as evidence.",
+      "scene": "molecularDogma"
+    },
+    {
+      "title": "Ecosystem niche",
+      "description": "Niche-driven adaptation anchor.",
+      "scene": "ecosystemFlow"
+    }
+  ],
+  "highYield": [
+    "Oparin-Haldane proposed chemical evolution.",
+    "Miller-Urey produced amino acids experimentally.",
+    "Fossils are direct evidence of past life.",
+    "Homologous organs show divergent evolution.",
+    "Analogous organs show convergent evolution.",
+    "Darwin proposed natural selection.",
+    "Natural selection changes allele frequencies.",
+    "Hardy-Weinberg equation is p squared + 2pq + q squared = 1.",
+    "Mutation creates new alleles.",
+    "Genetic drift is chance change in small populations.",
+    "Gene flow is allele movement between populations.",
+    "Adaptive radiation: Darwin finches.",
+    "Australian marsupials show adaptive radiation.",
+    "Isolation contributes to speciation.",
+    "Human evolution is branching, not linear."
+  ],
+  "mistakes": [
+    {
+      "title": "Homology vs analogy",
+      "body": "Homology means common origin; analogy means similar function due to convergence."
+    },
+    {
+      "title": "Individual vs population",
+      "body": "Individuals are selected; populations evolve."
+    },
+    {
+      "title": "Hardy-Weinberg meaning",
+      "body": "It describes no evolution under ideal conditions, not automatic change."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Miller-Urey experiment produced:",
+      "options": [
+        "Amino acids",
+        "DNA polymerase",
+        "Whole cells",
+        "Chloroplasts"
+      ],
+      "answer": 0,
+      "explain": "The experiment produced simple organic molecules including amino acids."
+    },
+    {
+      "question": "Homologous organs indicate:",
+      "options": [
+        "Common ancestry",
+        "No evolution",
+        "Identical function only",
+        "Artificial selection only"
+      ],
+      "answer": 0,
+      "explain": "Homology reflects common origin."
+    },
+    {
+      "question": "Analogous organs indicate:",
+      "options": [
+        "Divergent evolution",
+        "Convergent evolution",
+        "Same ancestry always",
+        "No selection"
+      ],
+      "answer": 1,
+      "explain": "Analogous organs have similar function but different origin."
+    },
+    {
+      "question": "Hardy-Weinberg equation is:",
+      "options": [
+        "p+q=0 only",
+        "p squared + 2pq + q squared = 1",
+        "2p+q=1",
+        "pq=0"
+      ],
+      "answer": 1,
+      "explain": "It represents genotype frequencies for two alleles."
+    },
+    {
+      "question": "Genetic drift is strongest in:",
+      "options": [
+        "Very large populations",
+        "Small populations",
+        "All populations equally",
+        "Only fossils"
+      ],
+      "answer": 1,
+      "explain": "Chance effects are stronger in small populations."
+    },
+    {
+      "question": "Darwin finches show:",
+      "options": [
+        "Adaptive radiation",
+        "No variation",
+        "Aneuploidy",
+        "Translation"
+      ],
+      "answer": 0,
+      "explain": "Finches diversified into different niches."
+    },
+    {
+      "question": "Natural selection acts directly on:",
+      "options": [
+        "Phenotype",
+        "Ribosomal RNA only",
+        "Fossil age",
+        "Stop codons"
+      ],
+      "answer": 0,
+      "explain": "Phenotype affects survival and reproduction."
+    },
+    {
+      "question": "Gene flow means:",
+      "options": [
+        "Allele movement between populations",
+        "Protein synthesis",
+        "Cell lysis",
+        "DNA splicing"
+      ],
+      "answer": 0,
+      "explain": "Migration can move alleles."
+    },
+    {
+      "question": "Speciation often requires:",
+      "options": [
+        "Isolation and divergence",
+        "No variation",
+        "No mutation ever",
+        "Identical niches only"
+      ],
+      "answer": 0,
+      "explain": "Isolation reduces gene flow and differences accumulate."
+    },
+    {
+      "question": "Homo habilis is associated with:",
+      "options": [
+        "Tool use",
+        "First photosynthesis",
+        "PCR",
+        "No brain growth"
+      ],
+      "answer": 0,
+      "explain": "Homo habilis means handy man and is linked with tools."
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Homology",
+      "back": "Same origin, possibly different function."
+    },
+    {
+      "front": "Analogy",
+      "back": "Similar function, different origin."
+    },
+    {
+      "front": "Hardy-Weinberg",
+      "back": "No-evolution reference model."
+    },
+    {
+      "front": "Genetic drift",
+      "back": "Random allele frequency change."
+    },
+    {
+      "front": "Adaptive radiation",
+      "back": "Many forms from one ancestor in different niches."
+    },
+    {
+      "front": "Speciation",
+      "back": "Formation of new species."
+    }
+  ],
+  "revisionTable": [
+    [
+      "Origin",
+      "Oparin-Haldane and Miller-Urey"
+    ],
+    [
+      "Evidence",
+      "Fossils, homology, analogy, molecular data"
+    ],
+    [
+      "Darwin",
+      "Natural selection"
+    ],
+    [
+      "Hardy-Weinberg",
+      "p2 + 2pq + q2 = 1"
+    ],
+    [
+      "Forces",
+      "Mutation, migration, drift, recombination, selection"
+    ],
+    [
+      "Adaptive radiation",
+      "Darwin finches"
+    ],
+    [
+      "Human evolution",
+      "Branching fossil story"
+    ]
+  ],
+  "transforms": [
+    [
+      "Variation",
+      "Selection"
+    ],
+    [
+      "Isolation",
+      "Speciation"
+    ],
+    [
+      "Ancestor",
+      "Adaptive radiation"
+    ]
+  ]
+}

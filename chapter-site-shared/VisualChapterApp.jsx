@@ -502,8 +502,251 @@ function buildScene(type, group) {
     population,
     artLab,
     safeClinic,
+    inheritanceLab,
+    pedigreeTree,
+    chromosomeCrossover,
+    molecularDogma,
+    dnaReplication,
+    transcriptionScene,
+    evolutionTree,
+    immunityDefense,
+    microbeFactory,
+    biotechApps,
+    geneTherapy3d,
+    ecologyPopulation,
+    ecosystemFlow,
+    pyramidScene,
+    nutrientCycle,
   }
   ;(scenes[type] || humanOverview)(group)
+}
+
+function addTube(group, points, color = 0x38bdf8, radius = 0.045) {
+  const curve = new THREE.CatmullRomCurve3(points.map(([x, y, z]) => new THREE.Vector3(x, y, z)))
+  const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 36, radius, 10), mat(color))
+  group.add(tube)
+  return tube
+}
+
+function addOrb(group, x, y, z, size, color, options = {}) {
+  const orb = new THREE.Mesh(new THREE.SphereGeometry(size, 28, 16), mat(color, options))
+  orb.position.set(x, y, z)
+  group.add(orb)
+  return orb
+}
+
+function inheritanceLab(group) {
+  for (let pair = 0; pair < 2; pair++) {
+    const y = pair ? -0.35 : 0.55
+    const a = new THREE.Mesh(new THREE.CapsuleGeometry(0.09, 1.7, 10, 24), mat(pair ? 0xec4899 : 0x38bdf8))
+    const b = new THREE.Mesh(new THREE.CapsuleGeometry(0.09, 1.7, 10, 24), mat(pair ? 0xf59e0b : 0x22c55e))
+    a.rotation.z = Math.PI / 2
+    b.rotation.z = Math.PI / 2
+    a.position.set(-0.8, y, 0)
+    b.position.set(-0.8, y - 0.22, 0.16)
+    group.add(a, b)
+    addOrb(group, -1.18, y + 0.08, 0.28, 0.13, 0xffffff).userData.pulse = true
+    addOrb(group, -0.42, y - 0.28, 0.28, 0.13, 0xffffff).userData.pulse = true
+  }
+  for (let row = 0; row < 2; row++) {
+    for (let col = 0; col < 2; col++) {
+      const tile = new THREE.Mesh(new THREE.BoxGeometry(0.48, 0.34, 0.08), mat(row === col ? 0x22c55e : 0x38bdf8, { transparent: true, opacity: 0.8 }))
+      tile.position.set(0.62 + col * 0.55, 0.35 - row * 0.45, 0.05)
+      group.add(tile)
+    }
+  }
+  addLabel(group, 'alleles on chromosomes', [-0.85, 1.55, 0])
+  addLabel(group, 'Punnett logic', [1.0, -0.9, 0])
+}
+
+function pedigreeTree(group) {
+  const nodes = [
+    [0, 1.05, 0, 0x38bdf8], [-0.75, 0.15, 0, 0xec4899], [0.75, 0.15, 0, 0xf59e0b],
+    [-1.1, -0.85, 0, 0x22c55e], [-0.35, -0.85, 0, 0x38bdf8], [0.45, -0.85, 0, 0xec4899], [1.2, -0.85, 0, 0xf59e0b],
+  ]
+  addTube(group, [[0, 0.9, 0], [-0.75, 0.3, 0]], 0x94a3b8, 0.025)
+  addTube(group, [[0, 0.9, 0], [0.75, 0.3, 0]], 0x94a3b8, 0.025)
+  addTube(group, [[-0.75, 0, 0], [-1.1, -0.65, 0]], 0x94a3b8, 0.025)
+  addTube(group, [[-0.75, 0, 0], [-0.35, -0.65, 0]], 0x94a3b8, 0.025)
+  addTube(group, [[0.75, 0, 0], [0.45, -0.65, 0]], 0x94a3b8, 0.025)
+  addTube(group, [[0.75, 0, 0], [1.2, -0.65, 0]], 0x94a3b8, 0.025)
+  nodes.forEach(([x, y, z, c], i) => {
+    const node = i % 2
+      ? new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.34, 0.12), mat(c))
+      : new THREE.Mesh(new THREE.SphereGeometry(0.2, 28, 16), mat(c))
+    node.position.set(x, y, z)
+    node.userData.pulse = i === 3 || i === 5
+    group.add(node)
+  })
+  addLabel(group, 'pedigree pattern', [0, 1.75, 0])
+  addLabel(group, 'affected trait', [0, -1.6, 0])
+}
+
+function chromosomeCrossover(group) {
+  addTube(group, [[-1.5, 0.7, 0], [-0.35, 0.05, 0], [1.4, -0.72, 0]], 0x38bdf8, 0.08)
+  addTube(group, [[-1.5, -0.7, 0.08], [-0.35, -0.05, 0.08], [1.4, 0.72, 0.08]], 0xec4899, 0.08)
+  addOrb(group, -0.35, 0, 0.25, 0.22, 0xffffff).userData.pulse = true
+  addTube(group, [[-0.9, 0.37, 0.18], [-0.2, 0.03, 0.18], [0.55, -0.32, 0.18]], 0xf59e0b, 0.04)
+  addLabel(group, 'crossing over', [0, 1.65, 0])
+  addLabel(group, 'new combinations', [0, -1.55, 0])
+}
+
+function molecularDogma(group) {
+  for (let i = 0; i < 18; i++) {
+    const y = -1.05 + i * 0.12
+    const x = Math.sin(i * 0.75) * 0.45 - 1.25
+    addOrb(group, x, y, 0, 0.075, i % 2 ? 0x38bdf8 : 0xec4899)
+    addOrb(group, -1.25 - x - 1.25, y, 0, 0.075, i % 2 ? 0xf59e0b : 0x22c55e)
+  }
+  addTube(group, [[-0.25, 0.55, 0], [0.55, 0.25, 0], [1.15, -0.2, 0]], 0x38bdf8, 0.055)
+  for (let i = 0; i < 8; i++) addOrb(group, 0.55 + i * 0.22, -0.82 + Math.sin(i) * 0.12, 0, 0.12, i % 2 ? 0xf59e0b : 0x22c55e)
+  addLabel(group, 'DNA -> mRNA', [-0.45, 1.55, 0])
+  addLabel(group, 'protein chain', [1.1, -1.55, 0])
+}
+
+function dnaReplication(group) {
+  addTube(group, [[-1.6, 1.0, 0], [-0.45, 0.25, 0], [1.45, 0.85, 0]], 0x38bdf8, 0.055)
+  addTube(group, [[-1.6, -1.0, 0.1], [-0.45, -0.25, 0.1], [1.45, -0.85, 0.1]], 0xec4899, 0.055)
+  addTube(group, [[-0.45, 0.25, 0], [0.45, 0.02, 0], [1.4, 0.02, 0]], 0x22c55e, 0.04)
+  addTube(group, [[-0.45, -0.25, 0.1], [0.45, -0.02, 0.1], [1.4, -0.02, 0.1]], 0xf59e0b, 0.04)
+  addOrb(group, -0.45, 0, 0.28, 0.25, 0xffffff).userData.pulse = true
+  addLabel(group, 'replication fork', [-0.45, 1.55, 0])
+  addLabel(group, 'new strands', [1.1, -1.55, 0])
+}
+
+function transcriptionScene(group) {
+  molecularDogma(group)
+  addOrb(group, -0.15, 0.55, 0.35, 0.22, 0xffffff).userData.pulse = true
+  addLabel(group, 'RNA polymerase', [0.25, 1.05, 0])
+}
+
+function evolutionTree(group) {
+  addTube(group, [[0, -1.45, 0], [0, -0.4, 0], [-0.75, 0.55, 0], [-1.25, 1.15, 0]], 0x22c55e, 0.055)
+  addTube(group, [[0, -0.4, 0], [0.25, 0.45, 0], [0.1, 1.15, 0]], 0x38bdf8, 0.055)
+  addTube(group, [[0, -0.25, 0], [0.85, 0.45, 0], [1.35, 1.05, 0]], 0xec4899, 0.055)
+  ;[[-1.25, 1.15, 0x22c55e], [0.1, 1.15, 0x38bdf8], [1.35, 1.05, 0xec4899], [0, -1.45, 0xf59e0b]].forEach(([x, y, c]) => {
+    addOrb(group, x, y, 0.18, 0.18, c).userData.float = true
+  })
+  for (let i = 0; i < 4; i++) {
+    const layer = new THREE.Mesh(new THREE.BoxGeometry(2.8 - i * 0.28, 0.08, 0.08), mat(0x94a3b8, { transparent: true, opacity: 0.5 }))
+    layer.position.set(0, -1.85 + i * 0.15, 0)
+    group.add(layer)
+  }
+  addLabel(group, 'common ancestor', [0, -1.15, 0])
+  addLabel(group, 'adaptive branches', [0, 1.7, 0])
+}
+
+function immunityDefense(group) {
+  const shield = new THREE.Mesh(new THREE.ConeGeometry(0.85, 1.45, 5), mat(0x22c55e, { transparent: true, opacity: 0.74 }))
+  shield.rotation.z = Math.PI
+  shield.position.set(-0.8, 0, 0)
+  group.add(shield)
+  for (let i = 0; i < 4; i++) {
+    const pathogen = addOrb(group, 0.75 + Math.cos(i * 1.7) * 0.65, Math.sin(i * 1.7) * 0.65, 0, 0.22, i % 2 ? 0xef4444 : 0xf59e0b)
+    pathogen.userData.pulse = true
+  }
+  for (let i = 0; i < 3; i++) {
+    addTube(group, [[0.05 + i * 0.35, -1.15, 0], [0.2 + i * 0.35, -0.75, 0], [0.42 + i * 0.35, -1.15, 0]], 0xffffff, 0.025)
+  }
+  addLabel(group, 'immune defense', [-0.85, 1.55, 0])
+  addLabel(group, 'antibody response', [0.95, -1.7, 0])
+}
+
+function microbeFactory(group) {
+  const tank = new THREE.Mesh(new THREE.CylinderGeometry(0.82, 0.82, 1.8, 48), mat(0x38bdf8, { transparent: true, opacity: 0.32 }))
+  tank.position.set(-0.45, 0, 0)
+  group.add(tank)
+  for (let i = 0; i < 15; i++) {
+    const cell = addOrb(group, -0.45 + Math.cos(i * 1.4) * 0.55, -0.72 + (i % 6) * 0.26, Math.sin(i) * 0.22, 0.09, i % 3 ? 0x22c55e : 0xf59e0b)
+    cell.userData.float = true
+  }
+  const vial = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.22, 1.1, 30), mat(0xec4899, { transparent: true, opacity: 0.55 }))
+  vial.position.set(1.35, -0.25, 0)
+  group.add(vial)
+  addOrb(group, 1.35, -0.75, 0.25, 0.12, 0xffffff).userData.pulse = true
+  addLabel(group, 'microbial culture', [-0.7, 1.7, 0])
+  addLabel(group, 'useful product', [1.25, -1.55, 0])
+}
+
+function biotechApps(group) {
+  const plasmid = new THREE.Mesh(new THREE.TorusGeometry(0.55, 0.045, 16, 90), mat(0x38bdf8))
+  plasmid.position.set(-1.1, 0.58, 0)
+  group.add(plasmid)
+  addTube(group, [[-1.08, 0.1, 0.1], [-0.35, 0, 0.1], [0.35, 0.1, 0.1]], 0xf59e0b, 0.045)
+  const plant = new THREE.Group()
+  addTube(plant, [[0, -0.75, 0], [0, 0.45, 0]], 0x22c55e, 0.055)
+  addOrb(plant, -0.25, 0.28, 0, 0.22, 0x22c55e)
+  addOrb(plant, 0.25, 0.55, 0, 0.22, 0x22c55e)
+  plant.position.set(0.75, -0.15, 0)
+  group.add(plant)
+  const vial = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.18, 0.9, 28), mat(0xec4899, { transparent: true, opacity: 0.58 }))
+  vial.position.set(1.65, -0.6, 0)
+  group.add(vial)
+  addLabel(group, 'transgene delivery', [-0.75, 1.65, 0])
+  addLabel(group, 'field / medicine', [0.95, -1.55, 0])
+}
+
+function geneTherapy3d(group) {
+  const cell = addOrb(group, 0.35, 0, 0, 0.95, 0x38bdf8, { transparent: true, opacity: 0.35 })
+  cell.userData.pulse = true
+  addOrb(group, 0.35, 0, 0.2, 0.34, 0xec4899)
+  addTube(group, [[-1.7, 0.75, 0], [-0.65, 0.35, 0], [0.08, 0.08, 0.2]], 0xf59e0b, 0.055)
+  addOrb(group, -1.75, 0.78, 0, 0.22, 0x22c55e).userData.float = true
+  addLabel(group, 'vector', [-1.3, 1.55, 0])
+  addLabel(group, 'corrected cell', [0.55, -1.45, 0])
+}
+
+function ecologyPopulation(group) {
+  addTube(group, [[-1.55, -1.1, 0], [-0.8, -0.95, 0], [-0.25, -0.45, 0], [0.35, 0.25, 0], [1.35, 0.55, 0]], 0x22c55e, 0.055)
+  const cap = new THREE.Mesh(new THREE.BoxGeometry(2.7, 0.045, 0.05), mat(0xec4899))
+  cap.position.set(0, 0.72, 0)
+  group.add(cap)
+  for (let i = 0; i < 10; i++) addOrb(group, -1.35 + i * 0.3, -1.55 + Math.sin(i) * 0.12, 0, 0.11, i % 2 ? 0x38bdf8 : 0xf59e0b).userData.float = true
+  addLabel(group, 'logistic growth', [0, 1.55, 0])
+  addLabel(group, 'carrying capacity', [0.7, 0.95, 0])
+}
+
+function ecosystemFlow(group) {
+  addOrb(group, -1.55, 1.0, 0, 0.32, 0xf59e0b).userData.pulse = true
+  const producer = new THREE.Mesh(new THREE.ConeGeometry(0.35, 0.9, 6), mat(0x22c55e))
+  producer.position.set(-0.8, -0.45, 0)
+  group.add(producer)
+  addOrb(group, 0.15, -0.35, 0, 0.28, 0x38bdf8)
+  addOrb(group, 1.05, -0.15, 0, 0.34, 0xec4899)
+  addTube(group, [[-1.35, 0.75, 0], [-0.9, -0.05, 0]], 0xf59e0b, 0.035)
+  addTube(group, [[-0.45, -0.35, 0], [-0.15, -0.35, 0], [0.45, -0.28, 0]], 0xffffff, 0.035)
+  addTube(group, [[0.45, -0.28, 0], [0.75, -0.2, 0], [1.3, -0.12, 0]], 0xffffff, 0.035)
+  addLabel(group, 'energy flow', [0, 1.55, 0])
+  addLabel(group, 'producer -> consumers', [0.25, -1.45, 0])
+}
+
+function pyramidScene(group) {
+  const tiers = [
+    [0, -1.05, 2.4, 0.32, 0x22c55e],
+    [0, -0.62, 1.8, 0.28, 0x38bdf8],
+    [0, -0.22, 1.15, 0.25, 0xf59e0b],
+    [0, 0.15, 0.62, 0.22, 0xec4899],
+  ]
+  tiers.forEach(([x, y, w, h, c], i) => {
+    const tier = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.35), mat(c, { transparent: true, opacity: 0.86 }))
+    tier.position.set(x, y, 0)
+    tier.userData.pulse = i === 3
+    group.add(tier)
+  })
+  addLabel(group, 'producer base', [0, -1.65, 0])
+  addLabel(group, 'energy pyramid', [0, 1.45, 0])
+}
+
+function nutrientCycle(group) {
+  const ringA = new THREE.Mesh(new THREE.TorusGeometry(1.15, 0.045, 16, 100), mat(0x38bdf8))
+  const ringB = new THREE.Mesh(new THREE.TorusGeometry(0.82, 0.035, 16, 100), mat(0x22c55e))
+  ringA.rotation.x = Math.PI / 2
+  ringB.rotation.x = Math.PI / 2
+  ringB.rotation.z = 0.6
+  group.add(ringA, ringB)
+  ;[[0, 1.15, 0xf59e0b], [1.15, 0, 0x22c55e], [0, -1.15, 0xec4899], [-1.15, 0, 0x38bdf8]].forEach(([x, y, c]) => addOrb(group, x, y, 0.12, 0.18, c).userData.float = true)
+  addLabel(group, 'nutrient cycling', [0, 1.65, 0])
+  addLabel(group, 'decomposition returns minerals', [0, -1.65, 0])
 }
 
 function humanOverview(group) {

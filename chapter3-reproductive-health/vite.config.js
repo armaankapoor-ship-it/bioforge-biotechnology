@@ -10,10 +10,10 @@ export default defineConfig({
   resolve: {
     dedupe: ['react', 'react-dom'],
     alias: [
-      { find: /^react$/, replacement: localModule('./node_modules/react/index.js') },
-      { find: /^react\/jsx-runtime$/, replacement: localModule('./node_modules/react/jsx-runtime.js') },
-      { find: /^react-dom$/, replacement: localModule('./node_modules/react-dom/index.js') },
-      { find: /^react-dom\/client$/, replacement: localModule('./node_modules/react-dom/client.js') },
+      { find: /^react$/, replacement: localModule('../node_modules/react/index.js') },
+      { find: /^react\/jsx-runtime$/, replacement: localModule('../node_modules/react/jsx-runtime.js') },
+      { find: /^react-dom$/, replacement: localModule('../node_modules/react-dom/index.js') },
+      { find: /^react-dom\/client$/, replacement: localModule('../node_modules/react-dom/client.js') },
     ],
   },
 })

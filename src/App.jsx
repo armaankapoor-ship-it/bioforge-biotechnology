@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ArrowRight, Atom, Dna, Menu, Microscope, Scissors, TestTube2, X } from 'lucide-react'
+import { ArrowRight, Atom, BookOpen, Dna, Menu, Microscope, Scissors, TestTube2, X } from 'lucide-react'
 import { CoreChapterSections, DownstreamApplicationsRevision } from './components/AdvancedChapterSections'
 import BioreactorSection from './components/BioreactorSection'
 import ChapterHero from './components/ChapterHero'
@@ -16,6 +16,7 @@ import { ConceptCard, FlowchartBlock, SectionShell } from './components/ui'
 const navItems = [
   ['home', 'Home'],
   ['roadmap', 'Map'],
+  ['chapter-library', 'Sites'],
   ['chapter-notebook', 'Chapter'],
   ['study-atlas', 'Notes'],
   ['intro', 'Basics'],
@@ -31,6 +32,21 @@ const navItems = [
   ['models', '3D'],
   ['high-yield', 'Yield'],
   ['revision', 'Revise'],
+]
+
+const chapterSites = [
+  ['chapter1', 'Chapter 1', 'Sexual Reproduction in Flowering Plants'],
+  ['chapter2', 'Chapter 2', 'Human Reproduction'],
+  ['chapter3', 'Chapter 3', 'Reproductive Health'],
+  ['chapter4', 'Chapter 4', 'Principles of Inheritance and Variation'],
+  ['chapter5', 'Chapter 5', 'Molecular Basis of Inheritance'],
+  ['chapter6', 'Chapter 6', 'Evolution'],
+  ['chapter7', 'Chapter 7', 'Human Health and Disease'],
+  ['chapter8', 'Chapter 8', 'Microbes in Human Welfare'],
+  ['', 'Chapter 9', 'Biotechnology: Principles, Processes and Applications'],
+  ['chapter10', 'Chapter 10', 'Biotechnology and Its Applications'],
+  ['chapter11', 'Chapter 11', 'Organisms and Populations'],
+  ['chapter12', 'Chapter 12', 'Ecosystem'],
 ]
 
 function App() {
@@ -90,6 +106,7 @@ function App() {
       <main>
         <ChapterHero />
         <ChapterRoadmap />
+        <ChapterLibrary />
         <FoundationsStrip />
         <CompleteChapterNotebook />
         <StudyAtlasSection />
@@ -103,6 +120,31 @@ function App() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+function ChapterLibrary() {
+  const base = import.meta.env.BASE_URL || '/'
+  const hrefFor = (path) => (path ? `${base}${path}/` : base)
+
+  return (
+    <SectionShell id="chapter-library" eyebrow="Chapter sites" title="Separate premium websites for Class 12 Biology." description="Each chapter opens as its own free GitHub Pages learning site with visual notes, 3D models, flowcharts, quizzes and revision tools.">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {chapterSites.map(([path, chapter, title]) => (
+          <a key={`${chapter}-${title}`} href={hrefFor(path)} className="group rounded-[28px] border border-emerald-100 bg-white/85 p-5 shadow-soft transition hover:-translate-y-1 hover:border-leaf/30 hover:shadow-[0_20px_60px_rgba(18,67,51,.14)] dark:border-white/10 dark:bg-white/5">
+            <div className="flex items-start justify-between gap-4">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-leaf/10 text-leaf dark:bg-mint/10 dark:text-mint">
+                <BookOpen size={21} />
+              </div>
+              <ArrowRight className="-rotate-45 text-leaf opacity-50 transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100 dark:text-mint" size={18} />
+            </div>
+            <p className="mt-5 text-xs font-black uppercase tracking-[.18em] text-leaf/60 dark:text-mint/60">{chapter}</p>
+            <h3 className="mt-2 font-display text-xl font-black tracking-[-.04em] text-ink dark:text-white">{title}</h3>
+            <p className="mt-3 text-sm leading-6 text-slate-500 dark:text-slate-400">Open the standalone visual learning site.</p>
+          </a>
+        ))}
+      </div>
+    </SectionShell>
   )
 }
 
