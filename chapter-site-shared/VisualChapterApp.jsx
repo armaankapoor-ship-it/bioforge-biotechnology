@@ -31,6 +31,146 @@ const navItems = [
   ['revise', 'Revise'],
 ]
 
+const genericSceneCycle = ['conceptHelix', 'conceptCell', 'conceptCycle', 'conceptPipeline', 'conceptNetwork', 'conceptAssay', 'conceptOrgan', 'conceptChromosome']
+
+function getTwentyModels(content) {
+  const chapter = content.chapterShort
+  const fromModels = (content.models || []).map((model, index) => ({
+    ...model,
+    source: 'Featured',
+    labels: model.labels || compactLabels([model.title, model.description, content.title]),
+    scene: model.scene || sceneForModel(chapter, `${model.title} ${model.description}`, index),
+  }))
+
+  const fromSections = (content.sections || []).map((section, index) => ({
+    title: section.title,
+    description: section.description,
+    source: section.eyebrow || 'Concept',
+    labels: compactLabels(section.points || [section.title, section.neet]),
+    scene: sceneForModel(chapter, `${section.eyebrow} ${section.title} ${section.description}`, index + 6),
+  }))
+
+  const fromRoadmap = (content.roadmap || []).map((item, index) => ({
+    title: `${item.title} model`,
+    description: item.summary,
+    source: 'Roadmap',
+    labels: compactLabels([item.title, item.summary, content.title]),
+    scene: sceneForModel(chapter, `${item.title} ${item.summary}`, index + 14),
+  }))
+
+  const universal = [
+    ['Core chapter map', 'A rotating 3D memory-map that links the whole chapter together.', 'conceptNetwork'],
+    ['Exam diagram trainer', 'Labels appear around a schematic model so students can revise drawing cues.', 'conceptAssay'],
+    ['Process timeline model', 'A 3D flow path for arranging the chapter events in the right order.', 'conceptPipeline'],
+    ['NEET trap visualizer', 'A compact model for spotting common confusion points.', 'conceptCycle'],
+  ].map(([title, description, scene], index) => ({
+    title,
+    description,
+    source: 'Revision',
+    labels: compactLabels([title, description, content.title]),
+    scene: sceneForModel(chapter, `${title} ${description}`, index + 30) || scene,
+  }))
+
+  const unique = []
+  const seen = new Set()
+  ;[...fromModels, ...fromSections, ...fromRoadmap, ...universal].forEach((model, index) => {
+    const key = model.title.toLowerCase()
+    if (seen.has(key) || unique.length >= 20) return
+    seen.add(key)
+    unique.push({
+      ...model,
+      number: String(unique.length + 1).padStart(2, '0'),
+      scene: model.scene || genericSceneCycle[index % genericSceneCycle.length],
+    })
+  })
+  return unique
+}
+
+function compactLabels(lines = []) {
+  return lines
+    .filter(Boolean)
+    .map((line) => String(line).replace(/\s+/g, ' ').split(/[.;:]/)[0].trim())
+    .filter(Boolean)
+    .map((line) => line.length > 34 ? `${line.slice(0, 31)}...` : line)
+    .slice(0, 3)
+}
+
+function sceneForModel(chapter, text = '', index = 0) {
+  const t = text.toLowerCase()
+  if (chapter === 'CH2') {
+    if (t.includes('male') || t.includes('testis') || t.includes('duct')) return 'maleSystem'
+    if (t.includes('female') || t.includes('ovary') || t.includes('uterus')) return 'femaleSystem'
+    if (t.includes('sperm')) return 'spermatogenesis'
+    if (t.includes('oogenesis') || t.includes('follicle') || t.includes('ovum')) return 'oogenesis'
+    if (t.includes('menstrual')) return 'menstrualCycle'
+    if (t.includes('fertil')) return 'fertilization'
+    if (t.includes('implant')) return 'implantation'
+    if (t.includes('pregnancy') || t.includes('placenta') || t.includes('embryo')) return 'pregnancy'
+  }
+  if (chapter === 'CH3') {
+    if (t.includes('contracept') || t.includes('iud') || t.includes('birth control')) return 'contraception'
+    if (t.includes('sti') || t.includes('infection')) return 'sti'
+    if (t.includes('population')) return 'population'
+    if (t.includes('art') || t.includes('ivf') || t.includes('zift') || t.includes('iut') || t.includes('infertility')) return 'artLab'
+    if (t.includes('clinic') || t.includes('counselling')) return 'safeClinic'
+    return 'reproductiveHealth'
+  }
+  if (chapter === 'CH4') {
+    if (t.includes('pedigree') || t.includes('disorder')) return 'pedigreeTree'
+    if (t.includes('cross') || t.includes('punnett') || t.includes('mendel') || t.includes('allele')) return 'inheritanceLab'
+    if (t.includes('linkage') || t.includes('recombination') || t.includes('crossing')) return 'chromosomeCrossover'
+    if (t.includes('chromosom') || t.includes('sex')) return 'conceptChromosome'
+    return 'inheritanceLab'
+  }
+  if (chapter === 'CH5') {
+    if (t.includes('replication')) return 'dnaReplication'
+    if (t.includes('transcription')) return 'transcriptionScene'
+    if (t.includes('dogma') || t.includes('translation') || t.includes('protein') || t.includes('code')) return 'molecularDogma'
+    if (t.includes('operon') || t.includes('regulation')) return 'conceptCycle'
+    if (t.includes('fingerprint') || t.includes('genome')) return 'conceptAssay'
+    return 'conceptHelix'
+  }
+  if (chapter === 'CH6') {
+    if (t.includes('tree') || t.includes('adaptive') || t.includes('ancestor') || t.includes('speciation')) return 'evolutionTree'
+    if (t.includes('population') || t.includes('hardy') || t.includes('selection')) return 'ecologyPopulation'
+    return 'conceptNetwork'
+  }
+  if (chapter === 'CH7') {
+    if (t.includes('immune') || t.includes('immunity') || t.includes('vaccine')) return 'immunityDefense'
+    if (t.includes('pathogen') || t.includes('disease') || t.includes('aids') || t.includes('hiv')) return 'sti'
+    if (t.includes('cancer') || t.includes('drug') || t.includes('alcohol')) return 'conceptCell'
+    return 'immunityDefense'
+  }
+  if (chapter === 'CH8') {
+    if (t.includes('microbe') || t.includes('fermentation') || t.includes('industrial') || t.includes('antibiotic')) return 'microbeFactory'
+    if (t.includes('sewage') || t.includes('biogas')) return 'conceptPipeline'
+    if (t.includes('biofertil') || t.includes('root') || t.includes('biocontrol')) return 'ecosystemFlow'
+    return 'microbeFactory'
+  }
+  if (chapter === 'CH10') {
+    if (t.includes('therapy') || t.includes('ada')) return 'geneTherapy3d'
+    if (t.includes('rna')) return 'conceptHelix'
+    if (t.includes('diagnosis') || t.includes('elisa') || t.includes('pcr')) return 'conceptAssay'
+    if (t.includes('bt') || t.includes('cotton') || t.includes('cry')) return 'biotechApps'
+    if (t.includes('insulin') || t.includes('transgenic') || t.includes('product')) return 'microbeFactory'
+    return 'biotechApps'
+  }
+  if (chapter === 'CH11') {
+    if (t.includes('growth') || t.includes('population') || t.includes('carrying')) return 'ecologyPopulation'
+    if (t.includes('interaction') || t.includes('competition') || t.includes('niche')) return 'conceptNetwork'
+    if (t.includes('adapt') || t.includes('response')) return 'conceptOrgan'
+    return 'ecologyPopulation'
+  }
+  if (chapter === 'CH12') {
+    if (t.includes('energy') || t.includes('trophic') || t.includes('producer')) return 'ecosystemFlow'
+    if (t.includes('pyramid')) return 'pyramidScene'
+    if (t.includes('nutrient') || t.includes('cycle')) return 'nutrientCycle'
+    if (t.includes('decompos') || t.includes('succession') || t.includes('services')) return 'conceptPipeline'
+    return 'ecosystemFlow'
+  }
+  return genericSceneCycle[index % genericSceneCycle.length]
+}
+
 export default function VisualChapterApp({ content }) {
   const [dark, setDark] = useState(() => localStorage.getItem(`${content.slug}-theme`) === 'dark')
   const [active, setActive] = useState('home')
@@ -119,7 +259,7 @@ function Hero({ content }) {
           </div>
           <div className="vc-stats">
             <Stat value={content.stats.modules} label="guided modules" />
-            <Stat value={content.stats.models} label="3D models" />
+            <Stat value="20" label="3D models" />
             <Stat value="100%" label="free stack" />
           </div>
         </div>
@@ -192,14 +332,34 @@ function Concepts({ content }) {
 }
 
 function ModelGallery({ content }) {
+  const models = useMemo(() => getTwentyModels(content), [content])
+  const [activeIndex, setActiveIndex] = useState(0)
+  const activeModel = models[activeIndex] || models[0]
+
   return (
-    <Section id="models" eyebrow="Interactive 3D lab" title={content.modelTitle} description={content.modelDescription}>
-      <div className="vc-model-grid">
-        {content.models.map((model) => (
-          <ThreePanel key={model.title} title={model.title} subtitle={model.description}>
-            <ThreeDViewer sceneType={model.scene} />
+    <Section id="models" eyebrow="Interactive 3D lab" title={`${content.modelTitle} — now with 20 models.`} description={`${content.modelDescription} Pick any model below, then drag to rotate and scroll to zoom.`}>
+      <div className="vc-model-lab">
+        <div className="vc-model-picker-list" aria-label="Choose a 3D model">
+          {models.map((model, index) => (
+            <button key={`${model.number}-${model.title}`} onClick={() => setActiveIndex(index)} className={`vc-model-picker ${activeIndex === index ? 'active' : ''}`}>
+              <span>{model.number}</span>
+              <strong>{model.title}</strong>
+              <small>{model.source}</small>
+            </button>
+          ))}
+        </div>
+        <div className="vc-model-stage">
+          <ThreePanel title={activeModel.title} subtitle={activeModel.description}>
+            <ThreeDViewer sceneType={activeModel.scene} model={activeModel} />
           </ThreePanel>
-        ))}
+          <div className="vc-model-readout">
+            <p>Model focus</p>
+            <h3>{activeModel.title}</h3>
+            <div className="vc-model-label-grid">
+              {(activeModel.labels || []).map((label) => <span key={label}>{label}</span>)}
+            </div>
+          </div>
+        </div>
       </div>
     </Section>
   )
@@ -360,7 +520,7 @@ function ThreePanel({ title, subtitle, children }) {
   )
 }
 
-function ThreeDViewer({ sceneType }) {
+function ThreeDViewer({ sceneType, model }) {
   const mountRef = useRef(null)
   const drag = useRef({ active: false, x: 0 })
 
@@ -387,7 +547,7 @@ function ThreeDViewer({ sceneType }) {
     rim.position.set(-4, 2, 5)
     scene.add(key, rim)
 
-    buildScene(sceneType, group)
+    buildScene(sceneType, group, model)
     const grid = new THREE.GridHelper(7, 14, 0xf9a8d4, 0xdbeafe)
     grid.position.y = -2.35
     grid.material.opacity = 0.18
@@ -443,7 +603,7 @@ function ThreeDViewer({ sceneType }) {
       mount.removeChild(renderer.domElement)
       renderer.dispose()
     }
-  }, [sceneType])
+  }, [sceneType, model])
 
   return <div className="vc-canvas" ref={mountRef} />
 }
@@ -485,8 +645,16 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath()
 }
 
-function buildScene(type, group) {
+function buildScene(type, group, model = {}) {
   const scenes = {
+    conceptHelix,
+    conceptCell,
+    conceptCycle,
+    conceptPipeline,
+    conceptNetwork,
+    conceptAssay,
+    conceptOrgan,
+    conceptChromosome,
     humanOverview,
     maleSystem,
     femaleSystem,
@@ -518,7 +686,9 @@ function buildScene(type, group) {
     pyramidScene,
     nutrientCycle,
   }
-  ;(scenes[type] || humanOverview)(group)
+  const scene = scenes[type] || conceptNetwork
+  if (genericSceneCycle.includes(type) || !scenes[type]) scene(group, model)
+  else scene(group)
 }
 
 function addTube(group, points, color = 0x38bdf8, radius = 0.045) {
@@ -533,6 +703,132 @@ function addOrb(group, x, y, z, size, color, options = {}) {
   orb.position.set(x, y, z)
   group.add(orb)
   return orb
+}
+
+function modelLabels(model) {
+  return (model?.labels?.length ? model.labels : compactLabels([model?.title, model?.description, 'visual model'])).slice(0, 3)
+}
+
+function placeConceptLabels(group, model) {
+  const positions = [[-1.75, 1.38, 0.1], [1.75, 0.25, 0.1], [0, -1.55, 0.1]]
+  modelLabels(model).forEach((label, index) => addLabel(group, label, positions[index]))
+}
+
+function conceptHelix(group, model) {
+  const colors = [0x38bdf8, 0xec4899, 0xf59e0b, 0x22c55e]
+  const pointsA = []
+  const pointsB = []
+  for (let i = 0; i < 32; i++) {
+    const y = -1.45 + i * 0.095
+    const angle = i * 0.62
+    const left = [Math.cos(angle) * 0.72, y, Math.sin(angle) * 0.72]
+    const right = [Math.cos(angle + Math.PI) * 0.72, y, Math.sin(angle + Math.PI) * 0.72]
+    pointsA.push(left)
+    pointsB.push(right)
+    addOrb(group, ...left, 0.055, colors[i % colors.length]).userData.float = true
+    addOrb(group, ...right, 0.055, colors[(i + 1) % colors.length]).userData.float = true
+    if (i % 3 === 0) addTube(group, [left, right], 0xffffff, 0.018)
+  }
+  addTube(group, pointsA, 0x38bdf8, 0.035)
+  addTube(group, pointsB, 0xec4899, 0.035)
+  placeConceptLabels(group, model)
+}
+
+function conceptCell(group, model) {
+  const cell = addOrb(group, 0, 0, 0, 1.25, 0x38bdf8, { transparent: true, opacity: 0.28 })
+  cell.scale.set(1.3, 0.9, 0.75)
+  const nucleus = addOrb(group, -0.22, 0.1, 0.28, 0.42, 0xec4899)
+  nucleus.userData.pulse = true
+  for (let i = 0; i < 14; i++) {
+    const orb = addOrb(group, Math.cos(i * 1.7) * 1.0, Math.sin(i * 1.13) * 0.65, Math.sin(i) * 0.45, 0.075, i % 2 ? 0xf59e0b : 0x22c55e)
+    orb.userData.float = true
+  }
+  addTube(group, [[-1.75, 0.92, 0], [-0.75, 0.4, 0.16], [-0.2, 0.12, 0.28]], 0xf59e0b, 0.045)
+  placeConceptLabels(group, model)
+}
+
+function conceptCycle(group, model) {
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(1.12, 0.06, 18, 110), mat(0x38bdf8))
+  ring.rotation.x = Math.PI / 2
+  group.add(ring)
+  for (let i = 0; i < 6; i++) {
+    const a = (i / 6) * Math.PI * 2
+    const node = addOrb(group, Math.cos(a) * 1.12, Math.sin(a) * 1.12, 0.18, 0.18, [0x22c55e, 0xf59e0b, 0xec4899][i % 3])
+    node.userData.pulse = i % 2 === 0
+    const arrow = new THREE.Mesh(new THREE.ConeGeometry(0.08, 0.25, 16), mat(0xffffff))
+    arrow.position.set(Math.cos(a + 0.32) * 1.12, Math.sin(a + 0.32) * 1.12, 0.24)
+    arrow.rotation.z = a - Math.PI / 2
+    group.add(arrow)
+  }
+  addOrb(group, 0, 0, 0.15, 0.38, 0xffffff).userData.pulse = true
+  placeConceptLabels(group, model)
+}
+
+function conceptPipeline(group, model) {
+  const colors = [0x38bdf8, 0x22c55e, 0xf59e0b, 0xec4899]
+  for (let i = 0; i < 4; i++) {
+    const block = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.48, 0.22), mat(colors[i], { transparent: true, opacity: 0.86 }))
+    block.position.set(-1.35 + i * 0.9, 0.1 + Math.sin(i) * 0.12, 0)
+    block.userData.pulse = i === 3
+    group.add(block)
+    if (i < 3) addTube(group, [[-1.02 + i * 0.9, 0.1, 0.02], [-0.62 + i * 0.9, 0.1, 0.02]], 0xffffff, 0.028)
+  }
+  for (let i = 0; i < 8; i++) addOrb(group, -1.55 + i * 0.42, -0.78 + Math.sin(i) * 0.08, 0.15, 0.06, colors[i % colors.length]).userData.float = true
+  placeConceptLabels(group, model)
+}
+
+function conceptNetwork(group, model) {
+  const nodes = [
+    [-1.1, 0.75, 0, 0x22c55e], [0, 1.0, 0.12, 0x38bdf8], [1.15, 0.5, 0, 0xec4899],
+    [-0.75, -0.45, 0.12, 0xf59e0b], [0.4, -0.85, 0, 0x22c55e], [1.25, -0.35, 0.1, 0x38bdf8],
+  ]
+  const links = [[0,1],[1,2],[0,3],[3,4],[4,5],[2,5],[1,4]]
+  links.forEach(([a, b]) => addTube(group, [nodes[a].slice(0, 3), nodes[b].slice(0, 3)], 0xffffff, 0.023))
+  nodes.forEach(([x, y, z, c], index) => {
+    const node = addOrb(group, x, y, z, 0.2, c)
+    node.userData.pulse = index % 2 === 0
+  })
+  placeConceptLabels(group, model)
+}
+
+function conceptAssay(group, model) {
+  const plate = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.16, 1.55), mat(0xffffff, { transparent: true, opacity: 0.88 }))
+  plate.rotation.x = -0.18
+  group.add(plate)
+  for (let r = 0; r < 3; r++) {
+    for (let c = 0; c < 5; c++) {
+      const signal = (r + c) % 4 === 0
+      const well = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.11, 0.08, 24), mat(signal ? 0xf59e0b : 0x38bdf8, { transparent: true, opacity: signal ? 0.95 : 0.55 }))
+      well.position.set(-1 + c * 0.5, 0.16, -0.48 + r * 0.48)
+      well.userData.pulse = signal
+      group.add(well)
+    }
+  }
+  const probe = new THREE.Mesh(new THREE.TorusKnotGeometry(0.36, 0.035, 90, 8), mat(0xec4899))
+  probe.position.set(0, 1.05, 0)
+  probe.userData.float = true
+  group.add(probe)
+  placeConceptLabels(group, model)
+}
+
+function conceptOrgan(group, model) {
+  const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.55, 1.45, 18, 34), mat(0x38bdf8, { transparent: true, opacity: 0.7 }))
+  body.rotation.z = -0.12
+  group.add(body)
+  addOrb(group, -0.55, 0.35, 0.2, 0.35, 0x22c55e).userData.float = true
+  addOrb(group, 0.58, -0.4, 0.1, 0.34, 0xec4899).userData.pulse = true
+  addTube(group, [[-1.15, 0.8, 0], [-0.55, 0.35, 0.2], [0.0, 0.1, 0], [0.65, -0.45, 0.1]], 0xf59e0b, 0.045)
+  placeConceptLabels(group, model)
+}
+
+function conceptChromosome(group, model) {
+  ;[-0.42, 0.42].forEach((x, index) => {
+    addTube(group, [[x - 0.42, 1.05, 0], [x, 0.05, 0], [x + 0.42, -1.05, 0]], index ? 0xec4899 : 0x38bdf8, 0.075)
+    addTube(group, [[x + 0.42, 1.05, 0.08], [x, 0.05, 0.08], [x - 0.42, -1.05, 0.08]], index ? 0xf59e0b : 0x22c55e, 0.075)
+    addOrb(group, x, 0.05, 0.28, 0.16, 0xffffff).userData.pulse = true
+  })
+  for (let i = 0; i < 4; i++) addOrb(group, -1.25 + i * 0.82, -1.45, 0.1, 0.11, i % 2 ? 0xec4899 : 0x38bdf8).userData.float = true
+  placeConceptLabels(group, model)
 }
 
 function inheritanceLab(group) {

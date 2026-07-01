@@ -174,6 +174,66 @@
     cursor: grabbing;
   }
 
+  .model-lab-layout {
+    @apply grid items-start gap-6 xl:grid-cols-[.74fr_1.26fr];
+  }
+
+  .model-picker-list {
+    @apply grid max-h-[780px] gap-3 overflow-y-auto rounded-[34px] border border-white/80 bg-white/70 p-3 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-white/10;
+  }
+
+  .model-picker {
+    @apply grid grid-cols-[46px_1fr] items-center gap-x-3 gap-y-1 rounded-[22px] border border-pink-100 bg-white/75 p-3 text-left transition hover:-translate-y-0.5 hover:border-petal hover:shadow-sm dark:border-white/10 dark:bg-white/10;
+  }
+
+  .model-picker span {
+    @apply row-span-2 grid h-[46px] w-[46px] place-items-center rounded-2xl bg-pink-50 font-mono text-xs font-black text-petal dark:bg-pink-300/10;
+  }
+
+  .model-picker strong {
+    @apply text-sm font-black tracking-[-.02em] text-ink dark:text-white;
+  }
+
+  .model-picker small {
+    @apply line-clamp-2 text-[10px] font-extrabold uppercase leading-4 tracking-[.1em] text-slate-500 dark:text-slate-400;
+  }
+
+  .model-picker.active {
+    @apply -translate-y-0.5 border-petal shadow-[0_0_0_4px_rgba(236,72,153,.16)];
+  }
+
+  .model-picker.active span {
+    @apply bg-petal text-white;
+  }
+
+  .model-lab-layout .three-panel {
+    @apply min-h-[620px];
+  }
+
+  .model-lab-layout .three-canvas {
+    @apply h-[510px];
+  }
+
+  .model-readout {
+    @apply rounded-[30px] border border-white/80 bg-white/75 p-5 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-white/10;
+  }
+
+  .model-readout p {
+    @apply text-xs font-black uppercase tracking-[.18em] text-petal;
+  }
+
+  .model-readout h3 {
+    @apply mt-2 text-2xl font-black tracking-[-.04em] text-ink dark:text-white;
+  }
+
+  .model-feature-grid {
+    @apply mt-4 grid gap-3 md:grid-cols-3;
+  }
+
+  .model-feature-grid span {
+    @apply rounded-2xl bg-pink-50/80 px-4 py-3 text-xs font-black uppercase tracking-[.1em] text-petal dark:bg-white/10;
+  }
+
   .concept-card {
     @apply rounded-[30px] p-6;
   }
@@ -312,6 +372,24 @@
 
   .transform-card strong {
     @apply text-lg font-black text-petal;
+  }
+
+  @media (max-width: 680px) {
+    .model-picker-list {
+      max-height: 520px;
+    }
+
+    .model-lab-layout .three-panel {
+      min-height: auto;
+    }
+
+    .model-lab-layout .three-canvas {
+      height: 360px;
+    }
+
+    .model-feature-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }
 

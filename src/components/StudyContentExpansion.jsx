@@ -23,6 +23,7 @@ import {
   Diagnostic3D,
   Insulin3D,
   RNAi3D,
+  UniversalBioModel3D,
   ViralVector3D,
 } from './AdvancedBioModels3D'
 import { ConceptCard, MistakeAlert, NCERTImportantLine, NEETHighYieldBox, SectionShell } from './ui'
@@ -76,6 +77,118 @@ const modelItems = [
     component: CellFactory3D,
     labels: ['plasmid', 'ribosomes', 'product'],
   },
+  {
+    id: 'dna-cut-3d',
+    title: 'Restriction enzyme cut',
+    kicker: 'molecular scissors',
+    description: 'DNA recognition-site model with an enzyme approaching the highlighted cut zone.',
+    component: () => <UniversalBioModel3D sceneType="dna-cut" ariaLabel="3D restriction enzyme cutting DNA at a recognition site" />,
+    labels: ['recognition site', 'enzyme body', 'cut ends'],
+  },
+  {
+    id: 'plasmid-map-3d',
+    title: 'Plasmid vector map',
+    kicker: 'ori + marker + insert',
+    description: 'Rotating circular vector with colored segments for origin, selectable marker and insert zone.',
+    component: () => <UniversalBioModel3D sceneType="plasmid-map" ariaLabel="3D plasmid vector map with origin marker and insert segment" />,
+    labels: ['ori', 'marker', 'insert'],
+  },
+  {
+    id: 'pcr-cycle-3d',
+    title: 'PCR cycle chamber',
+    kicker: '2ⁿ amplification',
+    description: 'Two DNA templates inside thermal cycle rings for denaturation, annealing and extension.',
+    component: () => <UniversalBioModel3D sceneType="pcr-cycle" ariaLabel="3D PCR cycle model showing DNA amplification" />,
+    labels: ['denature', 'anneal', 'extend'],
+  },
+  {
+    id: 'gel-bands-3d',
+    title: 'Gel band migration',
+    kicker: 'small moves farther',
+    description: 'Agarose-style slab with separated bands to remember migration and band pattern reading.',
+    component: () => <UniversalBioModel3D sceneType="gel-bands" ariaLabel="3D gel electrophoresis bands model" />,
+    labels: ['wells', 'bands', 'positive end'],
+  },
+  {
+    id: 'mini-bioreactor-3d',
+    title: 'Mini bioreactor',
+    kicker: 'scale-up',
+    description: 'Transparent stirred tank with liquid, impeller shaft and animated bubble field.',
+    component: () => <UniversalBioModel3D sceneType="bioreactor" ariaLabel="3D stirred tank bioreactor model" />,
+    labels: ['impeller', 'sparger', 'broth'],
+  },
+  {
+    id: 'ligase-3d',
+    title: 'DNA ligase sealing',
+    kicker: 'molecular glue',
+    description: 'Open plasmid and insert ends brought together with ligase at the sealing site.',
+    component: () => <UniversalBioModel3D sceneType="ligase" ariaLabel="3D DNA ligase joining compatible sticky ends" />,
+    labels: ['sticky ends', 'ligase', 'sealed vector'],
+  },
+  {
+    id: 'transformation-3d',
+    title: 'Bacterial transformation',
+    kicker: 'host uptake',
+    description: 'Competent host cell taking up plasmid DNA through a highlighted delivery path.',
+    component: () => <UniversalBioModel3D sceneType="transformation" ariaLabel="3D competent bacterial host taking plasmid DNA" />,
+    labels: ['competent cell', 'plasmid', 'uptake path'],
+  },
+  {
+    id: 'selection-3d',
+    title: 'Selection plate',
+    kicker: 'marker survival',
+    description: 'Colony field showing how selectable markers separate transformed and non-transformed cells.',
+    component: () => <UniversalBioModel3D sceneType="selection" ariaLabel="3D antibiotic selection plate with surviving transformed colonies" />,
+    labels: ['survivors', 'non-transformants', 'marker'],
+  },
+  {
+    id: 'gene-gun-3d',
+    title: 'Gene gun delivery',
+    kicker: 'plant transfer',
+    description: 'DNA-coated microprojectiles moving into a plant-cell target.',
+    component: () => <UniversalBioModel3D sceneType="gene-gun" ariaLabel="3D gene gun model delivering DNA coated particles" />,
+    labels: ['particles', 'plant cell', 'DNA entry'],
+  },
+  {
+    id: 'agrobacterium-3d',
+    title: 'Agrobacterium transfer',
+    kicker: 'natural vector',
+    description: 'Agrobacterium-style donor cell delivering gene material into a plant cell.',
+    component: () => <UniversalBioModel3D sceneType="agrobacterium" ariaLabel="3D Agrobacterium mediated gene transfer model" />,
+    labels: ['Agrobacterium', 'T-DNA', 'plant cell'],
+  },
+  {
+    id: 'microinjection-3d',
+    title: 'Microinjection',
+    kicker: 'direct transfer',
+    description: 'Needle-like delivery route placing genetic material into a large host cell.',
+    component: () => <UniversalBioModel3D sceneType="microinjection" ariaLabel="3D microinjection gene transfer model" />,
+    labels: ['needle', 'gene payload', 'host cell'],
+  },
+  {
+    id: 'probe-binding-3d',
+    title: 'DNA probe binding',
+    kicker: 'molecular diagnosis',
+    description: 'A labelled probe strand binding a complementary DNA target for diagnosis.',
+    component: () => <UniversalBioModel3D sceneType="probe-binding" ariaLabel="3D DNA probe binding complementary target" />,
+    labels: ['probe', 'target DNA', 'hybridization'],
+  },
+  {
+    id: 'insulin-pipeline-3d',
+    title: 'Insulin production line',
+    kicker: 'gene to vial',
+    description: 'Host cell expression with product beads leaving the bacterial factory.',
+    component: () => <UniversalBioModel3D sceneType="insulin-pipeline" ariaLabel="3D recombinant insulin production line" />,
+    labels: ['human gene', 'host cell', 'insulin product'],
+  },
+  {
+    id: 'downstream-3d',
+    title: 'Downstream pipeline',
+    kicker: 'purify + test',
+    description: 'Four-stage factory path for separation, purification, formulation and quality control.',
+    component: () => <UniversalBioModel3D sceneType="downstream" ariaLabel="3D downstream processing pipeline model" />,
+    labels: ['separate', 'purify', 'quality control'],
+  },
 ]
 
 const iconMap = {
@@ -106,7 +219,7 @@ export function ThreeDModelGallery() {
     <SectionShell
       id="models"
       eyebrow="3D biology gallery"
-      title="More interactive 3D models for the application-heavy half of the chapter."
+      title="20 interactive 3D models for the full biotechnology chapter."
       description="These are original, code-generated Three.js schematic models. No downloaded models, no stock assets, no paid APIs."
       tone="tint"
     >

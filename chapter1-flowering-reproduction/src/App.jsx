@@ -121,7 +121,7 @@ function Hero() {
           </div>
           <div className="mt-10 grid max-w-2xl grid-cols-3 gap-3">
             <HeroStat value="10" label="chapter modules" />
-            <HeroStat value="4" label="3D visuals" />
+            <HeroStat value="20" label="3D models" />
             <HeroStat value="100%" label="free stack" />
           </div>
         </div>
@@ -243,20 +243,54 @@ function ConceptSections() {
 }
 
 function VisualLabs() {
+  const [active, setActive] = useState(0)
   const labs = [
-    ['Flower 3D', 'Petals, stamen and pistil arranged as a rotating reproductive organ.', buildFlowerScene],
-    ['Pollen grain 3D', 'Exine spikes, germ pore and internal male gametophyte compartments.', buildPollenScene],
-    ['Ovule 3D', 'Integuments, micropyle, nucellus and embryo sac orientation.', buildOvuleScene],
-    ['Pollen tube 3D', 'Compatible pollen germinates and tube grows toward the ovule.', buildPollenTubeScene],
+    ['Flower 3D', 'Petals, stamen and pistil arranged as a rotating reproductive organ.', buildFlowerScene, ['petals', 'stamen', 'pistil']],
+    ['Anther wall layers', 'Epidermis, endothecium, middle layers and tapetum as a compact anther model.', buildAntherWallScene, ['wall layers', 'tapetum', 'pollen sacs']],
+    ['Microsporogenesis tetrad', 'MMC meiosis producing a tetrad of haploid microspores.', buildTetradScene, ['MMC', 'meiosis', 'tetrad']],
+    ['Pollen grain 3D', 'Exine spikes, germ pore and internal male gametophyte compartments.', buildPollenScene, ['exine', 'germ pore', 'vegetative cell']],
+    ['Generative cell division', 'Generative cell splitting to form two male gametes inside pollen.', buildGenerativeDivisionScene, ['generative cell', 'two male gametes', 'pollen']],
+    ['Ovule 3D', 'Integuments, micropyle, nucellus and embryo sac orientation.', buildOvuleScene, ['integuments', 'micropyle', 'embryo sac']],
+    ['Megasporogenesis line', 'Megaspore mother cell forming a linear tetrad with one functional megaspore.', buildMegasporeScene, ['MMC', 'linear tetrad', 'functional megaspore']],
+    ['Embryo sac layout', 'Seven-celled, eight-nucleate embryo sac with egg apparatus and polar nuclei.', buildEmbryoSacScene, ['egg apparatus', 'polar nuclei', 'antipodals']],
+    ['Pollination agents', 'Wind, water and animal pollination routes as moving transfer vectors.', buildPollinationAgentScene, ['wind', 'water', 'insect']],
+    ['Pollen tube 3D', 'Compatible pollen germinates and tube grows toward the ovule.', buildPollenTubeScene, ['stigma', 'style', 'ovule']],
+    ['Compatibility lock', 'Pollen-pistil recognition as a lock-and-key checkpoint.', buildCompatibilityScene, ['recognition', 'compatible', 'rejection']],
+    ['Double fertilization', 'Syngamy plus triple fusion inside the embryo sac.', buildDoubleFertilizationScene, ['syngamy', 'triple fusion', 'endosperm']],
+    ['Endosperm formation', 'Primary endosperm nucleus growing into nutritive tissue.', buildEndospermScene, ['PEN', 'endosperm', 'nutrition']],
+    ['Embryo development', 'Zygote moving toward proembryo, globular and heart stages.', buildEmbryoScene, ['zygote', 'proembryo', 'heart stage']],
+    ['Seed anatomy', 'Seed coat, embryo and stored food as a cutaway model.', buildSeedScene, ['seed coat', 'embryo', 'stored food']],
+    ['Fruit conversion', 'Ovary wall transformation into fruit around developing seeds.', buildFruitScene, ['ovary', 'fruit wall', 'seeds']],
+    ['Apomixis model', 'Seed formation without fertilization shown as a bypass route.', buildApomixisScene, ['no fertilization', 'seed', 'clone-like']],
+    ['Polyembryony model', 'Multiple embryos inside one seed as a NEET-favourite exception.', buildPolyembryonyScene, ['multiple embryos', 'one seed', 'exception']],
+    ['Outbreeding devices', 'Dioecy, pollen release timing and self-incompatibility as barriers.', buildOutbreedingScene, ['avoid selfing', 'barriers', 'variation']],
+    ['Chapter memory map', 'A final 3D flow from flower to seed and fruit.', buildChapterMapScene, ['flower', 'fertilization', 'seed + fruit']],
   ]
+  const current = labs[active]
   return (
-    <Section id="models" eyebrow="Interactive 3D lab" title="Rotate the structures instead of memorising flat diagrams." description="These are original schematic 3D models made with Three.js geometry — no copied diagrams or external models.">
-      <div className="grid gap-5 md:grid-cols-2">
-        {labs.map(([title, desc, scene]) => (
-          <ThreePanel key={title} title={title} subtitle={desc}>
-            <ThreeDViewer buildScene={scene} />
+    <Section id="models" eyebrow="Interactive 3D lab" title="20 rotating models for the entire flowering plants chapter." description="These are original schematic 3D models made with Three.js geometry — no copied diagrams or external models. Pick a model, then drag to rotate and scroll to zoom.">
+      <div className="model-lab-layout">
+        <div className="model-picker-list" aria-label="Choose a Chapter 1 3D model">
+          {labs.map(([title, desc], index) => (
+            <button key={title} onClick={() => setActive(index)} className={`model-picker ${active === index ? 'active' : ''}`}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <strong>{title}</strong>
+              <small>{desc}</small>
+            </button>
+          ))}
+        </div>
+        <div className="grid gap-4">
+          <ThreePanel title={current[0]} subtitle={current[1]}>
+            <ThreeDViewer buildScene={current[2]} />
           </ThreePanel>
-        ))}
+          <div className="model-readout">
+            <p>Model focus</p>
+            <h3>{current[0]}</h3>
+            <div className="model-feature-grid">
+              {current[3].map((label) => <span key={label}>{label}</span>)}
+            </div>
+          </div>
+        </div>
       </div>
     </Section>
   )
@@ -543,6 +577,24 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath()
 }
 
+function mat(color, options = {}) {
+  return new THREE.MeshStandardMaterial({ color, roughness: 0.48, metalness: 0.04, ...options })
+}
+
+function addOrb(group, x, y, z, radius, color, options = {}) {
+  const orb = new THREE.Mesh(new THREE.SphereGeometry(radius, 24, 16), mat(color, options))
+  orb.position.set(x, y, z)
+  group.add(orb)
+  return orb
+}
+
+function addTube(group, points, color = 0x16a34a, radius = 0.04) {
+  const curve = new THREE.CatmullRomCurve3(points.map(([x, y, z]) => new THREE.Vector3(x, y, z)))
+  const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 48, radius, 10), mat(color))
+  group.add(tube)
+  return tube
+}
+
 function buildFlowerScene(group) {
   const petalMat = new THREE.MeshStandardMaterial({ color: 0xec4899, roughness: 0.5, metalness: 0.04 })
   const petalGeo = new THREE.SphereGeometry(0.75, 32, 18)
@@ -696,6 +748,191 @@ function buildSeedScene(group) {
   group.add(capsule('seed coat', [-1.9, 1.15, 0]))
   group.add(capsule('embryo', [1.8, 0, 0]))
   group.add(capsule('stored food', [0, -1.65, 0]))
+}
+
+function buildAntherWallScene(group) {
+  const colors = [0xec4899, 0xf59e0b, 0x16a34a, 0x38bdf8]
+  for (let i = 0; i < 4; i += 1) {
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(1.25 - i * 0.18, 0.055, 14, 90), mat(colors[i], { transparent: true, opacity: 0.86 }))
+    ring.rotation.x = Math.PI / 2
+    ring.position.z = i * 0.04
+    group.add(ring)
+  }
+  for (let i = 0; i < 4; i += 1) {
+    const sac = addOrb(group, Math.cos(i * Math.PI / 2) * 0.58, Math.sin(i * Math.PI / 2) * 0.58, 0.25, 0.22, 0xf59e0b)
+    sac.userData.pulse = true
+  }
+  group.add(capsule('epidermis', [-1.75, 1.25, 0]))
+  group.add(capsule('tapetum', [1.75, 0.55, 0]))
+  group.add(capsule('pollen sacs', [0, -1.55, 0]))
+}
+
+function buildTetradScene(group) {
+  const mother = addOrb(group, -1.35, 0.35, 0, 0.42, 0xec4899, { transparent: true, opacity: 0.75 })
+  mother.userData.pulse = true
+  addTube(group, [[-0.92, 0.35, 0], [-0.25, 0.35, 0]], 0xffffff, 0.035)
+  ;[[-0.05, 0.58], [0.35, 0.58], [-0.05, 0.18], [0.35, 0.18]].forEach(([x, y], index) => {
+    addOrb(group, x, y, 0, 0.18, index % 2 ? 0x38bdf8 : 0xf59e0b).userData.float = true
+  })
+  addTube(group, [[0.65, 0.38, 0], [1.45, -0.45, 0]], 0xffffff, 0.035)
+  for (let i = 0; i < 4; i += 1) addOrb(group, 1.2 + (i % 2) * 0.42, -0.63 + Math.floor(i / 2) * 0.38, 0, 0.16, 0x16a34a)
+  group.add(capsule('MMC', [-1.65, 1.3, 0]))
+  group.add(capsule('meiosis', [0.25, 1.25, 0]))
+  group.add(capsule('microspore tetrad', [1.15, -1.45, 0]))
+}
+
+function buildGenerativeDivisionScene(group) {
+  buildPollenScene(group)
+  addTube(group, [[-0.4, -0.15, 0.8], [0.45, -0.15, 0.8]], 0xffffff, 0.035)
+  addOrb(group, -0.35, -0.15, 0.95, 0.14, 0x7c3aed).userData.pulse = true
+  addOrb(group, 0.35, -0.15, 0.95, 0.14, 0x7c3aed).userData.pulse = true
+  group.add(capsule('generative cell divides', [0, -2.05, 0]))
+}
+
+function buildMegasporeScene(group) {
+  const mother = addOrb(group, -1.45, 0, 0, 0.36, 0xec4899)
+  mother.userData.pulse = true
+  addTube(group, [[-1.05, 0, 0], [-0.52, 0, 0]], 0xffffff, 0.03)
+  for (let i = 0; i < 4; i += 1) {
+    const alive = i === 3
+    const cell = addOrb(group, -0.25 + i * 0.46, 0, 0, 0.18, alive ? 0x16a34a : 0xf9a8d4, { transparent: true, opacity: alive ? 1 : 0.5 })
+    cell.userData.pulse = alive
+  }
+  group.add(capsule('MMC', [-1.55, 1.25, 0]))
+  group.add(capsule('3 degenerate', [0.4, -1.2, 0]))
+  group.add(capsule('1 functional megaspore', [1.45, 1.1, 0]))
+}
+
+function buildEmbryoSacScene(group) {
+  const sac = new THREE.Mesh(new THREE.SphereGeometry(1.15, 48, 30), mat(0x38bdf8, { transparent: true, opacity: 0.32 }))
+  sac.scale.set(0.58, 1.35, 0.55)
+  group.add(sac)
+  ;[[-0.18, -0.74, 0xec4899], [0.18, -0.74, 0xf59e0b], [0, -0.52, 0xf59e0b]].forEach(([x, y, c]) => addOrb(group, x, y, 0.28, 0.1, c))
+  addOrb(group, -0.13, 0.02, 0.3, 0.11, 0x7c3aed)
+  addOrb(group, 0.13, 0.02, 0.3, 0.11, 0x7c3aed)
+  for (let i = 0; i < 3; i += 1) addOrb(group, -0.22 + i * 0.22, 0.76, 0.25, 0.09, 0x16a34a)
+  group.add(capsule('egg apparatus', [-1.75, -0.85, 0]))
+  group.add(capsule('polar nuclei', [1.7, 0.1, 0]))
+  group.add(capsule('antipodals', [0, 1.65, 0]))
+}
+
+function buildPollinationAgentScene(group) {
+  buildFlowerScene(group)
+  addTube(group, [[-2.0, 1.3, 0.2], [-0.9, 0.9, 0.2], [-0.15, 0.55, 0.2]], 0x38bdf8, 0.035)
+  addTube(group, [[2.0, 1.0, 0.2], [0.95, 0.7, 0.2], [0.2, 0.4, 0.2]], 0xf59e0b, 0.035)
+  for (let i = 0; i < 8; i += 1) addOrb(group, -1.8 + i * 0.48, 1.15 - i * 0.09, 0.35, 0.055, i % 2 ? 0xf59e0b : 0xec4899).userData.float = true
+  group.add(capsule('wind / water', [-1.7, 1.8, 0]))
+  group.add(capsule('animal vector', [1.7, 1.45, 0]))
+}
+
+function buildCompatibilityScene(group) {
+  const stigma = addOrb(group, -0.65, 0, 0, 0.78, 0x86efac, { transparent: true, opacity: 0.7 })
+  stigma.scale.set(1, 0.58, 0.58)
+  addOrb(group, 0.85, 0.35, 0, 0.28, 0xf59e0b).userData.float = true
+  addOrb(group, 0.85, -0.55, 0, 0.28, 0xec4899)
+  addTube(group, [[0.58, 0.35, 0], [-0.25, 0.1, 0]], 0x16a34a, 0.04)
+  const reject = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.08, 0.08), mat(0xef4444))
+  reject.position.set(0.1, -0.52, 0.12)
+  reject.rotation.z = 0.52
+  group.add(reject)
+  group.add(capsule('compatible', [-1.5, 1.2, 0]))
+  group.add(capsule('rejected pollen', [1.35, -1.3, 0]))
+}
+
+function buildEndospermScene(group) {
+  buildOvuleScene(group)
+  for (let i = 0; i < 18; i += 1) {
+    const angle = i * 0.9
+    const cell = addOrb(group, Math.cos(angle) * 0.42, 0.1 + Math.sin(angle) * 0.55, 0.6, 0.085, i % 2 ? 0xf59e0b : 0xffedd5)
+    cell.userData.pulse = i % 5 === 0
+  }
+  group.add(capsule('PEN divides', [1.85, 0.95, 0]))
+  group.add(capsule('nutritive tissue', [0, -2.05, 0]))
+}
+
+function buildEmbryoScene(group) {
+  const stages = [
+    [-1.35, 0, 0.16, 0xec4899],
+    [-0.45, 0, 0.26, 0xf59e0b],
+    [0.55, 0, 0.36, 0x16a34a],
+    [1.35, 0, 0.42, 0x38bdf8],
+  ]
+  stages.forEach(([x, y, s, c], i) => {
+    const embryo = new THREE.Mesh(new THREE.SphereGeometry(s, 28, 18), mat(c, { transparent: true, opacity: 0.86 }))
+    embryo.position.set(x, y, 0)
+    embryo.scale.set(1, i > 1 ? 0.65 : 1, 0.75)
+    embryo.userData.pulse = i === 3
+    group.add(embryo)
+    if (i < stages.length - 1) addTube(group, [[x + 0.25, y, 0], [stages[i + 1][0] - 0.25, y, 0]], 0xffffff, 0.025)
+  })
+  group.add(capsule('zygote', [-1.55, 1.1, 0]))
+  group.add(capsule('heart stage', [1.4, -1.1, 0]))
+}
+
+function buildFruitScene(group) {
+  const fruit = addOrb(group, 0, 0, 0, 1.15, 0xf97316, { transparent: true, opacity: 0.86 })
+  fruit.scale.set(0.9, 1.1, 0.8)
+  for (let i = 0; i < 6; i += 1) addOrb(group, Math.cos(i) * 0.45, -0.15 + Math.sin(i * 1.4) * 0.48, 0.55, 0.13, 0x92400e).userData.float = true
+  addTube(group, [[0, 1.05, 0], [0.18, 1.45, 0], [0.55, 1.62, 0]], 0x16a34a, 0.055)
+  group.add(capsule('ovary wall', [-1.75, 1.2, 0]))
+  group.add(capsule('fruit', [1.65, 0.2, 0]))
+  group.add(capsule('seeds', [0, -1.55, 0]))
+}
+
+function buildApomixisScene(group) {
+  const bypass = new THREE.Mesh(new THREE.TorusGeometry(1.05, 0.055, 14, 90), mat(0x7c3aed))
+  bypass.rotation.x = Math.PI / 2
+  group.add(bypass)
+  addOrb(group, -1.25, 0.4, 0.2, 0.24, 0xec4899)
+  addOrb(group, 1.25, -0.35, 0.2, 0.28, 0x16a34a).userData.pulse = true
+  const crossA = new THREE.Mesh(new THREE.BoxGeometry(0.85, 0.08, 0.08), mat(0xef4444))
+  const crossB = crossA.clone()
+  crossA.rotation.z = 0.72
+  crossB.rotation.z = -0.72
+  group.add(crossA, crossB)
+  group.add(capsule('fertilization skipped', [0, 1.55, 0]))
+  group.add(capsule('seed forms', [0, -1.45, 0]))
+}
+
+function buildPolyembryonyScene(group) {
+  buildSeedScene(group)
+  for (let i = 0; i < 4; i += 1) {
+    const embryo = new THREE.Mesh(new THREE.CapsuleGeometry(0.08, 0.46, 8, 16), mat([0x16a34a, 0x38bdf8, 0xec4899, 0xf59e0b][i]))
+    embryo.position.set(-0.35 + i * 0.22, -0.25 + Math.sin(i) * 0.18, 0.98)
+    embryo.rotation.z = -0.35 + i * 0.18
+    embryo.userData.float = true
+    group.add(embryo)
+  }
+  group.add(capsule('many embryos', [1.85, 1.05, 0]))
+}
+
+function buildOutbreedingScene(group) {
+  const shield = new THREE.Mesh(new THREE.ConeGeometry(1, 1.55, 5), mat(0x16a34a, { transparent: true, opacity: 0.72 }))
+  shield.rotation.z = Math.PI
+  group.add(shield)
+  addOrb(group, -1.3, 0.55, 0.2, 0.22, 0xec4899).userData.float = true
+  addOrb(group, 1.25, 0.45, 0.2, 0.22, 0xf59e0b).userData.float = true
+  addTube(group, [[-1.05, 0.48, 0.2], [-0.25, 0.12, 0.2]], 0xffffff, 0.028)
+  addTube(group, [[1.02, 0.38, 0.2], [0.25, 0.12, 0.2]], 0xffffff, 0.028)
+  group.add(capsule('dioecy', [-1.55, 1.35, 0]))
+  group.add(capsule('self-incompatibility', [1.35, -1.25, 0]))
+}
+
+function buildChapterMapScene(group) {
+  const nodes = [
+    [-1.7, 0.6, 0, 0xec4899],
+    [-0.85, 0.2, 0, 0xf59e0b],
+    [0, 0.62, 0, 0x38bdf8],
+    [0.82, 0.06, 0, 0x7c3aed],
+    [1.55, -0.55, 0, 0x16a34a],
+  ]
+  nodes.forEach(([x, y, z, c], i) => {
+    addOrb(group, x, y, z, 0.2, c).userData.pulse = i === 4
+    if (i < nodes.length - 1) addTube(group, [[x, y, z], [nodes[i + 1][0], nodes[i + 1][1], nodes[i + 1][2]]], 0xffffff, 0.026)
+  })
+  group.add(capsule('flower', [-1.6, 1.45, 0]))
+  group.add(capsule('double fertilization', [0.4, 1.55, 0]))
+  group.add(capsule('seed + fruit', [1.35, -1.35, 0]))
 }
 
 function Mistake({ title, body }) {

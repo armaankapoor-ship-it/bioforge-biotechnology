@@ -2,7 +2,7 @@
 
 BioForge is a premium-feeling, completely free interactive learning website for Class 12 Biology and NEET students studying **Biotechnology: Principles, Processes & Applications**.
 
-It includes an animated hero, chapter roadmap, restriction-enzyme model, PCR cycle simulator and amplification calculator, interactive plasmid, gel-electrophoresis lab, 3D stirred-tank bioreactor, NEET high-yield revision, quizzes, flashcards, and original visual diagrams.
+It includes an animated hero, chapter roadmap, restriction-enzyme model, PCR cycle simulator and amplification calculator, interactive plasmid, gel-electrophoresis lab, 3D stirred-tank bioreactor, NEET high-yield revision, quizzes, flashcards, and original visual diagrams. Every published site now includes a 20-model interactive Three.js lab.
 
 ## Free and open-source stack
 

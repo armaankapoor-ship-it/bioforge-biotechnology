@@ -21,6 +21,196 @@ function beadChain(group, points, material, bridgeMaterial) {
   })
 }
 
+function makeMat(color, options = {}) {
+  return new THREE.MeshStandardMaterial({ color, roughness: 0.28, metalness: 0.05, ...options })
+}
+
+function tube(group, points, color = 0x6de0bc, radius = 0.045) {
+  const curve = new THREE.CatmullRomCurve3(points)
+  const mesh = new THREE.Mesh(new THREE.TubeGeometry(curve, 72, radius, 10), makeMat(color))
+  group.add(mesh)
+  return mesh
+}
+
+function orb(group, x, y, z, radius, color, options = {}) {
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(radius, 24, 16), makeMat(color, options))
+  mesh.position.set(x, y, z)
+  group.add(mesh)
+  return mesh
+}
+
+function dnaLadder(group, xOffset = 0, yOffset = 0, scale = 1) {
+  const left = []
+  const right = []
+  for (let i = 0; i < 26; i++) {
+    const y = (-1.25 + i * 0.1) * scale + yOffset
+    const angle = i * 0.68
+    const a = new THREE.Vector3(Math.cos(angle) * 0.55 * scale + xOffset, y, Math.sin(angle) * 0.55 * scale)
+    const b = new THREE.Vector3(Math.cos(angle + Math.PI) * 0.55 * scale + xOffset, y, Math.sin(angle + Math.PI) * 0.55 * scale)
+    left.push(a)
+    right.push(b)
+    if (i % 2 === 0) tube(group, [a, b], i > 9 && i < 15 ? 0xffd35f : 0xffffff, 0.018 * scale)
+  }
+  tube(group, left, 0x6de0bc, 0.035 * scale)
+  tube(group, right, 0x8ed7ee, 0.035 * scale)
+}
+
+function plasmidRing(group, x = 0, y = 0, radius = 0.82) {
+  const colors = [0x6de0bc, 0xffd35f, 0xff7f66, 0x8ed7ee]
+  for (let i = 0; i < 4; i++) {
+    const pts = []
+    const start = i * Math.PI * 0.5
+    for (let j = 0; j < 28; j++) {
+      const a = start + (j / 27) * Math.PI * 0.5
+      pts.push(new THREE.Vector3(x + Math.cos(a) * radius, y + Math.sin(a) * radius, Math.sin(a * 3) * 0.08))
+    }
+    tube(group, pts, colors[i], i === 2 ? 0.09 : 0.055)
+  }
+}
+
+function microplate(group) {
+  const plate = new THREE.Mesh(new THREE.BoxGeometry(3.4, 0.18, 2), makeMat(0xffffff, { transparent: true, opacity: 0.88 }))
+  group.add(plate)
+  for (let r = 0; r < 4; r++) {
+    for (let c = 0; c < 6; c++) {
+      const positive = (r + c) % 5 === 0
+      const well = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.1, 22), makeMat(positive ? 0xffd35f : 0x8ed7ee, { transparent: true, opacity: positive ? 0.95 : 0.55 }))
+      well.position.set(-1.35 + c * 0.54, 0.16, -0.75 + r * 0.5)
+      group.add(well)
+    }
+  }
+}
+
+function bioReactor(group) {
+  const glass = new THREE.MeshStandardMaterial({ color: 0xb8f2dc, transparent: true, opacity: 0.25, roughness: 0.12 })
+  const tank = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 0.9, 2.4, 48), glass)
+  group.add(tank)
+  const liquid = new THREE.Mesh(new THREE.CylinderGeometry(0.82, 0.82, 1.55, 48), makeMat(0x6de0bc, { transparent: true, opacity: 0.28 }))
+  liquid.position.y = -0.32
+  group.add(liquid)
+  const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 2.75, 16), makeMat(0x9fb8ae, { metalness: 0.75 }))
+  group.add(shaft)
+  for (let i = 0; i < 4; i++) {
+    const blade = new THREE.Mesh(new THREE.BoxGeometry(0.76, 0.07, 0.18), makeMat(0x9fb8ae, { metalness: 0.75 }))
+    blade.position.y = -0.42
+    blade.rotation.y = (i / 4) * Math.PI
+    group.add(blade)
+  }
+  for (let i = 0; i < 22; i++) orb(group, -0.55 + (i % 6) * 0.22, -1.1 + (i % 8) * 0.26, Math.sin(i) * 0.42, 0.035 + (i % 3) * 0.01, 0xffffff, { transparent: true, opacity: 0.65 })
+}
+
+function buildUniversalScene(sceneType, group) {
+  const enzyme = () => orb(group, 0.1, 0.1, 0.55, 0.48, 0xff7f66)
+  const cell = () => {
+    const host = orb(group, 0.3, 0, 0, 1.25, 0xb8f2dc, { transparent: true, opacity: 0.35 })
+    host.scale.set(1.28, 0.82, 0.82)
+    orb(group, 0.18, 0.06, 0.35, 0.32, 0xff7f66)
+    plasmidRing(group, -0.55, 0.24, 0.42)
+  }
+  switch (sceneType) {
+    case 'dna-cut':
+      dnaLadder(group, -0.5)
+      enzyme()
+      tube(group, [new THREE.Vector3(-0.1, 0.05, 0.65), new THREE.Vector3(0.5, -0.35, 0.65)], 0xffffff, 0.028)
+      break
+    case 'plasmid-map':
+      plasmidRing(group, 0, 0, 1.1)
+      orb(group, 0.95, 0.38, 0.25, 0.16, 0xffd35f)
+      break
+    case 'pcr-cycle':
+      dnaLadder(group, -0.85, 0.2, 0.72)
+      dnaLadder(group, 0.85, -0.2, 0.72)
+      ;[0, 1, 2].forEach((i) => {
+        const ring = new THREE.Mesh(new THREE.TorusGeometry(1.25 + i * 0.09, 0.025, 12, 80), makeMat([0xff7f66, 0x8ed7ee, 0x6de0bc][i]))
+        ring.rotation.x = Math.PI / 2
+        group.add(ring)
+      })
+      break
+    case 'gel-bands':
+      microplate(group)
+      for (let i = 0; i < 5; i++) {
+        const band = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.1 + i * 0.05, 0.78), makeMat(0x7c3aed))
+        band.position.set(-1.1 + i * 0.52, 0.42, -0.05)
+        group.add(band)
+      }
+      break
+    case 'bioreactor':
+      bioReactor(group)
+      break
+    case 'ligase':
+      plasmidRing(group, -0.25, 0, 0.9)
+      tube(group, [new THREE.Vector3(0.55, 0.42, 0.15), new THREE.Vector3(1.35, 0.2, 0.15)], 0xffd35f, 0.08)
+      orb(group, 0.72, 0.38, 0.42, 0.32, 0xffffff)
+      break
+    case 'transformation':
+      cell()
+      plasmidRing(group, -1.7, 0.75, 0.32)
+      tube(group, [new THREE.Vector3(-1.35, 0.7, 0), new THREE.Vector3(-0.55, 0.35, 0.2)], 0xffd35f, 0.04)
+      break
+    case 'selection':
+      for (let i = 0; i < 18; i++) {
+        const alive = i % 4 !== 0
+        orb(group, -1.45 + (i % 6) * 0.58, -0.75 + Math.floor(i / 6) * 0.62, 0, 0.16, alive ? 0x6de0bc : 0xff7f66, { transparent: true, opacity: alive ? 0.95 : 0.45 })
+      }
+      break
+    case 'gene-gun':
+      cell()
+      for (let i = 0; i < 10; i++) tube(group, [new THREE.Vector3(-2, -0.7 + i * 0.15, 0), new THREE.Vector3(-0.6, -0.2 + i * 0.06, 0.12)], 0xffd35f, 0.018)
+      break
+    case 'agrobacterium':
+      const bact = new THREE.Mesh(new THREE.CapsuleGeometry(0.35, 1.2, 12, 24), makeMat(0x6de0bc))
+      bact.rotation.z = Math.PI / 2
+      bact.position.set(-1.05, 0.48, 0)
+      group.add(bact)
+      cell()
+      tube(group, [new THREE.Vector3(-0.7, 0.48, 0.15), new THREE.Vector3(0.05, 0.18, 0.22)], 0xffd35f, 0.045)
+      break
+    case 'downstream':
+      for (let i = 0; i < 4; i++) {
+        const block = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.45, 0.3), makeMat([0x6de0bc, 0x8ed7ee, 0xffd35f, 0xff7f66][i]))
+        block.position.set(-1.35 + i * 0.9, 0, 0)
+        group.add(block)
+      }
+      break
+    case 'microinjection':
+      cell()
+      tube(group, [new THREE.Vector3(-2, 0.92, 0.2), new THREE.Vector3(-0.12, 0.1, 0.35)], 0xffffff, 0.025)
+      orb(group, -0.05, 0.08, 0.42, 0.08, 0xffd35f)
+      break
+    case 'probe-binding':
+      dnaLadder(group, 0, 0, 0.78)
+      tube(group, [new THREE.Vector3(-1.25, -0.82, 0.4), new THREE.Vector3(-0.2, -0.28, 0.4), new THREE.Vector3(0.82, 0.22, 0.4)], 0xffd35f, 0.045)
+      break
+    case 'insulin-pipeline':
+      cell()
+      for (let i = 0; i < 8; i++) orb(group, 0.85 + Math.cos(i) * 0.52, -0.85 + Math.sin(i) * 0.15, 0.2, 0.08, 0x8ed7ee)
+      break
+    default:
+      dnaLadder(group, -0.95, 0, 0.72)
+      plasmidRing(group, 0.95, 0, 0.64)
+      cell()
+  }
+}
+
+export function UniversalBioModel3D({ sceneType, ariaLabel }) {
+  const buildScene = useCallback(({ scene, camera }) => {
+    camera.position.set(0, 0.2, 8.6)
+    const group = new THREE.Group()
+    buildUniversalScene(sceneType, group)
+    scene.add(group)
+    return {
+      animate(time) {
+        group.rotation.y = time * 0.24
+        group.rotation.x = Math.sin(time * 0.45) * 0.1
+        group.children.forEach((child, index) => {
+          if (child.geometry?.type === 'SphereGeometry') child.position.y += Math.sin(time * 1.4 + index) * 0.0015
+        })
+      },
+    }
+  }, [sceneType])
+  return <ThreeDViewer buildScene={buildScene} className="h-full w-full" ariaLabel={ariaLabel || 'Interactive biotechnology 3D model'} interactiveHint />
+}
+
 export function Insulin3D() {
   const buildScene = useCallback(({ scene, camera }) => {
     camera.position.set(0, 0.2, 8.8)
